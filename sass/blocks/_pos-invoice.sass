@@ -1,0 +1,421 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Invoice
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-invoice"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Invoice MOD: role main
+  &_role_main
+
+
+  // $Invoice guest buttons
+  &__guest-buttons
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    margin-bottom: 7px
+
+
+  // $Invoice guest button
+  &__guest-button
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    height: 48px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 48px
+    font-weight: 500
+    color: $c-invoice-guest-button-text
+    text-align: center
+    border-radius: 12px
+    background-color: $c-invoice-guest-button-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 5px
+
+
+  // $Invoice panel
+  &__panel
+    position: relative
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 486px
+    margin-bottom: 7px
+    border: 1px solid $c-invoice-panel-border
+    border-radius: 12px
+    background-color: $c-invoice-panel-bg
+    overflow: hidden
+
+
+  // $Invoice panel header
+  &__panel-header
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 100%
+    height: 43px
+    border-bottom: 1px solid $c-invoice-panel-border
+    background-color: $c-invoice-panel-header-bg
+
+
+  // $Invoice panel title
+  &__panel-title
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 35px
+    line-height: 43px
+    font-weight: 700
+    color: $c-invoice-panel-title-text
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Invoice panel content
+  &__panel-content
+    flex-grow: 1
+    flex-shrink: 1
+    width: 100%
+    overflow: hidden
+
+
+  // $Invoice panel footer
+  &__panel-footer
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 100%
+    height: 43px
+    background-color: $c-invoice-panel-footer-bg
+
+
+  // $Invoice panel function
+  &__panel-function
+    display: block
+    width: 100%
+    padding-right: 35%
+    font-family: $f-sans
+    font-size: 35px
+    line-height: 43px
+    font-weight: 700
+    color: $c-invoice-panel-function-text
+    text-transform: uppercase
+    text-align: right
+
+
+  // $Invoice list
+  &__list
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+    height: 100%
+
+
+  // $Invoice list labels
+  &__list-labels
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 25px
+    padding: 0 5px
+
+
+  // $Invoice list label
+  &__list-label
+    display: block
+    flex-grow: 1
+    flex-shrink: 1
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 25px
+    font-weight: 500
+    text-decoration: underline
+    color: $c-invoice-list-label-text
+    text-align: center
+
+    &:nth-child(1)
+      width: 58%
+      padding-left: 15px
+      text-align: left
+
+    &:nth-child(2)
+      width: 10%
+
+    &:nth-child(3)
+      width: 16%
+
+    &:nth-child(4)
+      width: 16%
+
+
+  // $Invoice list scroll
+  &__list-scroll
+    flex-grow: 1
+    flex-shrink: 1
+    position: relative
+    display: block
+    width: 100%
+    height: calc(100% - 25px)
+    overflow: hidden
+
+
+  // $Invoice items
+  &__items
+    display: block
+    width: 100%
+
+
+  // $Invoice item
+  &__item
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+    padding: 2px 5px
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      background-color: $c-invoice-item-hover
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    // $Invoice item STATE: active
+    &.is-active
+      background-color: $c-invoice-item-active
+
+
+  // $Invoice item info
+  &__item-info
+    width: 58%
+
+
+  // $Invoice item qty
+  &__item-qty
+    width: 10%
+    text-align: center
+
+
+  // $Invoice item price
+  &__item-price
+    width: 16%
+
+
+  // $Invoice item total
+  &__item-total
+    width: 16%
+
+
+  // $Invoice item text
+  &__item-text
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 18px
+    font-weight: 500
+    color: $c-invoice-item-text
+
+    // $Invoice item text CONTEXT: $Invoice item price
+    #{$block}__item-price &
+      color: $c-invoice-item-price-text
+
+
+  // $Invoice item meta
+  &__item-meta
+    display: block
+    width: 100%
+    padding-left: 5px
+
+    &:not(:last-child)
+      margin-bottom: 5px
+
+
+  // $Invoice item meta text
+  &__item-meta-text
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 15px
+    font-weight: 500
+    color: $c-invoice-item-meta-text
+
+
+  // $Invoice info
+  &__info
+    position: relative
+    z-index: 1
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 43px
+    margin-bottom: 7px
+    border-radius: 12px
+    background-color: $c-invoice-info-bg
+    overflow: hidden
+
+
+  // $Invoice table number
+  &__table-number
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 160px
+    height: 43px
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 43px
+    font-weight: 700
+    color: $c-invoice-guest-button-text
+    text-align: center
+    border-radius: 12px
+    background-color: $c-invoice-table-number-bg
+    overflow: hidden
+
+
+  // $Invoice total
+  &__total
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 43px
+    padding: 0 12px 0 4px
+    font-family: $f-sans
+    font-size: 35px
+    line-height: 43px
+    font-weight: 400
+    color: $c-invoice-guest-button-text
+    white-space: nowrap
+
+    &:only-child
+      padding: 0 20px
+
+
+  // $Invoice total label
+  &__total-label
+    display: block
+    font-size: 21px
+    line-height: 43px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: left
+
+
+  // $Invoice total value
+  &__total-value
+    display: block
+    font-size: 35px
+    line-height: 43px
+    font-weight: 700
+    text-align: right
+
+
+  // $Invoice controls
+  &__controls
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+
+  // $Invoice numpad
+  &__numpad
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 234px
+
+
+  // $Invoice actions
+  &__actions
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
+    width: calc(100% - 234px)
+    padding-left: 20px
+
+
+  // $Invoice action
+  &__action
+    display: block
+    width: 100%
+    height: 63px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-invoice-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-invoice-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-bottom: 14px

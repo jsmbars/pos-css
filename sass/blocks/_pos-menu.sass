@@ -1,0 +1,415 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Menu
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-menu"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Menu MOD: role main
+  &_role-main
+
+
+  // $Menu categories
+  &__categories
+    display: block
+    width: 100%
+    margin-bottom: 7px
+
+
+  // $Menu categories row
+  &__categories-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 7px
+
+
+  // $Menu category
+  &__category
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: calc(12.5% - 7px)
+    height: 77px
+    margin-right: 7px
+    border-radius: 12px 12px 39px 12px
+    background-color: $c-menu-category-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Menu category STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Menu category STATE: active
+    &.is-active
+      background-color: $c-menu-category-active-bg
+      cursor: default
+
+      &:hover
+        opacity: 1
+
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: -1
+        display: block
+        border-radius: 12px 12px 0 12px
+        background-color: $c-menu-category-active-corner
+
+    // $Menu category MOD: role home
+    &_role_home
+      background-color: $c-menu-category-home-bg
+
+    // $Menu category MOD: role home STATE: active
+    &_role_home.is-active
+      background-color: $c-menu-category-home-active-bg
+
+      &:after
+        background-color: $c-menu-category-home-active-corner
+
+
+  // $Menu category text
+  &__category-text
+    display: block
+    font-family: $f-sans
+    font-size: 17px
+    line-height: 20px
+    font-weight: 700
+    color: $c-menu-category-text
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Menu category icon
+  &__category-icon
+    display: block
+    margin: 0 auto
+    font-size: 0
+    line-height: 0
+    color: transparent
+
+    // $Menu category icon MOD: role home
+    &_role_home
+      &:before
+        content: '\e903'
+        display: block
+        font-family: icons
+        font-size: 22px
+        line-height: 22px
+        color: $c-menu-category-icon
+
+
+  // $Menu subcategories
+  &__subcategories
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: calc(100% - 7px)
+    margin: 0 7px 7px 0
+    border-radius: 12px
+    background-color: $c-menu-subcategories-bg
+
+
+  // $Menu subcategories control
+  &__subcategories-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 48px
+    height: 77px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-menu-subcategories-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 24px
+      line-height: 24px
+      color: $c-menu-subcategories-control-icon
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Menu subcategories control STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Menu subcategories control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $Menu subcategories control MOD: role next
+    &_role_next
+      &:before
+        content: '\e902'
+
+
+  // $Menu subcategories list
+  &__subcategories-list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 96px)
+    padding: 0 7px
+    text-align: center
+
+
+  // $Menu subcategories scroll
+  &__subcategories-scroll
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    text-align: center
+
+
+  // $Menu subcategories row
+  &__subcategories-row
+    display: inline-flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Menu subcategory
+  &__subcategory
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 98px
+    height: 77px
+    border-radius: 12px 12px 39px 12px
+    background-color: $c-menu-subcategory-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 6px
+
+    // $Menu subcategory STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Menu subcategory STATE: active
+    &.is-active
+      cursor: default
+
+      &:hover
+        opacity: 1
+
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: -1
+        display: block
+        border-radius: 12px 12px 0 12px
+        background-color: $c-menu-subcategory-active-corner
+
+
+  // $Menu subcategory text
+  &__subcategory-text
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 18px
+    font-weight: 700
+    color: $c-menu-category-text
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Menu items
+  &__items
+    display: block
+    width: 100%
+
+
+  // $Menu items row
+  &__items-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 7px
+
+
+  // $Menu items control
+  &__items-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: calc(25% - 7px)
+    height: 77px
+    margin: 0
+    padding: 0
+    margin-right: 7px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    box-shadow: none
+    border: 5px solid $c-menu-items-control-border
+    border-radius: 12px
+    background-color: $c-menu-items-control-bg
+    cursor: pointer
+    user-select: none
+    overflow: hidden
+    transition: all .2s
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 52px
+      line-height: 52px
+      color: $c-menu-items-control-icon
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Menu items control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $Menu items control MOD: role next
+    &_role_next
+      margin-left: auto
+
+      &:before
+        content: '\e902'
+
+
+  // $Menu item
+  &__item
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: calc(25% - 7px)
+    height: 77px
+    margin-right: 7px
+    border-radius: 12px
+    background-color: $c-menu-subcategory-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+
+  // $Menu item meta
+  &__item-meta
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 18px
+    font-weight: 300
+    color: $c-menu-item-meta
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Menu item text
+  &__item-text
+    display: block
+    padding: 4px 0
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-menu-item-text
+    text-transform: uppercase
+    text-align: center

@@ -1,0 +1,127 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Header
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-header"
+
+#{$block}
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 48px
+  padding: 10px 22px
+  background-color: $c-header-bg
+  border-radius: 12px
+
+  // $Header MOD: role main
+  &_role_main
+
+
+  // $Header sidebar toggle
+  &__sidebar-toggle
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    border: none
+    background-color: transparent
+    box-shadow: none
+    cursor: pointer
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:before
+      content: '\e904'
+      display: block
+      font-family: icons
+      font-size: 40px
+      line-height: 30px
+      color: $c-header-sidebar-toggle-icon
+
+
+  // $Header info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0 55px
+
+
+  // $Header info item
+  &__info-item
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 1
+    font-weight: 500
+    color: $c-header-text
+    text-align: center
+    white-space: nowrap
+
+
+  // $Header search toggle
+  &__search-toggle
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 140px
+    height: 30px
+    margin: 0
+    padding: 0 15px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 30px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    color: $c-header-search-toggle-text
+    text-align: left
+    border: none
+    border-radius: 15px
+    background-color: $c-header-search-toggle-bg
+    box-shadow: none
+    cursor: pointer
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:after
+      content: '\e905'
+      position: absolute
+      top: 0
+      right: 15px
+      display: block
+      font-family: icons
+      font-size: 20px
+      line-height: 30px
+      color: $c-header-search-toggle-icon
