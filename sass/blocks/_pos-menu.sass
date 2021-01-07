@@ -28,6 +28,9 @@ $block: ".pos-menu"
     width: 100%
     margin-bottom: 7px
 
+    +media-screen-1024x600
+      margin-bottom: 6px
+
 
   // $Menu categories row
   &__categories-row
@@ -39,6 +42,9 @@ $block: ".pos-menu"
 
     &:not(:last-child)
       margin-bottom: 7px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
 
 
   // $Menu category
@@ -57,6 +63,12 @@ $block: ".pos-menu"
     user-select: none
     text-decoration: none
     transition: all .2s
+
+    +media-screen-1024x600
+      width: calc(12.5% - 6px)
+      height: 42px
+      margin-right: 6px
+      border-radius: 7px 7px 23px 7px
 
     &:hover
       opacity: .8
@@ -92,6 +104,9 @@ $block: ".pos-menu"
         border-radius: 12px 12px 0 12px
         background-color: $c-menu-category-active-corner
 
+        +media-screen-1024x600
+          border-radius: 7px 7px 0 7px
+
     // $Menu category MOD: role home
     &_role_home
       background-color: $c-menu-category-home-bg
@@ -115,6 +130,10 @@ $block: ".pos-menu"
     text-transform: uppercase
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 12px
+      line-height: 15px
+
 
   // $Menu category icon
   &__category-icon
@@ -134,6 +153,10 @@ $block: ".pos-menu"
         line-height: 22px
         color: $c-menu-category-icon
 
+        +media-screen-1024x600
+          font-size: 14px
+          line-height: 14px
+
 
   // $Menu subcategories
   &__subcategories
@@ -145,6 +168,11 @@ $block: ".pos-menu"
     margin: 0 7px 7px 0
     border-radius: 12px
     background-color: $c-menu-subcategories-bg
+
+    +media-screen-1024x600
+      width: calc(100% - 6px)
+      margin: 0 6px 6px 0
+      border-radius: 7px
 
 
   // $Menu subcategories control
@@ -168,6 +196,11 @@ $block: ".pos-menu"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 38px
+      height: 42px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -175,6 +208,10 @@ $block: ".pos-menu"
       font-size: 24px
       line-height: 24px
       color: $c-menu-subcategories-control-icon
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
 
     &:hover
       opacity: .8
@@ -209,6 +246,9 @@ $block: ".pos-menu"
     width: calc(100% - 96px)
     padding: 0 7px
     text-align: center
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
 
 
   // $Menu subcategories scroll
@@ -246,6 +286,11 @@ $block: ".pos-menu"
     text-decoration: none
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 78px
+      height: 42px
+      border-radius: 7px 7px 23px 7px
+
     &:hover
       opacity: .8
 
@@ -254,6 +299,9 @@ $block: ".pos-menu"
 
     &:not(:last-child)
       margin-right: 6px
+
+      +media-screen-1024x600
+        margin-right: 5px
 
     // $Menu subcategory STATE: disabled
     &.is-disabled
@@ -282,6 +330,9 @@ $block: ".pos-menu"
         border-radius: 12px 12px 0 12px
         background-color: $c-menu-subcategory-active-corner
 
+        +media-screen-1024x600
+          border-radius: 7px 7px 0 7px
+
 
   // $Menu subcategory text
   &__subcategory-text
@@ -293,6 +344,10 @@ $block: ".pos-menu"
     color: $c-menu-category-text
     text-transform: uppercase
     text-align: center
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 14px
 
 
   // $Menu items
@@ -311,6 +366,9 @@ $block: ".pos-menu"
 
     &:not(:last-child)
       margin-bottom: 7px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
 
 
   // $Menu items control
@@ -337,6 +395,11 @@ $block: ".pos-menu"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 42px
+      border-width: 4px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -344,6 +407,10 @@ $block: ".pos-menu"
       font-size: 52px
       line-height: 52px
       color: $c-menu-items-control-icon
+
+      +media-screen-1024x600
+        font-size: 26px
+        line-height: 26px
 
     &:hover
       opacity: .8
@@ -383,6 +450,12 @@ $block: ".pos-menu"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      width: calc(25% - 6px)
+      height: 42px
+      margin-right: 6px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -401,6 +474,10 @@ $block: ".pos-menu"
     text-transform: uppercase
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 9px
+      line-height: 11px
+
 
   // $Menu item text
   &__item-text
@@ -413,3 +490,8 @@ $block: ".pos-menu"
     color: $c-menu-item-text
     text-transform: uppercase
     text-align: center
+
+    +media-screen-1024x600
+      padding: 1px 0
+      font-size: 13px
+      line-height: 15px

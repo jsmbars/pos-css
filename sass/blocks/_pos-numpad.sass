@@ -38,6 +38,9 @@ $block: ".pos-numpad"
     &:not(:last-child)
       margin-bottom: 7px
 
+      +media-screen-1024x600
+        margin-bottom: 6px
+
 
   // $Numpad control
   &__control
@@ -63,6 +66,12 @@ $block: ".pos-numpad"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 40px
+      font-size: 30px
+      line-height: 40px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -71,6 +80,9 @@ $block: ".pos-numpad"
 
     &:not(:last-child)
       margin-right: 12px
+
+      +media-screen-1024x600
+        margin-right: 10px
 
 
     // $Numpad control MOD: role clear
@@ -81,3 +93,8 @@ $block: ".pos-numpad"
       font-weight: 700
       border: 5px solid $c-numpad-control-clear-border
       background-color: $c-numpad-control-clear-bg
+
+      +media-screen-1024x600
+        width: calc(66.666% + 10px)
+        line-height: 32px
+        border-width: 4px

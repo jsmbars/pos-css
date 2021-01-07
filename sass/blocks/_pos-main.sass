@@ -33,6 +33,10 @@ $block: ".pos-main"
     width: 860px
     padding: 7px 6px 7px 12px
 
+    +media-screen-1024x600
+      width: 688px
+      padding: 6px 6px 6px 10px
+
 
   // $Main order
   &__order
@@ -43,6 +47,10 @@ $block: ".pos-main"
     height: 100%
     width: 420px
     padding: 7px 12px 0 6px
+
+    +media-screen-1024x600
+      width: 336px
+      padding: 6px 10px 0 6px
 
 
   // $Main header
@@ -56,6 +64,9 @@ $block: ".pos-main"
     display: block
     width: 100%
     padding: 14px 2px 0 0
+
+    +media-screen-1024x600
+      padding: 10px 0 0 0
 
 
   // $Main version
@@ -72,6 +83,10 @@ $block: ".pos-main"
     font-weight: 500
     color: $c-main-meta-text
     text-align: center
+
+    +media-screen-1024x600
+      bottom: 6px
+      font-size: 11px
 
 
   // $Main invoice
@@ -105,6 +120,14 @@ $block: ".pos-main"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      width: 290px
+      height: 60px
+      margin-left: -145px
+      font-size: 24px
+      line-height: 60px
+      border-radius: 21px 21px 0 0
 
     &:hover
       opacity: .8

@@ -31,6 +31,9 @@ $block: ".pos-invoice"
     width: 100%
     margin-bottom: 7px
 
+    +media-screen-1024x600
+      margin-bottom: 6px
+
 
   // $Invoice guest button
   &__guest-button
@@ -53,6 +56,12 @@ $block: ".pos-invoice"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      height: 30px
+      font-size: 16px
+      line-height: 30px
+      border-radius: 7px
 
     &:hover
       opacity: .8
@@ -80,6 +89,11 @@ $block: ".pos-invoice"
     background-color: $c-invoice-panel-bg
     overflow: hidden
 
+    +media-screen-1024x600
+      height: 265px
+      margin-bottom: 6px
+      border-radius: 7px
+
 
   // $Invoice panel header
   &__panel-header
@@ -90,6 +104,9 @@ $block: ".pos-invoice"
     height: 43px
     border-bottom: 1px solid $c-invoice-panel-border
     background-color: $c-invoice-panel-header-bg
+
+    +media-screen-1024x600
+      height: 25px
 
 
   // $Invoice panel title
@@ -103,6 +120,10 @@ $block: ".pos-invoice"
     color: $c-invoice-panel-title-text
     text-transform: uppercase
     text-align: center
+
+    +media-screen-1024x600
+      font-size: 21px
+      line-height: 25px
 
 
   // $Invoice panel content
@@ -122,6 +143,9 @@ $block: ".pos-invoice"
     height: 43px
     background-color: $c-invoice-panel-footer-bg
 
+    +media-screen-1024x600
+      height: 25px
+
 
   // $Invoice panel function
   &__panel-function
@@ -135,6 +159,11 @@ $block: ".pos-invoice"
     color: $c-invoice-panel-function-text
     text-transform: uppercase
     text-align: right
+
+    +media-screen-1024x600
+      padding-right: 39%
+      font-size: 21px
+      line-height: 25px
 
 
   // $Invoice list
@@ -159,6 +188,9 @@ $block: ".pos-invoice"
     height: 25px
     padding: 0 5px
 
+    +media-screen-1024x600
+      height: 20px
+
 
   // $Invoice list label
   &__list-label
@@ -173,19 +205,34 @@ $block: ".pos-invoice"
     color: $c-invoice-list-label-text
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 13px
+
     &:nth-child(1)
       width: 58%
       padding-left: 15px
       text-align: left
 
+      +media-screen-1024x600
+        width: 51%
+
     &:nth-child(2)
       width: 10%
+
+      +media-screen-1024x600
+        width: 11%
 
     &:nth-child(3)
       width: 16%
 
+      +media-screen-1024x600
+        width: 19%
+
     &:nth-child(4)
       width: 16%
+
+      +media-screen-1024x600
+        width: 19%
 
 
   // $Invoice list scroll
@@ -197,6 +244,9 @@ $block: ".pos-invoice"
     width: 100%
     height: calc(100% - 25px)
     overflow: hidden
+
+    +media-screen-1024x600
+      height: calc(100% - 20px)
 
 
   // $Invoice items
@@ -232,21 +282,32 @@ $block: ".pos-invoice"
   &__item-info
     width: 58%
 
+    +media-screen-1024x600
+      width: 51%
+
 
   // $Invoice item qty
   &__item-qty
     width: 10%
     text-align: center
 
+    +media-screen-1024x600
+      width: 11%
+
 
   // $Invoice item price
   &__item-price
     width: 16%
 
+    +media-screen-1024x600
+      width: 19%
 
   // $Invoice item total
   &__item-total
     width: 16%
+
+    +media-screen-1024x600
+      width: 19%
 
 
   // $Invoice item text
@@ -259,9 +320,18 @@ $block: ".pos-invoice"
     font-weight: 500
     color: $c-invoice-item-text
 
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 16px
+
     // $Invoice item text CONTEXT: $Invoice item price
     #{$block}__item-price &
       color: $c-invoice-item-price-text
+      white-space: nowrap
+
+    // $Invoice item text CONTEXT: $Invoice item total
+    #{$block}__item-total &
+      white-space: nowrap
 
 
   // $Invoice item meta
@@ -300,6 +370,11 @@ $block: ".pos-invoice"
     background-color: $c-invoice-info-bg
     overflow: hidden
 
+    +media-screen-1024x600
+      height: 25px
+      margin-bottom: 6px
+      border-radius: 7px
+
 
   // $Invoice table number
   &__table-number
@@ -317,6 +392,13 @@ $block: ".pos-invoice"
     border-radius: 12px
     background-color: $c-invoice-table-number-bg
     overflow: hidden
+
+    +media-screen-1024x600
+      width: 120px
+      height: 25px
+      font-size: 18px
+      line-height: 25px
+      border-radius: 7px
 
 
   // $Invoice total
@@ -337,6 +419,12 @@ $block: ".pos-invoice"
     color: $c-invoice-guest-button-text
     white-space: nowrap
 
+    +media-screen-1024x600
+      height: 25px
+      padding: 0 8px 0 4px
+      font-size: 21px
+      line-height: 25px
+
     &:only-child
       padding: 0 20px
 
@@ -350,6 +438,10 @@ $block: ".pos-invoice"
     text-transform: uppercase
     text-align: left
 
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 25px
+
 
   // $Invoice total value
   &__total-value
@@ -358,6 +450,10 @@ $block: ".pos-invoice"
     line-height: 43px
     font-weight: 700
     text-align: right
+
+    +media-screen-1024x600
+      font-size: 21px
+      line-height: 25px
 
 
   // $Invoice controls
@@ -376,6 +472,9 @@ $block: ".pos-invoice"
     display: block
     width: 234px
 
+    +media-screen-1024x600
+      width: 140px
+
 
   // $Invoice actions
   &__actions
@@ -387,6 +486,11 @@ $block: ".pos-invoice"
     align-items: stretch
     width: calc(100% - 234px)
     padding-left: 20px
+
+    +media-screen-1024x600
+      width: calc(100% - 140px)
+      padding-left: 16px
+
 
 
   // $Invoice action
@@ -411,6 +515,12 @@ $block: ".pos-invoice"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 38px
+      font-size: 16px
+      line-height: 18px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -419,3 +529,6 @@ $block: ".pos-invoice"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1024x600
+        margin-bottom: 8px
