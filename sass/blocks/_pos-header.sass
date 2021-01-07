@@ -25,6 +25,11 @@ $block: ".pos-header"
   background-color: $c-header-bg
   border-radius: 12px
 
+  +media-screen-1024x768
+    height: 35px
+    padding: 5px 15px
+    border-radius: 9px
+
   +media-screen-1024x600
     height: 30px
     padding: 5px 15px
@@ -64,6 +69,10 @@ $block: ".pos-header"
       line-height: 30px
       color: $c-header-sidebar-toggle-icon
 
+      +media-screen-1024x768
+        font-size: 28px
+        line-height: 22px
+
       +media-screen-1024x600
         font-size: 24px
         line-height: 20px
@@ -78,6 +87,9 @@ $block: ".pos-header"
     justify-content: space-between
     align-items: center
     padding: 0 55px
+
+    +media-screen-1024x768
+      padding: 0 40px
 
     +media-screen-1024x600
       padding: 0 40px
@@ -95,6 +107,9 @@ $block: ".pos-header"
     color: $c-header-text
     text-align: center
     white-space: nowrap
+
+    +media-screen-1024x768
+      font-size: 16px
 
     +media-screen-1024x600
       font-size: 16px
@@ -124,6 +139,13 @@ $block: ".pos-header"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1024x768
+      width: 110px
+      height: 22px
+      padding: 0 8px
+      font-size: 12px
+      line-height: 22px
+
     +media-screen-1024x600
       width: 110px
       height: 20px
@@ -147,6 +169,11 @@ $block: ".pos-header"
       font-size: 20px
       line-height: 30px
       color: $c-header-search-toggle-icon
+
+      +media-screen-1024x768
+        right: 8px
+        font-size: 14px
+        line-height: 22px
 
       +media-screen-1024x600
         right: 8px
