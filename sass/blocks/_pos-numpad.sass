@@ -1,0 +1,131 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Numpad
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-numpad"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Numpad MOD: role main
+  &_role_main
+
+
+  // $Numpad controls
+  &__controls
+    width: 100%
+
+
+  // $Numpad controls row
+  &__controls-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 7px
+
+      +media-screen-1024x768
+        margin-bottom: 6px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
+
+
+  // $Numpad control
+  &__control
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 33.333%
+    height: 70px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 70px
+    font-weight: 500
+    color: $c-numpad-control-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-numpad-control-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 50px
+      font-size: 38px
+      line-height: 50px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      height: 50px
+      font-size: 38px
+      line-height: 50px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      height: 40px
+      font-size: 30px
+      line-height: 40px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 12px
+
+      +media-screen-1280x800
+        margin-right: 10px
+
+      +media-screen-1024x768
+        margin-right: 10px
+
+      +media-screen-1024x600
+        margin-right: 10px
+
+
+    // $Numpad control MOD: role clear
+    &_role_clear
+      width: calc(66.666% + 12px)
+      color: $c-numpad-control-clear-text
+      line-height: 60px
+      font-weight: 700
+      border: 5px solid $c-numpad-control-clear-border
+      background-color: $c-numpad-control-clear-bg
+
+      +media-screen-1280x800
+        width: calc(66.666% + 10px)
+        line-height: 42px
+        border-width: 4px
+
+      +media-screen-1024x768
+        width: calc(66.666% + 10px)
+        line-height: 42px
+        border-width: 4px
+
+      +media-screen-1024x600
+        width: calc(66.666% + 10px)
+        line-height: 32px
+        border-width: 4px

@@ -7,8 +7,20 @@
 // VENDOR...............................
 //
 // HELPERS..............................Variables, mixins, elements
+//  $Fonts..............................Offline and online fonts
+//  $Settings...........................Site settings
+//  $Mixins.............................Site mixins
+//  $Reset..............................Default styles reset
+//  $Base...............................Some general styles
 //
 // BLOCKS...............................Page components
+//  $Body...............................
+//  $Container..........................
+//  $Main...............................
+//  $Header.............................
+//  $Menu...............................
+//  $Invoice............................
+//  $Numpad.............................
 
 
 ////////////////////////////////////////
@@ -20,7 +32,44 @@
 /// $HELPERS
 ////////////////////////////////////////
 
+// $Fonts
+@import './helpers/fonts'
+
+// $Settings
+@import './helpers/settings'
+
+// $Mixins
+@import './helpers/mixins'
+
+// $Reset
+@import './helpers/reset'
+
+// $Base
+@import './helpers/base'
+
 
 ////////////////////////////////////////
 /// $BLOCKS
 ////////////////////////////////////////
+
+
+// $Body
+@import './blocks/pos-body'
+
+// $Container
+@import './blocks/pos-container'
+
+// $Main
+@import './blocks/pos-main'
+
+// $Header
+@import './blocks/pos-header'
+
+// $Menu
+@import './blocks/pos-menu'
+
+// $Invoice
+@import './blocks/pos-invoice'
+
+// $Numpad
+@import './blocks/pos-numpad'
