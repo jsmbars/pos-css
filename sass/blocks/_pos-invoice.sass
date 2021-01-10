@@ -336,17 +336,18 @@ $block: ".pos-invoice"
     padding: 2px 5px
     cursor: pointer
     user-select: none
+    background-color: $c-invoice-item-bg
     transition: all .2s
 
     &:hover
-      background-color: $c-invoice-item-hover
+      background-color: $c-invoice-item-hover-bg
 
     &:not(:last-child)
       margin-bottom: 10px
 
     // $Invoice item STATE: active
     &.is-active
-      background-color: $c-invoice-item-active
+      background-color: $c-invoice-item-active-bg
 
 
   // $Invoice item info
@@ -433,6 +434,34 @@ $block: ".pos-invoice"
 
     &:not(:last-child)
       margin-bottom: 5px
+
+
+  // $Invoice item meta group
+  &__item-meta-group
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 5px
+
+
+  // $Invoice item meta label
+  &__item-meta-label
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 15px
+    font-weight: 700
+    color: $c-invoice-item-meta-label-text
+
+    // $Invoice item meta label MOD: role take off
+    &_role_take-off
+      color: $c-invoice-item-meta-label-take-off-text
+
+    // $Invoice item meta label MOD: role add on
+    &_role_add-on
+      color: $c-invoice-item-meta-label-add-on-text
 
 
   // $Invoice item meta text
