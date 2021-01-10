@@ -28,6 +28,9 @@ $block: ".pos-item"
     width: 100%
     margin-bottom: 28px
 
+    +media-screen-1024x600
+      margin-bottom: 16px
+
 
   // $Item image
   &__image
@@ -40,6 +43,11 @@ $block: ".pos-item"
     border-radius: 15px
     background-color: $c-item-image-bg
     overflow: hidden
+
+    +media-screen-1024x600
+      width: 70px
+      height: 70px
+      border-radius: 9px
 
     & img
       display: block
@@ -54,6 +62,9 @@ $block: ".pos-item"
     display: block
     width: calc(100% - 250px)
     padding: 0 20px 0 40px
+
+    +media-screen-1024x600
+      width: calc(100% - 180px)
 
 
   // $Item title
@@ -74,6 +85,9 @@ $block: ".pos-item"
     color: $c-item-title-text
     text-transform: uppercase
 
+    +media-screen-1024x600
+      font-size: 35px
+
 
   // $Item subtitle
   &__subtitle
@@ -86,6 +100,9 @@ $block: ".pos-item"
     color: $c-item-subtitle-text
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 25px
+
 
   // $Item details
   &__details
@@ -94,6 +111,8 @@ $block: ".pos-item"
     display: block
     width: 140px
 
+    +media-screen-1024x600
+      width: 110px
 
   // $Item meta
   &__meta
@@ -112,6 +131,10 @@ $block: ".pos-item"
     color: $c-item-meta-label-text
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 16px
+
 
   // $Item meta text
   &__meta-text
@@ -124,6 +147,10 @@ $block: ".pos-item"
     color: $c-item-meta-text
     text-transform: uppercase
     text-align: center
+
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 16px
 
 
   // $Item options
@@ -142,6 +169,10 @@ $block: ".pos-item"
     margin-bottom: 28px
     border-radius: 12px
     background-color: $c-item-modifiers-bg
+
+    +media-screen-1024x600
+      margin-bottom: 16px
+      border-radius: 7px
 
 
   // $Item modifiers control
@@ -165,6 +196,11 @@ $block: ".pos-item"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 38px
+      height: 50px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -172,6 +208,10 @@ $block: ".pos-item"
       font-size: 24px
       line-height: 24px
       color: $c-item-modifiers-control-icon
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
 
     &:hover
       opacity: .8
@@ -206,6 +246,10 @@ $block: ".pos-item"
     width: calc(100% - 96px)
     padding: 0 12px
     text-align: center
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
+      padding: 0 9px
 
 
   // $Item modifiers scroll
@@ -244,6 +288,12 @@ $block: ".pos-item"
     text-decoration: none
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 119px
+      height: 50px
+      padding: 4px 8px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -252,6 +302,9 @@ $block: ".pos-item"
 
     &:not(:last-child)
       margin-right: 14px
+
+      +media-screen-1024x600
+        margin-right: 8px
 
     // $Item modifier STATE: disabled
     &.is-disabled
@@ -329,6 +382,9 @@ $block: ".pos-item"
     text-align: center
     white-space: nowrap
 
+    +media-screen-1024x600
+      font-size: 17px
+
 
   // $Item modifier group
   &__modifier-group
@@ -351,6 +407,9 @@ $block: ".pos-item"
     color: $c-item-modifier-price-text
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 14px
+
 
   // $Item modifier price
   &__modifier-icon
@@ -370,80 +429,128 @@ $block: ".pos-item"
         content: '\e909'
         font-size: 31px
 
+        +media-screen-1024x600
+          font-size: 20px
+
     #{$block}__modifier_role_tower &
       &:before
         content: '\e916'
         font-size: 35px
+
+        +media-screen-1024x600
+          font-size: 21px
 
     #{$block}__modifier_role_magnum &
       &:before
         content: '\e90e'
         font-size: 39px
 
+        +media-screen-1024x600
+          font-size: 21px
+
     #{$block}__modifier_role_stein &
       &:before
         content: '\e915'
         font-size: 28px
+
+        +media-screen-1024x600
+          font-size: 17px
 
     #{$block}__modifier_role_2-pt-jug &
       &:before
         content: '\e907'
         font-size: 30px
 
+        +media-screen-1024x600
+          font-size: 19px
+
     #{$block}__modifier_role_4-pt-jug &
       &:before
         content: '\e908'
         font-size: 30px
+
+        +media-screen-1024x600
+          font-size: 19px
 
     #{$block}__modifier_role_jug &
       &:before
         content: '\e90c'
         font-size: 30px
 
+        +media-screen-1024x600
+          font-size: 19px
+
     #{$block}__modifier_role_pint &
       &:before
         content: '\e910'
         font-size: 33px
+
+        +media-screen-1024x600
+          font-size: 20px
 
     #{$block}__modifier_role_double &
       &:before
         content: '\e90a'
         font-size: 33px
 
+        +media-screen-1024x600
+          font-size: 20px
+
     #{$block}__modifier_role_splash &
       &:before
         content: '\e914'
         font-size: 21px
+
+        +media-screen-1024x600
+          font-size: 16px
 
     #{$block}__modifier_role_scooner &
       &:before
         content: '\e911'
         font-size: 33px
 
+        +media-screen-1024x600
+          font-size: 20px
+
     #{$block}__modifier_role_half &
       &:before
         content: '\e90b'
         font-size: 21px
+
+        +media-screen-1024x600
+          font-size: 16px
 
     #{$block}__modifier_role_single &
       &:before
         content: '\e912'
         font-size: 21px
 
+        +media-screen-1024x600
+          font-size: 16px
+
     #{$block}__modifier_role_small &
       &:before
         content: '\e913'
         font-size: 20px
+
+        +media-screen-1024x600
+          font-size: 15px
 
     #{$block}__modifier_role_medium &
       &:before
         content: '\e90f'
         font-size: 20px
 
+        +media-screen-1024x600
+          font-size: 15px
+
     #{$block}__modifier_role_large &
       &:before
         content: '\e90d'
         font-size: 20px
+
+        +media-screen-1024x600
+          font-size: 15px
 
 
   // $Item condiments
@@ -457,6 +564,11 @@ $block: ".pos-item"
     margin-bottom: 18px
     padding-left: 1px
 
+    +media-screen-1024x600
+      height: 172px
+      margin-bottom: 11px
+      padding-left: 0
+
 
   // $Item condiments row
   &__condiments-row
@@ -468,6 +580,9 @@ $block: ".pos-item"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1024x600
+        margin-bottom: 8px
 
     &:last-child
       margin-top: auto
@@ -494,6 +609,11 @@ $block: ".pos-item"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      width: calc(25% - 6px)
+      height: 37px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -501,6 +621,10 @@ $block: ".pos-item"
       font-size: 42px
       line-height: 42px
       color: $c-item-condiments-control-icon
+
+      +media-screen-1024x600
+        font-size: 22px
+        line-height: 22px
 
     &:hover
       opacity: .8
@@ -510,6 +634,9 @@ $block: ".pos-item"
 
     &:not(:last-child)
       margin-right: 14px
+
+      +media-screen-1024x600
+        margin-right: 8px
 
     // $Item condiments control STATE: disabled
     // $Item condiments action STATE: disabled
@@ -547,6 +674,9 @@ $block: ".pos-item"
     background-color: $c-item-condiments-control-bg
     border: 5px solid $c-item-condiments-control-border
 
+    +media-screen-1024x600
+      border-width: 4px
+
 
   // $Item condiments actions
   &__condiments-action
@@ -557,6 +687,10 @@ $block: ".pos-item"
     color: $c-item-condiments-action-text
     white-space: nowrap
     background-color: $c-item-condiments-action-bg
+
+    +media-screen-1024x600
+      font-size: 16px
+      line-height: 18px
 
     // $Item condiments action MOD: role take off
     &_role_take-off
@@ -587,6 +721,12 @@ $block: ".pos-item"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      width: calc(25% - 6px)
+      height: 37px
+      padding: 2px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -595,6 +735,9 @@ $block: ".pos-item"
 
     &:not(:last-child)
       margin-right: 14px
+
+      +media-screen-1024x600
+        margin-right: 8px
 
 
     // $Item condiment control STATE: disabled
@@ -641,6 +784,10 @@ $block: ".pos-item"
     text-align: center
     white-space: nowrap
 
+    +media-screen-1024x600
+      font-size: 15px
+      line-height: 17px
+
 
   // $Item condiment price
   &__condiment-price
@@ -652,12 +799,19 @@ $block: ".pos-item"
     color: $c-item-condiment-price-text
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 16px
+
 
   // $Item quantity
   &__quantity
     display: block
     width: 100%
     margin-bottom: 10px
+
+    +media-screen-1024x600
+      margin-bottom: 6px
 
 
   // $Item quantity label
@@ -671,6 +825,11 @@ $block: ".pos-item"
     color: $c-item-quantity-label-text
     text-align: center
     margin-bottom: 5px
+
+    +media-screen-1024x600
+      margin-bottom: 2px
+      font-size: 15px
+      line-height: 17px
 
 
   // $Item quantity group
@@ -701,6 +860,13 @@ $block: ".pos-item"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 40px
+      height: 40px
+      font-size: 30px
+      line-height: 40px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -726,3 +892,11 @@ $block: ".pos-item"
     border-radius: 12px
     background-color: $c-item-quantity-value-bg
     transition: all .2s
+
+    +media-screen-1024x600
+      width: 60px
+      height: 40px
+      font-size: 25px
+      line-height: 32px
+      border-width: 4px
+      border-radius: 7px
