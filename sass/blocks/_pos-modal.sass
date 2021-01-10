@@ -1,0 +1,66 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Modal window
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-modal"
+
+#{$block}
+  position: relative
+  display: block
+  width: 100%
+  max-width: 1024px
+  margin: auto
+  border-radius: 15px
+  background-color: $c-modal-bg
+
+  #{$block}-portal &
+    z-index: 10002
+
+  // $Modal window MOD: role item
+  &_role_item
+    flex-grow: 0
+    flex-shrink: 0
+    width: 777px
+    height: 777px
+
+
+  // $Modal window content
+  &__content
+    display: block
+    width: 100%
+
+    // $Modal window content CONTEXT: Modal window MOD: role item
+    #{$block}_role_item &
+      padding: 12px 16px
+
+
+  @at-root
+    // $Modal window portal
+    &-portal
+
+
+    // $Modal window overlay
+    &-overlay
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 10001
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      overflow-x: hidden
+      overflow-y: auto
+      background-color: rgba(0,0,0,.75)

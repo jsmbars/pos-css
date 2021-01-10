@@ -103,7 +103,6 @@ $block: ".pos-menu"
     // $Menu category STATE: active
     &.is-active
       background-color: $c-menu-category-active-bg
-      cursor: default
 
       &:hover
         opacity: 1
@@ -391,7 +390,6 @@ $block: ".pos-menu"
 
     // $Menu subcategory STATE: active
     &.is-active
-      cursor: default
 
       &:hover
         opacity: 1
@@ -585,6 +583,14 @@ $block: ".pos-menu"
     &:focus
       outline: none
 
+    // $Menu item STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
 
   // $Menu item meta
   &__item-meta
@@ -593,7 +599,7 @@ $block: ".pos-menu"
     font-size: 14px
     line-height: 18px
     font-weight: 300
-    color: $c-menu-item-meta
+    color: $c-menu-item-meta-text
     text-transform: uppercase
     text-align: center
 
