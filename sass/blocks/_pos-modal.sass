@@ -26,6 +26,9 @@ $block: ".pos-modal"
   #{$block}-portal &
     z-index: 10002
 
+  +media-screen-1280x800
+    border-radius: 12px
+
   +media-screen-1024x768
     border-radius: 12px
 
@@ -38,6 +41,9 @@ $block: ".pos-modal"
     flex-shrink: 0
     width: 777px
     height: 777px
+
+    +media-screen-1280x800
+      height: 620px
 
     +media-screen-1024x768
       width: 620px
@@ -56,6 +62,9 @@ $block: ".pos-modal"
     // $Modal window content CONTEXT: Modal window MOD: role item
     #{$block}_role_item &
       padding: 12px 16px
+
+      +media-screen-1280x800
+        padding: 10px 16px
 
       +media-screen-1024x768
         padding: 10px 12px
