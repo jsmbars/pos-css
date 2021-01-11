@@ -28,6 +28,9 @@ $block: ".pos-invoice"
   &_role_message-item
     height: 100%
 
+  // $Invoice MOD: role void-item-select
+  &_role_void-item-select
+
 
   // $Invoice guest buttons
   &__guest-buttons
@@ -185,7 +188,17 @@ $block: ".pos-invoice"
     flex-grow: 1
     flex-shrink: 1
     width: 100%
+    height: calc(100% - 86px)
     overflow: hidden
+
+    +media-screen-1280x800
+      height: calc(100% - 64px)
+
+    +media-screen-1024x768
+      height: calc(100% - 64px)
+
+    +media-screen-1024x600
+      height: calc(100% - 50px)
 
 
   // $Invoice panel footer

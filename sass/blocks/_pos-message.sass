@@ -280,7 +280,7 @@ $block: ".pos-message"
       +media-screen-1024x600
         margin-right: 6px
 
-    // $Menu item STATE: disabled
+    // $Message preset STATE: disabled
     &.is-disabled
       cursor: default
       opacity: .4
@@ -358,11 +358,11 @@ $block: ".pos-message"
     font-size: 21px
     line-height: 25px
     font-weight: 700
-    color: $c-message-button-text
+    color: $c-message-action-text
     text-align: center
     text-transform: uppercase
     border-radius: 12px
-    background-color: $c-message-button-bg
+    background-color: $c-message-action-bg
     cursor: pointer
     user-select: none
     transition: all .2s
@@ -382,10 +382,10 @@ $block: ".pos-message"
       border-radius: 9px
 
     +media-screen-1024x600
-      width: 110px
+      width: 100px
       height: 40px
-      font-size: 16px
-      line-height: 18px
+      font-size: 15px
+      line-height: 17px
       border-radius: 7px
 
     &:hover
@@ -393,3 +393,11 @@ $block: ".pos-message"
 
     &:focus
       outline: none
+
+    // $Message action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
