@@ -39,6 +39,10 @@ $block: ".pos-void"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x768
+      font-size: 37px
+      line-height: 45px
+
     +media-screen-1024x600
       font-size: 30px
       line-height: 36px
@@ -53,6 +57,9 @@ $block: ".pos-void"
     width: 100%
     padding-top: 50px
 
+    +media-screen-1024x768
+      padding-top: 37px
+
     +media-screen-1024x600
       padding-top: 30px
 
@@ -63,6 +70,9 @@ $block: ".pos-void"
     flex-shrink: 0
     display: block
     width: 402px
+
+    +media-screen-1024x768
+      width: 320px
 
     +media-screen-1024x600
       width: 320px
@@ -78,6 +88,9 @@ $block: ".pos-void"
     align-items: stretch
     width: 100%
     padding-left: 43px
+
+    +media-screen-1024x768
+      padding-left: 34px
 
     +media-screen-1024x600
       padding-left: 34px
@@ -105,6 +118,12 @@ $block: ".pos-void"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x768
+      height: 46px
+      font-size: 16px
+      line-height: 18px
+      border-radius: 9px
+
     +media-screen-1024x600
       height: 40px
       font-size: 15px
@@ -119,6 +138,9 @@ $block: ".pos-void"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1024x768
+        margin-bottom: 12px
 
       +media-screen-1024x600
         margin-bottom: 10px
