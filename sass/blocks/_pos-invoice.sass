@@ -128,6 +128,9 @@ $block: ".pos-invoice"
       margin-bottom: 6px
       border-radius: 7px
 
+      #{$block}_role_message-item &
+        height: 100%
+
 
   // $Invoice panel header
   &__panel-header
@@ -292,6 +295,9 @@ $block: ".pos-invoice"
       +media-screen-1024x600
         width: 51%
 
+        #{$block}_role_message-item &
+          width: 85%
+
     &:nth-child(2)
       width: 10%
 
@@ -321,6 +327,9 @@ $block: ".pos-invoice"
 
       +media-screen-1024x600
         width: 19%
+
+        #{$block}_role_message-item &
+          width: 15%
 
 
   // $Invoice list scroll
@@ -384,6 +393,9 @@ $block: ".pos-invoice"
     +media-screen-1024x600
       width: 51%
 
+      #{$block}_role_message-item &
+        width: 85%
+
 
   // $Invoice item qty
   &__item-qty
@@ -398,6 +410,9 @@ $block: ".pos-invoice"
 
     +media-screen-1024x600
       width: 11%
+
+      #{$block}_role_message-item &
+        width: 15%
 
 
   // $Invoice item price

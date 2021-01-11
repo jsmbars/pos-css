@@ -39,8 +39,14 @@ $block: ".pos-keyboard"
     &:not(:last-child)
       margin-bottom: 10px
 
+      +media-screen-1024x600
+        margin-bottom: 6px
+
     &:last-child
       margin-top: 20px
+
+      +media-screen-1024x600
+        margin-top: 12px
 
 
   // $Keyboard control
@@ -67,6 +73,14 @@ $block: ".pos-keyboard"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 36px
+      height: 36px
+      font-size: 25px
+      line-height: 36px
+      border-radius: 7px
+
+
     &:hover
       opacity: .8
 
@@ -76,6 +90,9 @@ $block: ".pos-keyboard"
     &:not(:last-child)
       margin-right: 10px
 
+      +media-screen-1024x600
+        margin-right: 6px
+
     // $Keyboard control MOD: role shift
     // $Keyboard control MOD: role backspace
     &_role_shift,
@@ -84,6 +101,9 @@ $block: ".pos-keyboard"
       font-size: 0
       line-height: 0
       color: transparent
+
+      +media-screen-1024x600
+        width: 89px
 
       &:before
         content: ''
@@ -97,15 +117,26 @@ $block: ".pos-keyboard"
         font-size: 30px
         line-height: 30px
 
+        +media-screen-1024x600
+          font-size: 20px
+          line-height: 20px
+
     &_role_backspace
       &:before
         content: '\e917'
         font-size: 42px
         line-height: 30px
 
+        +media-screen-1024x600
+          font-size: 28px
+          line-height: 20px
+
     // $Keyboard control MOD: role space
     &_role_space
       width: 453px
+
+      +media-screen-1024x600
+        width: 362px
 
 
 
