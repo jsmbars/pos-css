@@ -1,0 +1,111 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Keyboard
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-keyboard"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Keyboard MOD: role message
+  &_role_message
+
+
+  // $Keyboard controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Keyboard controls row
+  &__controls-row
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    &:last-child
+      margin-top: 20px
+
+
+  // $Keyboard control
+  &__control
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 63px
+    height: 63px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 42px
+    line-height: 63px
+    font-weight: 500
+    color: $c-keyboard-control-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-keyboard-control-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 10px
+
+    // $Keyboard control MOD: role shift
+    // $Keyboard control MOD: role backspace
+    &_role_shift,
+    &_role_backspace
+      width: 112px
+      font-size: 0
+      line-height: 0
+      color: transparent
+
+      &:before
+        content: ''
+        display: inline-block
+        font-family: icons
+        color: $c-keyboard-control-icon
+
+    &_role_shift
+      &:before
+        content: '\e918'
+        font-size: 30px
+        line-height: 30px
+
+    &_role_backspace
+      &:before
+        content: '\e917'
+        font-size: 42px
+        line-height: 30px
+
+    // $Keyboard control MOD: role space
+    &_role_space
+      width: 453px
+
+
+

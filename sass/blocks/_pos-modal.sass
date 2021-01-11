@@ -36,7 +36,9 @@ $block: ".pos-modal"
     border-radius: 9px
 
   // $Modal window MOD: role item
-  &_role_item
+  // $Modal window MOD: role message
+  &_role_item,
+  &_role_message
     flex-grow: 0
     flex-shrink: 0
     width: 777px
@@ -58,6 +60,7 @@ $block: ".pos-modal"
   &__content
     display: block
     width: 100%
+    height: 100%
 
     // $Modal window content CONTEXT: Modal window MOD: role item
     #{$block}_role_item &
@@ -71,6 +74,10 @@ $block: ".pos-modal"
 
       +media-screen-1024x600
         padding: 8px 12px
+
+    // $Modal window content CONTEXT: Modal window MOD: role message
+    #{$block}_role_message &
+      padding: 10px 15px 30px
 
 
   @at-root
