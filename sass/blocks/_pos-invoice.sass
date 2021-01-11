@@ -21,6 +21,13 @@ $block: ".pos-invoice"
   // $Invoice MOD: role main
   &_role_main
 
+  // $Invoice MOD: role message-item-select
+  &_role_message-item-select
+
+  // $Invoice MOD: role message-item
+  &_role_message-item
+    height: 100%
+
 
   // $Invoice guest buttons
   &__guest-buttons
@@ -104,6 +111,9 @@ $block: ".pos-invoice"
     background-color: $c-invoice-panel-bg
     overflow: hidden
 
+    #{$block}_role_message-item &
+      height: 100%
+
     +media-screen-1280x800
       height: 385px
       border-radius: 9px
@@ -113,10 +123,16 @@ $block: ".pos-invoice"
       margin-bottom: 6px
       border-radius: 9px
 
+      #{$block}_role_message-item &
+        height: 100%
+
     +media-screen-1024x600
       height: 265px
       margin-bottom: 6px
       border-radius: 7px
+
+      #{$block}_role_message-item &
+        height: 100%
 
 
   // $Invoice panel header
@@ -241,6 +257,10 @@ $block: ".pos-invoice"
     height: 25px
     padding: 0 5px
 
+    +media-screen-1024x768
+      #{$block}_role_message-item &
+        height: 20px
+
     +media-screen-1024x600
       height: 20px
 
@@ -272,11 +292,21 @@ $block: ".pos-invoice"
       padding-left: 15px
       text-align: left
 
+      #{$block}_role_message-item &
+        width: 85%
+        padding-left: 0
+
       +media-screen-1024x768
         width: 51%
 
+        #{$block}_role_message-item &
+          width: 85%
+
       +media-screen-1024x600
         width: 51%
+
+        #{$block}_role_message-item &
+          width: 85%
 
     &:nth-child(2)
       width: 10%
@@ -299,11 +329,20 @@ $block: ".pos-invoice"
     &:nth-child(4)
       width: 16%
 
+      #{$block}_role_message-item &
+        width: 15%
+
       +media-screen-1024x768
         width: 19%
 
+        #{$block}_role_message-item &
+          width: 15%
+
       +media-screen-1024x600
         width: 19%
+
+        #{$block}_role_message-item &
+          width: 15%
 
 
   // $Invoice list scroll
@@ -342,6 +381,10 @@ $block: ".pos-invoice"
     &:hover
       background-color: $c-invoice-item-hover-bg
 
+      #{$block}_role_message-item &
+        cursor: default
+        background-color: $c-invoice-item-bg
+
     &:not(:last-child)
       margin-bottom: 10px
 
@@ -354,11 +397,20 @@ $block: ".pos-invoice"
   &__item-info
     width: 58%
 
+    #{$block}_role_message-item &
+      width: 85%
+
     +media-screen-1024x768
       width: 51%
 
+      #{$block}_role_message-item &
+        width: 85%
+
     +media-screen-1024x600
       width: 51%
+
+      #{$block}_role_message-item &
+        width: 85%
 
 
   // $Invoice item qty
@@ -366,11 +418,20 @@ $block: ".pos-invoice"
     width: 10%
     text-align: center
 
+    #{$block}_role_message-item &
+      width: 15%
+
     +media-screen-1024x768
       width: 11%
 
+      #{$block}_role_message-item &
+        width: 15%
+
     +media-screen-1024x600
       width: 11%
+
+      #{$block}_role_message-item &
+        width: 15%
 
 
   // $Invoice item price

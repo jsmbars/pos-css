@@ -1,0 +1,117 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Switch
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-switch"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Switch MOD: role message
+  &_role_message
+
+
+  // $Switch controls
+  &__controls
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Switch control
+  &__control
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 136px
+    height: 54px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-switch-control-text
+    text-align: center
+    text-transform: uppercase
+    border: 1px solid $c-switch-control-border
+    background-color: $c-switch-control-bg
+    cursor: pointer
+    user-select: none
+    opacity: 0.4
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 42px
+      font-size: 18px
+      line-height: 21px
+
+    +media-screen-1024x768
+      width: 108px
+      height: 40px
+      font-size: 16px
+      line-height: 18px
+
+    +media-screen-1024x600
+      width: 108px
+      height: 32px
+      font-size: 16px
+      line-height: 18px
+
+    &:hover
+      opacity: .6
+
+    &:focus
+      outline: none
+
+    &:first-child
+      border-top-left-radius: 7px
+      border-bottom-left-radius: 7px
+
+      +media-screen-1280x800
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+
+      +media-screen-1024x600
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+
+      +media-screen-1024x600
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+
+    &:last-child
+      border-top-right-radius: 7px
+      border-bottom-right-radius: 7px
+
+      +media-screen-1280x800
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
+
+      +media-screen-1024x600
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
+
+      +media-screen-1024x600
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+
+
+    &.is-active
+      cursor: default
+      opacity: 1

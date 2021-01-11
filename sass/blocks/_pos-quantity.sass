@@ -1,0 +1,117 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Quantity
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-quantity"
+
+#{$block}
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  width: 100%
+
+  // $Quantity MOD: role item
+  &_role_item
+
+
+  // $Quantity control
+  &__control
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 70px
+    height: 70px
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 70px
+    font-weight: 500
+    color: $c-quantity-control-text
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-quantity-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    +media-screen-1280x800
+      width: 50px
+      height: 50px
+      font-size: 38px
+      line-height: 50px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 50px
+      height: 50px
+      font-size: 38px
+      line-height: 50px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 40px
+      height: 40px
+      font-size: 30px
+      line-height: 40px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+
+  // $Quantity value
+  &__value
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 100px
+    height: 70px
+    margin: 0 12px
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-quantity-value-text
+    text-align: center
+    border: 5px solid $c-quantity-value-border
+    border-radius: 12px
+    background-color: $c-quantity-value-bg
+    transition: all .2s
+
+    +media-screen-1280x800
+      width: 70px
+      height: 50px
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 70px
+      height: 50px
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 60px
+      height: 40px
+      font-size: 25px
+      line-height: 32px
+      border-width: 4px
+      border-radius: 7px

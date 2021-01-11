@@ -1,0 +1,395 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Message
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-message"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+
+
+  // $Message header
+  &__header
+    display: block
+    width: 100%
+
+
+  // $Message title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-message-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 40px
+      line-height: 48px
+
+    +media-screen-1024x768
+      font-size: 37px
+      line-height: 45px
+
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
+
+
+  // $Message item select
+  &__item-select
+    display: block
+    width: 402px
+    margin: 0 auto
+    padding-top: 50px
+
+    +media-screen-1280x800
+      padding-top: 40px
+
+    +media-screen-1024x768
+      width: 320px
+      padding-top: 37px
+
+    +media-screen-1024x600
+      width: 320px
+      padding-top: 30px
+
+
+  // $Message info
+  &__info
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: stretch
+    width: 100%
+    margin-bottom: 28px
+    padding-top: 10px
+
+    +media-screen-1280x800
+      margin-bottom: 22px
+      padding-top: 9px
+
+    +media-screen-1024x768
+      margin-bottom: 21px
+      padding-top: 8px
+
+    +media-screen-1024x600
+      margin-bottom: 16px
+      padding-top: 6px
+
+
+  // $Message box
+  &__box
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    width: 297px
+    height: 88px
+    border-radius: 7px
+    border: 1px solid $c-message-box-border
+    background-color: $c-message-box-bg
+
+    +media-screen-1280x800
+      height: 75px
+      border-radius: 6px
+
+    +media-screen-1024x768
+      width: 237px
+      height: 70px
+      border-radius: 6px
+
+    +media-screen-1024x600
+      width: 237px
+      height: 65px
+      border-radius: 5px
+
+    &:nth-child(1)
+      margin-right: 30px
+      padding: 10px
+
+      +media-screen-1280x800
+        padding: 5px 9px
+
+      +media-screen-1024x768
+        margin-right: 24px
+        padding: 5px 8px
+
+      +media-screen-1024x600
+        margin-right: 24px
+        padding: 3px 6px
+
+    &:nth-child(2)
+      padding: 5px 5px 5px 30px
+
+      +media-screen-1024x768
+        padding: 5px
+
+      +media-screen-1024x600
+        padding: 3px
+
+
+  // $Message box-scroll
+  &__box-scroll
+    display: block
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+
+  &__box-scroll-content
+    display: block
+    width: 100%
+
+
+  // $Message text
+  &__text
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 18px
+    font-weight: 500
+    color: $c-message-text
+    font-style: italic
+
+    +media-screen-1280x800
+      font-size: 13px
+      line-height: 15px
+
+    +media-screen-1024x768
+      font-size: 13px
+      line-height: 15px
+
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 15px
+
+
+  // $Message controls
+  &__controls
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Message switch
+  &__switch
+    display: block
+    width: 100%
+
+
+  // $Message presets
+  &__presets
+    display: block
+    width: 623px
+    margin: 0 auto
+    padding-top: 45px
+
+    +media-screen-1280x800
+      padding-top: 36px
+
+    +media-screen-1024x768
+      width: 498px
+      padding-top: 33px
+
+    +media-screen-1024x600
+      width: 498px
+      padding-top: 27px
+
+
+  // $Message presets row
+  &__presets-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 7px
+
+      +media-screen-1024x768
+        margin-bottom: 6px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
+
+
+  // $Message preset
+  &__preset
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 203px
+    height: 77px
+    border-radius: 12px
+    background-color: $c-message-preset-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 60px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 162px
+      height: 57px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 162px
+      height: 42px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 7px
+
+      +media-screen-1024x768
+        margin-right: 6px
+
+      +media-screen-1024x600
+        margin-right: 6px
+
+    // $Menu item STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Message preset test
+  &__preset-text
+    display: block
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-message-preset-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 18px
+      line-height: 21px
+
+    +media-screen-1024x768
+      font-size: 16px
+      line-height: 18px
+
+    +media-screen-1024x600
+      font-size: 16px
+      line-height: 18px
+
+
+  // $Message keyboard
+  &__keyboard
+    display: block
+    width: 100%
+    padding-top: 25px
+
+    +media-screen-1280x800
+      padding-top: 22px
+
+    +media-screen-1024x768
+      padding-top: 22px
+
+    +media-screen-1024x600
+      padding-top: 18px
+
+
+  // $Message actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 670px
+    margin: auto auto 0
+
+    +media-screen-1024x768
+      width: 536px
+
+    +media-screen-1024x600
+      width: 536px
+
+
+  // $Message action
+  &__action
+    display: block
+    width: 140px
+    height: 63px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-message-button-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-message-button-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      width: 120px
+      height: 50px
+      font-size: 18px
+      line-height: 21px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 110px
+      height: 46px
+      font-size: 16px
+      line-height: 18px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 110px
+      height: 40px
+      font-size: 16px
+      line-height: 18px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
