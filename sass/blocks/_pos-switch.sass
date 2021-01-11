@@ -56,6 +56,11 @@ $block: ".pos-switch"
     opacity: 0.4
     transition: all .2s
 
+    +media-screen-1280x800
+      height: 42px
+      font-size: 18px
+      line-height: 21px
+
     +media-screen-1024x768
       width: 108px
       height: 40px
@@ -78,6 +83,10 @@ $block: ".pos-switch"
       border-top-left-radius: 7px
       border-bottom-left-radius: 7px
 
+      +media-screen-1280x800
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+
       +media-screen-1024x600
         border-top-left-radius: 6px
         border-bottom-left-radius: 6px
@@ -89,6 +98,10 @@ $block: ".pos-switch"
     &:last-child
       border-top-right-radius: 7px
       border-bottom-right-radius: 7px
+
+      +media-screen-1280x800
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
 
       +media-screen-1024x600
         border-top-right-radius: 6px

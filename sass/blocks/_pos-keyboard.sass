@@ -39,6 +39,9 @@ $block: ".pos-keyboard"
     &:not(:last-child)
       margin-bottom: 10px
 
+      +media-screen-1280x800
+        margin-bottom: 9px
+
       +media-screen-1024x768
         margin-bottom: 8px
 
@@ -47,6 +50,9 @@ $block: ".pos-keyboard"
 
     &:last-child
       margin-top: 20px
+
+      +media-screen-1280x800
+        margin-bottom: 18px
 
       +media-screen-1024x768
         margin-top: 16px
@@ -79,6 +85,13 @@ $block: ".pos-keyboard"
     user-select: none
     transition: all .2s
 
+    +media-screen-1280x800
+      width: 48px
+      height: 48px
+      font-size: 33px
+      line-height: 48px
+      border-radius: 9px
+
     +media-screen-1024x768
       width: 46px
       height: 46px
@@ -87,10 +100,10 @@ $block: ".pos-keyboard"
       border-radius: 9px
 
     +media-screen-1024x600
-      width: 36px
-      height: 36px
-      font-size: 25px
-      line-height: 36px
+      width: 35px
+      height: 35px
+      font-size: 24px
+      line-height: 35px
       border-radius: 7px
 
 
@@ -102,6 +115,9 @@ $block: ".pos-keyboard"
 
     &:not(:last-child)
       margin-right: 10px
+
+      +media-screen-1280x800
+        margin-right: 9px
 
       +media-screen-1024x768
         margin-right: 8px
@@ -136,13 +152,17 @@ $block: ".pos-keyboard"
         font-size: 30px
         line-height: 30px
 
+        +media-screen-1280x800
+          font-size: 24px
+          line-height: 24px
+
         +media-screen-1024x768
           font-size: 22px
           line-height: 22px
 
         +media-screen-1024x600
-          font-size: 20px
-          line-height: 20px
+          font-size: 18px
+          line-height: 18px
 
     &_role_backspace
       &:before
@@ -150,13 +170,17 @@ $block: ".pos-keyboard"
         font-size: 42px
         line-height: 30px
 
+        +media-screen-1280x800
+          font-size: 34px
+          line-height: 26px
+
         +media-screen-1024x768
           font-size: 30px
           line-height: 24px
 
         +media-screen-1024x600
-          font-size: 28px
-          line-height: 20px
+          font-size: 24px
+          line-height: 18px
 
     // $Keyboard control MOD: role space
     &_role_space
