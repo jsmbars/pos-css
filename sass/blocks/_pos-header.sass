@@ -20,27 +20,72 @@ $block: ".pos-header"
   justify-content: flex-start
   align-items: center
   width: 100%
-  height: 48px
-  padding: 10px 22px
-  background-color: $c-header-bg
-  border-radius: 12px
-
-  +media-screen-1280x800
-    height: 35px
-    border-radius: 9px
+  padding: 7px 12px
 
   +media-screen-1024x768
-    height: 35px
-    padding: 5px 15px
-    border-radius: 9px
+    padding: 6px 10px
 
   +media-screen-1024x600
-    height: 30px
-    padding: 5px 15px
-    border-radius: 7px
+    padding: 6px 10px
 
   // $Header MOD: role main
   &_role_main
+
+
+  // $Header area
+  &__area
+    display: block
+
+    // $Header area MOD: role info
+    &_role_info
+      flex-grow: 1
+      flex-shrink: 1
+      width: calc(100% - 402px)
+      padding-right: 12px
+
+      +media-screen-1024x768
+        width: calc(100% - 320px)
+
+      +media-screen-1024x600
+        width: calc(100% - 320px)
+
+    // $Header area MOD: role actions
+    &_role_actions
+      flex-grow: 0
+      flex-shrink: 0
+      width: 402px
+
+      +media-screen-1024x768
+        width: 320px
+
+      +media-screen-1024x600
+        width: 320px
+
+
+  // $Header info
+  &__info
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    height: 48px
+    padding: 10px 22px
+    background-color: $c-header-info-bg
+    border-radius: 12px
+
+    +media-screen-1280x800
+      height: 35px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      height: 35px
+      padding: 5px 15px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      height: 30px
+      padding: 5px 15px
+      border-radius: 7px
 
 
   // $Header sidebar toggle
@@ -86,8 +131,8 @@ $block: ".pos-header"
         line-height: 20px
 
 
-  // $Header info
-  &__info
+  // $Header labels
+  &__labels
     flex-grow: 1
     flex-shrink: 1
     display: flex
@@ -103,8 +148,8 @@ $block: ".pos-header"
       padding: 0 40px
 
 
-  // $Header info item
-  &__info-item
+  // $Header label
+  &__label
     flex-grow: 0
     flex-shrink: 0
     display: block
@@ -112,7 +157,7 @@ $block: ".pos-header"
     font-size: 21px
     line-height: 1
     font-weight: 500
-    color: $c-header-text
+    color: $c-header-label-text
     text-align: center
     white-space: nowrap
 
@@ -199,3 +244,78 @@ $block: ".pos-header"
         right: 8px
         font-size: 14px
         line-height: 20px
+
+    // $Header search toggle STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Header actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+
+  // $Header action
+  &__action
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    height: 48px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 48px
+    font-weight: 500
+    color: $c-header-action-text
+    text-align: center
+    border-radius: 12px
+    background-color: $c-header-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 35px
+      font-size: 17px
+      line-height: 35px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      height: 35px
+      font-size: 16px
+      line-height: 35px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      height: 30px
+      font-size: 16px
+      line-height: 30px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 5px
+
+    // $Header action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
