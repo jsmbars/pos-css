@@ -1,0 +1,352 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Search
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-search"
+
+#{$block}
+  display: block
+  width: 100%
+  padding: 10px 15px
+
+  +media-screen-1280x800
+    padding: 9px 15px
+
+  +media-screen-1024x768
+    padding: 9px 12px
+
+  +media-screen-1024x600
+    padding: 8px 12px
+
+
+  // $Search header
+  &__header
+    display: block
+    width: 100%
+
+
+  // $Search title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-search-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 40px
+      line-height: 48px
+
+    +media-screen-1024x768
+      font-size: 37px
+      line-height: 45px
+
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
+
+  // $Search products
+  &__products
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 733px
+    margin: 0 auto
+    padding-top: 30px
+    border-radius: 12px
+    background-color: $c-search-products-bg
+
+    +media-screen-1280x800
+      padding-top: 24px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 586px
+      padding-top: 22px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 586px
+      padding-top: 18px
+      border-radius: 7px
+
+
+  // $Search products control
+  &__products-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 48px
+    height: 77px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-search-products-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 38px
+      height: 57px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 38px
+      height: 46px
+      border-radius: 7px
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 24px
+      line-height: 24px
+      color: $c-search-products-control-icon
+
+      +media-screen-1280x800
+        font-size: 19px
+        line-height: 19px
+
+      +media-screen-1024x768
+        font-size: 18px
+        line-height: 18px
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Search products control STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Search products control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $Search products control MOD: role next
+    &_role_next
+      &:before
+        content: '\e902'
+
+
+  // $Search products list
+  &__products-list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 96px)
+    padding: 0 7px
+    text-align: center
+
+    +media-screen-1024x768
+      width: calc(100% - 76px)
+      padding: 0 6px
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
+      padding: 0 6px
+
+
+  // $Search products scroll
+  &__products-scroll
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    text-align: center
+
+
+  // $Search products row
+  &__products-row
+    display: inline-flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Search product
+  &__product
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 203px
+    height: 77px
+    padding: 4px 0
+    border-radius: 12px
+    background-color: $c-search-product-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 162px
+      height: 57px
+      padding: 3px 0
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      padding: 2px 0
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 7px
+
+      +media-screen-1024x768
+        margin-right: 6px
+
+      +media-screen-1024x600
+        margin-right: 6px
+
+    // $Search product STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Search product meta
+  &__product-meta
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 18px
+    font-weight: 300
+    color: $c-search-product-meta-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 11px
+      line-height: 13px
+
+    +media-screen-1024x768
+      font-size: 11px
+      line-height: 13px
+
+    +media-screen-1024x600
+      font-size: 9px
+      line-height: 11px
+
+
+  // $Search product text
+  &__product-text
+    display: block
+    padding: 4px 0
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-search-product-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 15px
+      line-height: 17px
+
+    +media-screen-1024x768
+      padding: 3px 0
+      font-size: 15px
+      line-height: 17px
+
+    +media-screen-1024x600
+      padding: 2px 0
+      font-size: 13px
+      line-height: 15px
+
+
+  // $Search controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Search field
+  &__field
+    display: block
+    width: 436px
+    margin: 0 auto
+    padding-top: 30px
+
+    +media-screen-1280x800
+      padding-top: 24px
+
+    +media-screen-1024x768
+      width: 348px
+      padding-top: 22px
+
+    +media-screen-1024x600
+      width: 348px
+      padding-top: 18px
+
+
+  // $Search keyboard
+  &__keyboard
+    display: block
+    width: 100%
+    padding-top: 30px
+
+    +media-screen-1280x800
+      padding-top: 24px
+
+    +media-screen-1024x768
+      padding-top: 22px
+
+    +media-screen-1024x600
+      padding-top: 18px
