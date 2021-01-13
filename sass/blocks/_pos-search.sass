@@ -19,6 +19,9 @@ $block: ".pos-search"
   width: 100%
   padding: 10px 15px
 
+  +media-screen-1024x600
+    padding: 8px 12px
+
 
   // $Search header
   &__header
@@ -37,6 +40,10 @@ $block: ".pos-search"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
 
   // $Search products
   &__products
@@ -49,6 +56,11 @@ $block: ".pos-search"
     padding-top: 30px
     border-radius: 12px
     background-color: $c-search-products-bg
+
+    +media-screen-1024x600
+      width: 586px
+      padding-top: 18px
+      border-radius: 7px
 
 
   // $Search products control
@@ -72,6 +84,11 @@ $block: ".pos-search"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 38px
+      height: 46px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -79,6 +96,10 @@ $block: ".pos-search"
       font-size: 24px
       line-height: 24px
       color: $c-search-products-control-icon
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
 
     &:hover
       opacity: .8
@@ -113,6 +134,10 @@ $block: ".pos-search"
     width: calc(100% - 96px)
     padding: 0 7px
     text-align: center
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
+      padding: 0 6px
 
 
   // $Search products scroll
@@ -151,6 +176,12 @@ $block: ".pos-search"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      padding: 2px 0
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -159,6 +190,9 @@ $block: ".pos-search"
 
     &:not(:last-child)
       margin-right: 7px
+
+      +media-screen-1024x600
+        margin-right: 6px
 
     // $Search product STATE: disabled
     &.is-disabled
@@ -180,6 +214,10 @@ $block: ".pos-search"
     text-transform: uppercase
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 9px
+      line-height: 11px
+
 
   // $Search product text
   &__product-text
@@ -192,6 +230,11 @@ $block: ".pos-search"
     color: $c-search-product-text
     text-transform: uppercase
     text-align: center
+
+    +media-screen-1024x600
+      padding: 2px 0
+      font-size: 13px
+      line-height: 15px
 
 
   // $Search controls
@@ -207,9 +250,16 @@ $block: ".pos-search"
     margin: 0 auto
     padding-top: 30px
 
+    +media-screen-1024x600
+      width: 348px
+      padding-top: 18px
+
 
   // $Search keyboard
   &__keyboard
     display: block
     width: 100%
     padding-top: 30px
+
+    +media-screen-1024x600
+      padding-top: 18px
