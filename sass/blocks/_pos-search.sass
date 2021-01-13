@@ -1,0 +1,215 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Search
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-search"
+
+#{$block}
+  display: block
+  width: 100%
+  padding: 10px 15px
+
+
+  // $Search header
+  &__header
+    display: block
+    width: 100%
+
+
+  // $Search title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-search-title-text
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Search products
+  &__products
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 733px
+    margin: 0 auto
+    padding-top: 30px
+    border-radius: 12px
+    background-color: $c-search-products-bg
+
+
+  // $Search products control
+  &__products-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 48px
+    height: 77px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-search-products-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 24px
+      line-height: 24px
+      color: $c-search-products-control-icon
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Search products control STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Search products control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $Search products control MOD: role next
+    &_role_next
+      &:before
+        content: '\e902'
+
+
+  // $Search products list
+  &__products-list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 96px)
+    padding: 0 7px
+    text-align: center
+
+
+  // $Search products scroll
+  &__products-scroll
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    text-align: center
+
+
+  // $Search products row
+  &__products-row
+    display: inline-flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Search product
+  &__product
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 203px
+    height: 77px
+    padding: 4px 0
+    border-radius: 12px
+    background-color: $c-search-product-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 7px
+
+    // $Search product STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Search product meta
+  &__product-meta
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 18px
+    font-weight: 300
+    color: $c-search-product-meta-text
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Search product text
+  &__product-text
+    display: block
+    padding: 4px 0
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-search-product-text
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Search controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Search field
+  &__field
+    display: block
+    width: 436px
+    margin: 0 auto
+    padding-top: 30px
+
+
+  // $Search keyboard
+  &__keyboard
+    display: block
+    width: 100%
+    padding-top: 30px

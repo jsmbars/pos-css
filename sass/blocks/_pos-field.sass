@@ -1,0 +1,93 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Field
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-field"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Field MOD: role search
+  &_role_search
+
+
+  // $Field group
+  &__group
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+
+
+  // $Field box
+  &__box
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    widt: auto
+    height: 40px
+    padding: 0 12px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 38px
+    font-weight: 500
+    color: $c-field-box-text
+    white-space: nowrap
+    border: 1px solid $c-field-box-border
+    border-radius: 7px
+    background-color: $c-field-box-bg
+    overflow: hidden
+
+    &:not(:last-child)
+      margin-right: 12px
+
+
+  // $Field action
+  &__action
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 140px
+    height: 40px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 40px
+    font-weight: 700
+    color: $c-field-action-text
+    text-align: center
+    border-radius: 7px
+    background-color: $c-field-action-bg
+    text-transform: uppercase
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Field action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
