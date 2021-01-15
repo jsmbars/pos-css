@@ -6,13 +6,13 @@
 
 //////////////////////////////////////// Colors
 
-$c-body-bg: #FFFCE6
+$c-body-bg: #fffce6
 
 
 $c-main-meta-text: #7f7d72
 $c-main-action-bg: #770c80
 $c-main-action-text: #fdfbed
-$c-main-subtotal-bg: #80A080
+$c-main-subtotal-bg: #80a080
 $c-main-subtotal-text: #fff
 
 $c-header-info-bg: #6984a3
@@ -56,21 +56,32 @@ $c-invoice-item-bg: transparent
 $c-invoice-item-text: #000000
 $c-invoice-item-meta-text: #726f6f
 $c-invoice-item-meta-label-text: #726f6f
-$c-invoice-item-meta-label-take-off-text: #84AC6C
-$c-invoice-item-meta-label-add-on-text: #C19393
+$c-invoice-item-meta-label-take-off-text: #84ac6c
+$c-invoice-item-meta-label-add-on-text: #c19393
 $c-invoice-item-price-text: transparentize(#000000, 0.6)
-$c-invoice-item-hover-bg: transparentize(#07967B, 0.7)
-$c-invoice-item-active-bg: transparentize(#07967B, 0.7)
+$c-invoice-item-hover-bg: transparentize(#07967b, 0.7)
+$c-invoice-item-active-bg: transparentize(#07967b, 0.7)
 $c-invoice-info-bg: #023e18
 $c-invoice-table-number-bg: #d06101
 $c-invoice-table-number-text: #fdfbed
 $c-invoice-total-text: #ffffff
 
+$c-numpad-display-bg: transparent
+$c-numpad-display-border: #0c8080
+$c-numpad-display-text: #000000
 $c-numpad-control-bg: #0c8080
 $c-numpad-control-text: #fdfbed
 $c-numpad-control-clear-bg: transparent
 $c-numpad-control-clear-border: #0c8080
 $c-numpad-control-clear-text: #0c8080
+$c-numpad-transaction-display-bg: transparent
+$c-numpad-transaction-display-border: #156E58
+$c-numpad-transaction-display-text: #000000
+$c-numpad-transaction-control-bg: #156E58
+$c-numpad-transaction-control-text: #fdfbed
+$c-numpad-transaction-control-clear-bg: transparent
+$c-numpad-transaction-control-clear-border: #156E58
+$c-numpad-transaction-control-clear-text: #156E58
 
 $c-modal-bg: #fdfbed
 
@@ -129,25 +140,25 @@ $c-quantity-value-border: #797979
 $c-quantity-value-text: #000000
 
 $c-message-title-text: #770c80
-$c-message-box-bg: #FFFFFF
+$c-message-box-bg: #ffffff
 $c-message-box-border: #707070
 $c-message-text: #000000
-$c-message-preset-bg: #07A09A
-$c-message-preset-text: #FDFBED
+$c-message-preset-bg: #07a09a
+$c-message-preset-text: #fdfbed
 $c-message-action-bg: #770c80
-$c-message-action-text: #FDFBED
+$c-message-action-text: #fdfbed
 
 $c-switch-control-bg: #535151
 $c-switch-control-border: #707070
-$c-switch-control-text: #FDFBED
+$c-switch-control-text: #fdfbed
 
 $c-keyboard-control-bg: #969595
-$c-keyboard-control-text: #FDFBED
-$c-keyboard-control-icon: #FDFBED
+$c-keyboard-control-text: #fdfbed
+$c-keyboard-control-icon: #fdfbed
 
 $c-void-title-text: #770c80
 $c-void-action-bg: #770c80
-$c-void-action-text: #FDFBED
+$c-void-action-text: #fdfbed
 
 $c-search-title-text: #770c80
 $c-search-products-bg: transparent
@@ -157,11 +168,49 @@ $c-search-product-bg: #8e8e8e
 $c-search-product-text: #fdfbed
 $c-search-product-meta-text: transparentize(#fdfbed, 0.5)
 
-$c-field-box-bg: transparentize(#FCFCFC, 0.6)
+$c-field-box-bg: transparentize(#fcfcfc, 0.6)
 $c-field-box-border: transparentize(#707070, 0.6)
 $c-field-box-text: #000000
 $c-field-action-bg: transparentize(#006004, 0.6)
-$c-field-action-text: #FDFBED
+$c-field-action-text: #fdfbed
+
+$c-transaction-action-split-bg: #c17a7a
+$c-transaction-action-split-text: #ffffff
+$c-transaction-action-receipt-bg: #770c80
+$c-transaction-action-receipt-text: #ffffff
+$c-transaction-denomination-bg: #80a080
+$c-transaction-denomination-text: #ffffff
+$c-transaction-method-cash-bg: #5d775d
+$c-transaction-method-cash-text: #ffffff
+$c-transaction-method-card-bg: #6984a3
+$c-transaction-method-card-text: #ffffff
+
+$c-pagination-control-bg: #c9caed
+$c-pagination-control-border: #707070
+$c-pagination-control-icon: transparentize(#000000, 0.5)
+$c-pagination-info-bg: transparent
+$c-pagination-info-border: #707070
+$c-pagination-info-text: transparentize(#000000, 0.5)
+
+$c-data-item-total-border: #707070
+$c-data-item-label-total-text: #000000
+$c-data-item-label-cash-text: #7f9f7f
+$c-data-item-label-card-text: #6984a3
+$c-data-item-label-loyalty-text: #6984a3
+$c-data-item-label-deposit-text: #6984a3
+$c-data-item-label-balance-text: #000000
+$c-data-item-label-change-text: #000000
+$c-data-item-value-total-text: #000000
+$c-data-item-value-cash-text: #7f9f7f
+$c-data-item-value-card-text: #6984a3
+$c-data-item-value-loyalty-text: #6984a3
+$c-data-item-value-deposit-text: #6984a3
+$c-data-item-value-balance-bg: #156e58
+$c-data-item-value-balance-text: #ffffff
+$c-data-item-value-balance-active-bg: #f86018
+$c-data-item-value-balance-active-text: #ffffff
+$c-data-item-value-change-text: #058b00
+$c-data-item-value-change-active-text: #f86018
 
 //////////////////////////////////////// Fonts
 

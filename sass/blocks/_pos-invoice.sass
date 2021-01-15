@@ -31,6 +31,9 @@ $block: ".pos-invoice"
   // $Invoice MOD: role void-item-select
   &_role_void-item-select
 
+  // $Invoice MOD: role transaction
+  &_role_transaction
+
 
   // $Invoice panel
   &__panel
@@ -328,7 +331,8 @@ $block: ".pos-invoice"
     &:hover
       background-color: $c-invoice-item-hover-bg
 
-      #{$block}_role_message-item &
+      #{$block}_role_message-item &,
+      #{$block}_role_transaction &
         cursor: default
         background-color: $c-invoice-item-bg
 
@@ -493,7 +497,6 @@ $block: ".pos-invoice"
     align-items: center
     width: 100%
     height: 43px
-    margin-bottom: 7px
     border-radius: 12px
     background-color: $c-invoice-info-bg
     overflow: hidden
@@ -504,12 +507,10 @@ $block: ".pos-invoice"
 
     +media-screen-1024x768
       height: 32px
-      margin-bottom: 6px
       border-radius: 9px
 
     +media-screen-1024x600
       height: 25px
-      margin-bottom: 6px
       border-radius: 7px
 
 

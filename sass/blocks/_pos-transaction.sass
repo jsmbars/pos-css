@@ -1,0 +1,296 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Transaction
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-transaction"
+
+#{$block}
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: stretch
+  width: 100%
+  height: 100%
+  padding: 7px 48px 7px 26px
+
+
+  // $Transaction order
+  &__order
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 402px
+    height: 100%
+
+
+  // $Transaction tender
+  &__tender
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    width: calc(100% - 402px)
+    height: 100%
+
+
+  // $Transaction header actions
+  &__header-actions
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    margin-bottom: 7px
+
+
+  // $Transaction header action
+  &__header-action
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    height: 48px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 48px
+    font-weight: 500
+    color: $c-header-action-text
+    text-align: center
+    border-radius: 12px
+    background-color: $c-header-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 5px
+
+    // $Transaction guest action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Transaction invoice
+  &__invoice
+    display: block
+    width: 100%
+    margin-bottom: 7px
+
+
+  // $Transaction pagination
+  &__pagination
+    display: block
+    width: 100%
+    margin-bottom: 26px
+
+
+  // $Transaction actions
+  &__actions
+    display: block
+    width: 280px
+    margin: 0 auto
+
+
+  // $Transaction action
+  &__action
+    display: block
+    width: 100%
+    height: 98px
+    margin: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 98px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Transaction action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Transaction action MOD: role split
+    &_role_split
+      margin-bottom: 32px
+      color: $c-transaction-action-split-text
+      background-color: $c-transaction-action-split-bg
+
+    // $Transaction action MOD: role receipt
+    &_role_receipt
+      color: $c-transaction-action-receipt-text
+      background-color: $c-transaction-action-receipt-bg
+
+
+  // $Transaction calculation
+  &__calculation
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 280px)
+    padding: 0 78px 0 58px
+
+
+  // $Transaction data
+  &__data
+    display: block
+    width: 100%
+    margin-bottom: 7px
+
+
+  // $Transaction numpad
+  &__numpad
+    display: block
+    width: 100%
+
+
+  // $Transaction options
+  &__options
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 280px
+    padding-top: 103px
+
+
+  // $Transaction denominations
+  &__denominations
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+    margin-bottom: 80px
+
+
+  // $Transaction denomination
+  &__denomination
+    display: block
+    width: 100%
+    height: 98px
+    margin: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 98px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    color: $c-transaction-denomination-text
+    border-radius: 12px
+    background-color: $c-transaction-denomination-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-bottom: 21px
+
+    // $Transaction action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Transaction methods
+  &__methods
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+
+
+  // $Transaction method
+  &__method
+    display: block
+    width: 100%
+    height: 98px
+    margin: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 98px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Transaction action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Transaction action MOD: role cash
+    &_role_cash
+      margin-bottom: 150px
+      color: $c-transaction-method-cash-text
+      background-color: $c-transaction-method-cash-bg
+
+    // $Transaction action MOD: role card
+    &_role_card
+      color: $c-transaction-method-card-text
+      background-color: $c-transaction-method-card-bg
