@@ -20,12 +20,18 @@ $block: ".pos-summary"
   height: 100%
   padding: 50px 175px
 
+  +media-screen-1024x600
+    padding: 30px 140px
+
 
   // $Summary data
   &__data
     display: block
     width: 100%
     margin-bottom: 45px
+
+    +media-screen-1024x600
+      margin-bottom: 25px
 
 
   // $Summary actions
@@ -54,6 +60,12 @@ $block: ".pos-summary"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      height: 115px
+      font-size: 42px
+      line-height: 115px
+      border-radius: 13px
 
     &:hover
       opacity: .8

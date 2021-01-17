@@ -52,6 +52,9 @@ $block: ".pos-data"
     +media-screen-1024x600
       height: 30px
 
+      #{$block}_role_summary &
+        height: 60px
+
     // $Data item MOD: role total
     &_role_total
       height: 60px
@@ -70,6 +73,9 @@ $block: ".pos-data"
       +media-screen-1024x600
         height: 36px
 
+        #{$block}_role_summary &
+          height: 80px
+
     // $Data item MOD: role balance
     // $Data item MOD: role change
     &_role_balance,
@@ -87,6 +93,9 @@ $block: ".pos-data"
 
       +media-screen-1024x600
         height: 42px
+
+        #{$block}_role_summary &
+          height: 80px
 
 
   // $Data item label
@@ -162,6 +171,13 @@ $block: ".pos-data"
 
       #{$block}__item_role_total &
         font-size: 21px
+
+      #{$block}_role_summary &
+        padding-right: 16px
+        font-size: 36px
+
+      #{$block}_role_summary #{$block}__item_role_total &
+        font-size: 36px
 
 
   // $Data item value
@@ -281,4 +297,11 @@ $block: ".pos-data"
         font-size: 24px
         line-height: 42px
         border-radius: 7px
+
+      #{$block}_role_summary &
+        font-size: 42px
+
+      #{$block}_role_summary #{$block}__item_role_total &,
+      #{$block}_role_summary #{$block}__item_role_change &
+        font-size: 48px
 
