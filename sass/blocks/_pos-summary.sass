@@ -20,6 +20,9 @@ $block: ".pos-summary"
   height: 100%
   padding: 50px 175px
 
+  +media-screen-1024x768
+    padding: 37px 140px
+
   +media-screen-1024x600
     padding: 30px 140px
 
@@ -29,6 +32,9 @@ $block: ".pos-summary"
     display: block
     width: 100%
     margin-bottom: 45px
+
+    +media-screen-1024x768
+      margin-bottom: 33px
 
     +media-screen-1024x600
       margin-bottom: 25px
@@ -60,6 +66,12 @@ $block: ".pos-summary"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x768
+      height: 145px
+      font-size: 52px
+      line-height: 145px
+      border-radius: 15px
 
     +media-screen-1024x600
       height: 115px

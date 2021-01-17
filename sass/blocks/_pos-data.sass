@@ -49,6 +49,9 @@ $block: ".pos-data"
     +media-screen-1024x768
       height: 37px
 
+      #{$block}_role_summary &
+        height: 75px
+
     +media-screen-1024x600
       height: 30px
 
@@ -70,6 +73,9 @@ $block: ".pos-data"
       +media-screen-1024x768
         height: 45px
 
+        #{$block}_role_summary &
+          height: 105px
+
       +media-screen-1024x600
         height: 36px
 
@@ -90,6 +96,9 @@ $block: ".pos-data"
 
       +media-screen-1024x768
         height: 52px
+
+        #{$block}_role_summary &
+          height: 105px
 
       +media-screen-1024x600
         height: 42px
@@ -163,6 +172,13 @@ $block: ".pos-data"
 
       #{$block}__item_role_total &
         font-size: 26px
+
+      #{$block}_role_summary &
+        padding-right: 16px
+        font-size: 45px
+
+      #{$block}_role_summary #{$block}__item_role_total &
+        font-size: 45px
 
     +media-screen-1024x600
       width: 96px
@@ -281,6 +297,13 @@ $block: ".pos-data"
         font-size: 30px
         line-height: 52px
         border-radius: 9px
+
+      #{$block}_role_summary &
+        font-size: 52px
+
+      #{$block}_role_summary #{$block}__item_role_total &,
+      #{$block}_role_summary #{$block}__item_role_change &
+        font-size: 60px
 
     +media-screen-1024x600
       width: calc(100% - 96px)
