@@ -1,0 +1,189 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Pagination
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-pagination"
+
+#{$block}
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  width: 100%
+
+  // $Pagination MOD: role transaction
+  &_role_transaction
+
+  // $Pagination STATE: disabled
+  &.is-disabled
+    cursor: default
+    opacity: .4
+
+
+  // $Pagination control
+  &__control
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 84px
+    height: 84px
+    font-size: 0
+    line-height: 0
+    text-align: center
+    border: 3px solid $c-pagination-control-border
+    box-shadow: none
+    background-color: $c-pagination-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    +media-screen-1280x800
+      width: 63px
+      height: 63px
+
+    +media-screen-1024x768
+      width: 63px
+      height: 63px
+
+    +media-screen-1024x600
+      width: 50px
+      height: 50px
+
+    #{$block}.is-disabled &
+      cursor: default
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: $f-sans
+      font-size: 60px
+      line-height: 78px
+      font-weight: 700
+      color: $c-pagination-control-icon
+
+      +media-screen-1280x800
+        font-size: 45px
+        line-height: 57px
+
+      +media-screen-1024x768
+        font-size: 45px
+        line-height: 57px
+
+      +media-screen-1024x600
+        font-size: 36px
+        line-height: 44px
+
+    &:hover
+      opacity: .8
+
+      #{$block}.is-disabled &
+        opacity: 1
+
+    &:focus
+      outline: none
+
+    // $Pagination control MOD: role previous
+    &_role_previous
+      border-top-left-radius: 12px
+      border-bottom-left-radius: 12px
+
+      +media-screen-1280x800
+        border-top-left-radius: 9px
+        border-bottom-left-radius: 9px
+
+      +media-screen-1024x768
+        border-top-left-radius: 9px
+        border-bottom-left-radius: 9px
+
+      +media-screen-1024x600
+        border-top-left-radius: 7px
+        border-bottom-left-radius: 7px
+
+      &:before
+        content: '\003C'
+
+    // $Pagination control MOD: role next
+    &_role_next
+      border-top-right-radius: 12px
+      border-bottom-right-radius: 12px
+
+      +media-screen-1280x800
+        border-top-right-radius: 9px
+        border-bottom-right-radius: 9px
+
+      +media-screen-1024x768
+        border-top-right-radius: 9px
+        border-bottom-right-radius: 9px
+
+      +media-screen-1024x600
+        border-top-right-radius: 7px
+        border-bottom-right-radius: 7px
+
+      &:before
+        content: '\003E'
+
+
+  // $Pagination info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: calc(100% - 168px)
+    height: 84px
+    padding: 0 16px
+    font-family: $f-sans
+    font-size: 40px
+    line-height: 78px
+    font-weight: 700
+    color: $c-pagination-info-text
+    text-align: center
+    white-space: nowrap
+    border-top: 3px solid $c-pagination-info-border
+    border-bottom: 3px solid $c-pagination-info-border
+    background-color: $c-pagination-info-bg
+    transition: all .2s
+
+    +media-screen-1280x800
+      width: calc(100% - 126px)
+      height: 63px
+      padding: 0 12px
+      font-size: 30px
+      line-height: 57px
+
+    +media-screen-1024x768
+      width: calc(100% - 126px)
+      height: 63px
+      padding: 0 12px
+      font-size: 30px
+      line-height: 57px
+
+    +media-screen-1024x600
+      width: calc(100% - 100px)
+      height: 50px
+      padding: 0 12px
+      font-size: 24px
+      line-height: 44px
+
+
+  // $Pagination label
+  &__label
+    display: inline-block
+    text-transform: uppercase
+    margin-right: 10px
+
+
+  // $Pagination value
+  &__value
+    display: inline-block
