@@ -52,11 +52,30 @@ $block: ".pos-numpad"
       border-color: $c-numpad-transaction-display-border
       background-color: $c-numpad-transaction-display-bg
 
+    +media-screen-1024x600
+      height: 36px
+      padding: 0 8px
+      font-size: 24px
+      line-height: 28px
+      border-width: 4px
+      border-radius: 7px
+
+      #{$block}_role_transaction &
+        height: 58px
+        font-size: 36px
+        line-height: 50px
+
     &:not(:last-child)
       margin-bottom: 7px
 
       #{$block}_role_transaction &
         margin-bottom: 10px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
+
+        #{$block}_role_transaction &
+          margin-bottom: 6px
 
 
   // $Numpad controls
@@ -84,6 +103,9 @@ $block: ".pos-numpad"
 
       +media-screen-1024x600
         margin-bottom: 6px
+
+        #{$block}_role_transaction &
+          margin-bottom: 8px
 
 
   // $Numpad control
@@ -136,6 +158,11 @@ $block: ".pos-numpad"
       line-height: 40px
       border-radius: 7px
 
+      #{$block}_role_transaction &
+        height: 72px
+        font-size: 42px
+        line-height: 72px
+
     &:hover
       opacity: .8
 
@@ -156,6 +183,9 @@ $block: ".pos-numpad"
 
       +media-screen-1024x600
         margin-right: 10px
+
+        #{$block}_role_transaction &
+          margin-right: 8px
 
     // $Numpad control MOD: role clear
     &_role_clear
@@ -188,3 +218,9 @@ $block: ".pos-numpad"
         width: calc(66.666% + 10px)
         line-height: 32px
         border-width: 4px
+
+        #{$block}_role_transaction &
+          width: calc(66.666% + 8px)
+          line-height: 64px
+          border-width: 4px
+

@@ -23,6 +23,9 @@ $block: ".pos-transaction"
   height: 100%
   padding: 7px 48px 7px 26px
 
+  +media-screen-1024x600
+    padding: 6px 38px 6px 20px
+
 
   // $Transaction order
   &__order
@@ -32,6 +35,9 @@ $block: ".pos-transaction"
     display: block
     width: 402px
     height: 100%
+
+    +media-screen-1024x600
+      width: 320px
 
 
   // $Transaction tender
@@ -45,6 +51,9 @@ $block: ".pos-transaction"
     width: calc(100% - 402px)
     height: 100%
 
+    +media-screen-1024x600
+      width: calc(100% - 320px)
+
 
   // $Transaction header actions
   &__header-actions
@@ -54,6 +63,9 @@ $block: ".pos-transaction"
     align-items: center
     width: 100%
     margin-bottom: 7px
+
+    +media-screen-1024x600
+      margin-bottom: 6px
 
 
   // $Transaction header action
@@ -77,6 +89,12 @@ $block: ".pos-transaction"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      height: 30px
+      font-size: 16px
+      line-height: 30px
+      border-radius: 7px
 
     &:hover
       opacity: .8
@@ -102,6 +120,9 @@ $block: ".pos-transaction"
     width: 100%
     margin-bottom: 7px
 
+    +media-screen-1024x600
+      margin-bottom: 6px
+
 
   // $Transaction pagination
   &__pagination
@@ -109,12 +130,18 @@ $block: ".pos-transaction"
     width: 100%
     margin-bottom: 26px
 
+    +media-screen-1024x600
+      margin-bottom: 15px
+
 
   // $Transaction actions
   &__actions
     display: block
     width: 280px
     margin: 0 auto
+
+    +media-screen-1024x600
+      width: 224px
 
 
   // $Transaction action
@@ -136,6 +163,12 @@ $block: ".pos-transaction"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 58px
+      font-size: 30px
+      line-height: 58px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -156,6 +189,9 @@ $block: ".pos-transaction"
       color: $c-transaction-action-split-text
       background-color: $c-transaction-action-split-bg
 
+      +media-screen-1024x600
+        margin-bottom: 19px
+
     // $Transaction action MOD: role receipt
     &_role_receipt
       color: $c-transaction-action-receipt-text
@@ -170,12 +206,19 @@ $block: ".pos-transaction"
     width: calc(100% - 280px)
     padding: 0 78px 0 58px
 
+    +media-screen-1024x600
+      width: calc(100% - 224px)
+      padding: 0 62px 0 46px
+
 
   // $Transaction data
   &__data
     display: block
     width: 100%
     margin-bottom: 7px
+
+    +media-screen-1024x600
+      margin-bottom: 6px
 
 
   // $Transaction numpad
@@ -192,6 +235,10 @@ $block: ".pos-transaction"
     width: 280px
     padding-top: 103px
 
+    +media-screen-1024x600
+      width: 224px
+      padding-top: 61px
+
 
   // $Transaction denominations
   &__denominations
@@ -201,6 +248,9 @@ $block: ".pos-transaction"
     align-items: stretch
     width: 100%
     margin-bottom: 80px
+
+    +media-screen-1024x600
+      margin-bottom: 48px
 
 
   // $Transaction denomination
@@ -224,6 +274,12 @@ $block: ".pos-transaction"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 58px
+      font-size: 30px
+      line-height: 58px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -232,6 +288,9 @@ $block: ".pos-transaction"
 
     &:not(:last-child)
       margin-bottom: 21px
+
+      +media-screen-1024x600
+        margin-bottom: 13px
 
     // $Transaction action STATE: disabled
     &.is-disabled
@@ -270,6 +329,12 @@ $block: ".pos-transaction"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 58px
+      font-size: 30px
+      line-height: 58px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -289,6 +354,9 @@ $block: ".pos-transaction"
       margin-bottom: 150px
       color: $c-transaction-method-cash-text
       background-color: $c-transaction-method-cash-bg
+
+      +media-screen-1024x600
+        margin-bottom: 90px
 
     // $Transaction action MOD: role card
     &_role_card
