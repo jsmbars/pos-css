@@ -52,6 +52,19 @@ $block: ".pos-numpad"
       border-color: $c-numpad-transaction-display-border
       background-color: $c-numpad-transaction-display-bg
 
+    +media-screen-1024x768
+      height: 45px
+      padding: 0 8px
+      font-size: 30px
+      line-height: 37px
+      border-width: 4px
+      border-radius: 9px
+
+      #{$block}_role_transaction &
+        height: 73px
+        font-size: 45px
+        line-height: 65px
+
     +media-screen-1024x600
       height: 36px
       padding: 0 8px
@@ -70,6 +83,12 @@ $block: ".pos-numpad"
 
       #{$block}_role_transaction &
         margin-bottom: 10px
+
+      +media-screen-1024x768
+        margin-bottom: 7px
+
+        #{$block}_role_transaction &
+          margin-bottom: 6px
 
       +media-screen-1024x600
         margin-bottom: 6px
@@ -100,6 +119,9 @@ $block: ".pos-numpad"
 
       +media-screen-1024x768
         margin-bottom: 6px
+
+        #{$block}_role_transaction &
+          margin-bottom: 8px
 
       +media-screen-1024x600
         margin-bottom: 6px
@@ -152,6 +174,11 @@ $block: ".pos-numpad"
       line-height: 50px
       border-radius: 9px
 
+      #{$block}_role_transaction &
+        height: 90px
+        font-size: 52px
+        line-height: 90px
+
     +media-screen-1024x600
       height: 40px
       font-size: 30px
@@ -180,6 +207,9 @@ $block: ".pos-numpad"
 
       +media-screen-1024x768
         margin-right: 10px
+
+        #{$block}_role_transaction &
+          margin-right: 8px
 
       +media-screen-1024x600
         margin-right: 10px
@@ -213,6 +243,11 @@ $block: ".pos-numpad"
         width: calc(66.666% + 10px)
         line-height: 42px
         border-width: 4px
+
+        #{$block}_role_transaction &
+          width: calc(66.666% + 8px)
+          line-height: 82px
+          border-width: 4px
 
       +media-screen-1024x600
         width: calc(66.666% + 10px)
