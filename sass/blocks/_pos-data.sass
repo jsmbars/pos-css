@@ -37,6 +37,9 @@ $block: ".pos-data"
     width: 100%
     height: 50px
 
+    +media-screen-1280x800
+      height: 40px
+
     +media-screen-1024x768
       height: 37px
 
@@ -48,6 +51,9 @@ $block: ".pos-data"
       height: 60px
       border-bottom: 3px solid $c-data-item-total-border
 
+      +media-screen-1280x800
+        height: 45px
+
       +media-screen-1024x768
         height: 45px
 
@@ -57,6 +63,9 @@ $block: ".pos-data"
     // $Data item MOD: role balance
     &_role_balance
       height: 70px
+
+      +media-screen-1280x800
+        height: 52px
 
       +media-screen-1024x768
         height: 52px
@@ -107,6 +116,12 @@ $block: ".pos-data"
     // $Data item label CONTEXT: $Data item MOD: role change
     #{$block}__item_role_change &
       color: $c-data-item-label-change-text
+
+    +media-screen-1280x800
+      font-size: 18px
+
+      #{$block}__item_role_total &
+        font-size: 26px
 
     +media-screen-1024x768
       width: 96px
@@ -183,6 +198,21 @@ $block: ".pos-data"
     // $Data item value STATE: active CONTEXT: $Data item MOD: role change
     #{$block}__item_role_change.is-active &
       background-color: $c-data-item-value-change-active-text
+
+    +media-screen-1280x800
+      font-size: 21px
+
+      #{$block}__item_role_total &
+        font-size: 32px
+
+      #{$block}__item_role_total#{$block}__item_adjust_split &
+        font-size: 18px
+
+      #{$block}__item_role_balance &
+        height: 52px
+        font-size: 32px
+        line-height: 52px
+        border-radius: 9px
 
     +media-screen-1024x768
       width: calc(100% - 96px)
