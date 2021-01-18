@@ -1,0 +1,338 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Split
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-split"
+
+#{$block}
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: stretch
+  width: 100%
+  height: 100%
+  padding: 62px 26px 38px
+
+  +media-screen-1280x800
+    padding: 49px 26px 30px
+
+  +media-screen-1024x768
+    padding: 47px 20px 28px
+
+  +media-screen-1024x600
+    padding: 42px 20px 22px
+
+
+  // $Split order
+  &__order
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 402px
+    height: 100%
+
+    +media-screen-1024x768
+      width: 320px
+
+    +media-screen-1024x600
+      width: 320px
+
+
+  // $Split dashboard
+  &__dashboard
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: calc(100% - 804px)
+    height: 100%
+
+    +media-screen-1024x768
+      width: calc(100% - 640px)
+
+    +media-screen-1024x600
+      width: calc(100% - 640px)
+
+
+  // $Split invoice
+  &__invoice
+    display: block
+    width: 100%
+    margin-bottom: 7px
+
+    +media-screen-1024x768
+      margin-bottom: 6px
+
+    +media-screen-1024x600
+      margin-bottom: 6px
+
+
+  // $Split pagination
+  &__pagination
+    display: block
+    width: 100%
+    margin-bottom: 7px
+
+    +media-screen-1024x768
+      margin-bottom: 6px
+
+    +media-screen-1024x600
+      margin-bottom: 6px
+
+
+  // $Split actions
+  &__actions
+    display: block
+    width: 280px
+    margin: 0 auto
+
+    +media-screen-1024x768
+      width: 224px
+
+    +media-screen-1024x600
+      width: 224px
+
+
+  // $Split action
+  &__action
+    display: block
+    width: 100%
+    height: 98px
+    margin: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 98px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 76px
+      font-size: 39px
+      line-height: 76px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      height: 73px
+      font-size: 37px
+      line-height: 73px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      height: 58px
+      font-size: 30px
+      line-height: 58px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Split action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Split action MOD: role receipt
+    &_role_receipt
+      color: $c-split-action-receipt-text
+      background-color: $c-split-action-receipt-bg
+
+    // $Split action MOD: role add
+    &_role_add
+      position: relative
+      z-index: 1
+      font-size: 35px
+      line-height: 43px
+      color: $c-split-action-add-text
+      background-color: $c-split-action-add-bg
+
+      +media-screen-1280x800
+        height: 78px
+        font-size: 31px
+        line-height: 34px
+
+      +media-screen-1024x768
+        height: 75px
+        font-size: 27px
+        line-height: 32px
+
+      +media-screen-1024x600
+        height: 60px
+        font-size: 25px
+        line-height: 28px
+
+      &:after
+        content: '\e902'
+        position: absolute
+        bottom: 8px
+        right: 46px
+        z-index: 2
+        display: block
+        font-family: icons
+        font-size: 34px
+        line-height: 34px
+        color: $c-split-action-add-icon
+
+        +media-screen-1280x800
+          bottom: 6px
+          right: 52px
+          font-size: 30px
+          line-height: 30px
+
+        +media-screen-1024x768
+          bottom: 6px
+          right: 36px
+          font-size: 26px
+          line-height: 26px
+
+        +media-screen-1024x600
+          bottom: 6px
+          right: 48px
+          font-size: 20px
+          line-height: 20px
+
+    // $Split action MOD: role done
+    &_role_done
+      color: $c-split-action-done-text
+      background-color: $c-split-action-done-bg
+
+
+  // $Split controls
+  &__controls
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 280px
+    margin: 0 auto
+    padding-top: 84px
+
+    +media-screen-1280x800
+      padding-top: 67px
+
+    +media-screen-1024x768
+      width: 224px
+      padding-top: 63px
+
+    +media-screen-1024x600
+      width: 224px
+      padding-top: 50px
+
+
+  // $Split control
+  &__control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 198px
+    height: 92px
+    margin: 0 auto
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    box-shadow: none
+    border: 5px solid $c-split-control-border
+    border-radius: 12px
+    background-color: $c-split-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 73px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 158px
+      height: 69px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 158px
+      height: 55px
+      border-width: 4px
+      border-radius: 7px
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 70px
+      line-height: 70px
+      color: $c-split-control-icon
+
+      +media-screen-1280x800
+        font-size: 55px
+        line-height: 55px
+
+      +media-screen-1024x768
+        font-size: 50px
+        line-height: 50px
+
+      +media-screen-1024x600
+        font-size: 40px
+        line-height: 40px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-bottom: 92px
+
+      +media-screen-1280x800
+        margin-bottom: 73px
+
+      +media-screen-1024x768
+        margin-bottom: 69px
+
+      +media-screen-1024x600
+        margin-bottom: 50px
+
+    // $Split control STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Split control MOD: role add-to
+    &_role_add-to
+      &:before
+        content: '\e902'
+
+    // $Split control MOD: role take-off
+    &_role_take-off
+      &:before
+        content: '\e901'
