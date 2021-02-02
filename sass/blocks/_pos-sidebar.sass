@@ -1,0 +1,142 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Sidebar
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-sidebar"
+
+#{$block}
+  display: block
+  width: 410px
+  height: 100%
+  padding: 80px 0 32px
+  background-color: $c-sidebar-bg
+  border-top-left-radius: 12px
+  transition: all .3s
+
+  +media-screen-1280x800
+    padding: 65px 0 24px
+
+  +media-screen-1024x768
+    width: 328px
+    padding: 65px 0 24px
+
+  +media-screen-1024x600
+    width: 328px
+    padding: 55px 0 20px
+
+
+  // $Sidebar menu
+  &__menu
+    display: block
+    width: 100%
+
+
+  // $Sidebar menu list
+  &__menu-list
+    display: block
+    width: 100%
+    list-style: none
+
+
+  // $Sidebar menu item
+  &__menu-item
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 30px
+
+      +media-screen-1280x800
+        margin-bottom: 24px
+
+      +media-screen-1024x768
+        margin-bottom: 22px
+
+      +media-screen-1024x600
+        margin-bottom: 18px
+
+
+  // $Sidebar menu action
+  &__menu-action
+    display: block
+    height: 68px
+    width: 100%
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 66px
+    font-weight: 700
+    color: $c-sidebar-menu-action-text
+    text-align: center
+    text-decoration: none
+    border-top: 1px solid $c-sidebar-menu-action-border
+    border-bottom: 1px solid $c-sidebar-menu-action-border
+    background-color: $c-sidebar-menu-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 54px
+      font-size: 17px
+      line-height: 52px
+
+    +media-screen-1024x768
+      height: 51px
+      font-size: 16px
+      line-height: 49px
+
+    +media-screen-1024x600
+      height: 41px
+      font-size: 16px
+      line-height: 39px
+
+    &:hover
+      text-decoration: none
+      color: $c-sidebar-menu-action-hover-text
+      background-color: $c-sidebar-menu-action-hover-bg
+
+    &:focus
+      outline: none
+
+    // $Sidebar menu action STATE: active
+    &.is-active
+      color: $c-sidebar-menu-action-active-text
+      background-color: $c-sidebar-menu-action-active-bg
+      cursor: default
+
+
+  // $Sidebar overlay
+  &-overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 100
+    display: none
+    padding: 7px 12px 0
+    background-color: $c-sidebar-overlay-bg
+
+    +media-screen-1024x768
+      padding: 6px 10px 0
+
+    +media-screen-1024x600
+      padding: 6px 10px 0
+
+    // $Sidebar overlay STATE: visible
+    &.is-visible
+      display: block
