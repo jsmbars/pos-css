@@ -15,6 +15,7 @@
 $block: ".pos-header"
 
 #{$block}
+  position: relative
   display: flex
   flex-direction: row
   justify-content: flex-start
@@ -30,6 +31,7 @@ $block: ".pos-header"
 
   // $Header MOD: role main
   &_role_main
+    z-index: 200
 
 
   // $Header area
@@ -113,10 +115,12 @@ $block: ".pos-header"
     &:before
       content: '\e904'
       display: block
+      width: 40px
       font-family: icons
       font-size: 40px
       line-height: 30px
       color: $c-header-sidebar-toggle-icon
+      text-align: center
 
       +media-screen-1280x800
         font-size: 28px
@@ -129,6 +133,12 @@ $block: ".pos-header"
       +media-screen-1024x600
         font-size: 24px
         line-height: 20px
+
+    // $Header sidebar toggle STATE: active
+    &.is-active
+      &:before
+        content: '\e900'
+        font-size: 30px
 
 
   // $Header labels
