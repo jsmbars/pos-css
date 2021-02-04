@@ -1,0 +1,118 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Sign out
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-sign-out"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 33px 60px 120px
+
+
+  // $Sign out header
+  &__header
+    display: block
+    width: 100%
+
+
+  // $Sign out title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 56px
+    line-height: 68px
+    font-weight: 800
+    color: $c-sign-out-title-text
+    text-align: center
+
+
+  // $Sign out message
+  &__message
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Sign out message text
+  &__message-text
+    display: block
+    font-family: $f-sans
+    font-size: 56px
+    line-height: 68px
+    font-weight: 800
+    color: $c-sign-out-message-text
+    text-align: center
+
+
+  // $Sign out actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+
+  // $Sign out action
+  &__action
+    display: block
+    width: 280px
+    height: 98px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 98px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sign out action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Sign out action MOD: role change fob
+    &_role_change-fob
+      color: $c-sign-out-action-change-fob-text
+      background-color: $c-sign-out-action-change-fob-bg
+
+    // $Sign out action MOD: role confirm
+    &_role_confirm
+      color: $c-sign-out-action-confirm-text
+      background-color: $c-sign-out-action-confirm-bg
+
