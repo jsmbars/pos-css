@@ -39,10 +39,12 @@ $block: ".pos-modal"
   // $Modal window MOD: role message
   // $Modal window MOD: role void
   // $Modal window MOD: role search
+  // $Modal window MOD: role sign-out
   &_role_item,
   &_role_message,
   &_role_void,
-  &_role_search
+  &_role_search,
+  &_role_sign-out
     flex-grow: 0
     flex-shrink: 0
     width: 777px
@@ -84,3 +86,7 @@ $block: ".pos-modal"
       justify-content: center
       align-items: center
       background-color: $c-modal-overlay-bg
+
+      // $Modal window overlay MOD: type transparent
+      &_type_transparent
+        background-color: transparent
