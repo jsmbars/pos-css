@@ -137,6 +137,23 @@ $block: ".pos-sidebar"
     +media-screen-1024x600
       padding: 6px 10px 0
 
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      z-index: 100
+      display: block
+      width: calc((100vw - 100%) / 2)
+      background-color: $c-sidebar-overlay-bg
+
+    &:before
+      right: 100%
+
+    &:after
+      left: 100%
+
     // $Sidebar overlay STATE: visible
     &.is-visible
       display: block
