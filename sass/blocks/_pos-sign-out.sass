@@ -23,6 +23,9 @@ $block: ".pos-sign-out"
   height: 100%
   padding: 33px 60px 120px
 
+  +media-screen-1280x800
+    padding: 26px 60px 96px
+
   +media-screen-1024x768
     padding: 24px 48px 90px
 
@@ -45,6 +48,10 @@ $block: ".pos-sign-out"
     font-weight: 800
     color: $c-sign-out-title-text
     text-align: center
+
+    +media-screen-1280x800
+      font-size: 45px
+      line-height: 54px
 
     +media-screen-1024x768
       font-size: 42px
@@ -75,6 +82,10 @@ $block: ".pos-sign-out"
     font-weight: 800
     color: $c-sign-out-message-text
     text-align: center
+
+    +media-screen-1280x800
+      font-size: 45px
+      line-height: 54px
 
     +media-screen-1024x768
       font-size: 42px
@@ -113,6 +124,12 @@ $block: ".pos-sign-out"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1280x800
+      height: 76px
+      font-size: 24px
+      line-height: 76px
+      border-radius: 9px
 
     +media-screen-1024x768
       width: 224px
