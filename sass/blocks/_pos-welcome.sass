@@ -1,0 +1,136 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Welcome
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-welcome"
+
+#{$block}
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: calc(100% - 62px)
+  padding: 150px 12px 75px
+
+
+  // $Welcome info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Welcome title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 70px
+    line-height: 86px
+    font-weight: 700
+    color: $c-welcome-title-text
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Welcome title label
+  &__title-label
+    display: block
+    width: 100%
+    margin-bottom: 75px
+
+
+  // $Welcome title site name
+  &__title-site-name
+    display: block
+    width: 100%
+
+
+  // $Welcome actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Welcome action
+  &__action
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 98px
+    height: 98px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    box-shadow: none
+    border: 1px solid $c-welcome-action-border
+    border-radius: 12px
+    background-color: $c-welcome-action-bg
+    cursor: pointer
+    user-select: none
+    overflow: hidden
+    transition: all .2s
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      color: $c-welcome-action-icon
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Menu items control MOD: role users
+    &_role_users
+      margin-right: 40px
+
+      &:before
+        content: '\e919'
+        font-size: 70px
+        line-height: 96px
+
+    // $Menu items control MOD: role sign-in
+    &_role_sign-in
+      margin-left: 40px
+
+      &:before
+        content: '\e91a'
+        font-size: 60px
+        line-height: 96px
+
+
+  // $Welcome version
+  &__version
+    position: absolute
+    bottom: 7px
+    left: 12px
+    right: 12px
+    display: block
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 500
+    color: $c-welcome-version-text
+    text-align: center
