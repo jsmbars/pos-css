@@ -161,14 +161,17 @@ $block: ".pos-header"
       text-align: center
 
       +media-screen-1280x800
+        width: 28px
         font-size: 28px
         line-height: 22px
 
       +media-screen-1024x768
+        width: 28px
         font-size: 28px
         line-height: 22px
 
       +media-screen-1024x600
+        width: 24px
         font-size: 24px
         line-height: 20px
 
@@ -309,6 +312,54 @@ $block: ".pos-header"
 
       &:hover
         opacity: .4
+
+
+  // $Header menu toggle
+  &__menu-toggle
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    border: none
+    background-color: transparent
+    box-shadow: none
+    cursor: pointer
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:before
+      content: '\e91b'
+      display: block
+      width: 30px
+      font-family: icons
+      font-size: 30px
+      line-height: 10px
+      color: $c-header-menu-toggle-icon
+      text-align: center
+
+      +media-screen-1280x800
+        width: 24px
+        font-size: 24px
+        line-height: 10px
+
+      +media-screen-1024x768
+        width: 22px
+        font-size: 22px
+        line-height: 10px
+
+      +media-screen-1024x600
+        width: 20px
+        font-size: 20px
+        line-height: 10px
 
 
   // $Header actions
