@@ -1,0 +1,250 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Welcome
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-welcome"
+
+#{$block}
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: calc(100% - 62px)
+  padding: 150px 12px 75px
+  background-color: $c-welcome-bg
+
+  +media-screen-1280x800
+    height: calc(100% - 49px)
+    padding: 120px 12px 60px
+
+  +media-screen-1024x768
+    height: calc(100% - 47px)
+    padding: 112px 10px 56px
+
+  +media-screen-1024x600
+    height: calc(100% - 42px)
+    padding: 90px 10px 45px
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 1
+    display: block
+    width: calc((100vw - 100%) / 2)
+    background-color: $c-welcome-bg
+
+  &:before
+    right: 100%
+
+  &:after
+    left: 100%
+
+
+  // $Welcome info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Welcome title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 70px
+    line-height: 86px
+    font-weight: 700
+    color: $c-welcome-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 56px
+      line-height: 68px
+
+    +media-screen-1024x768
+      font-size: 52px
+      line-height: 64px
+
+    +media-screen-1024x600
+      font-size: 42px
+      line-height: 52px
+
+
+  // $Welcome title label
+  &__title-label
+    display: block
+    width: 100%
+    margin-bottom: 75px
+
+    +media-screen-1280x800
+      margin-bottom: 60px
+
+    +media-screen-1024x768
+      margin-bottom: 56px
+
+    +media-screen-1024x600
+      margin-bottom: 45px
+
+
+  // $Welcome title site name
+  &__title-site-name
+    display: block
+    width: 100%
+
+
+  // $Welcome actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Welcome action
+  &__action
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 98px
+    height: 98px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    text-align: center
+    box-shadow: none
+    border: 1px solid $c-welcome-action-border
+    border-radius: 12px
+    background-color: $c-welcome-action-bg
+    cursor: pointer
+    user-select: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      width: 78px
+      height: 78px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 73px
+      height: 73px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 58px
+      height: 58px
+      border-radius: 7px
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      color: $c-welcome-action-icon
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Menu items control MOD: role users
+    &_role_users
+      margin-right: 40px
+
+      +media-screen-1024x768
+        margin-right: 32px
+
+      +media-screen-1024x600
+        margin-right: 32px
+
+      &:before
+        content: '\e919'
+        font-size: 70px
+        line-height: 96px
+
+        +media-screen-1280x800
+          font-size: 56px
+          line-height: 76px
+
+        +media-screen-1024x768
+          font-size: 52px
+          line-height: 71px
+
+        +media-screen-1024x600
+          font-size: 42px
+          line-height: 56px
+
+    // $Menu items control MOD: role sign-in
+    &_role_sign-in
+      margin-left: 40px
+
+      +media-screen-1024x768
+        margin-left: 32px
+
+      +media-screen-1024x600
+        margin-left: 32px
+
+      &:before
+        content: '\e91a'
+        font-size: 60px
+        line-height: 96px
+
+        +media-screen-1280x800
+          font-size: 48px
+          line-height: 76px
+
+        +media-screen-1024x768
+          font-size: 45px
+          line-height: 71px
+
+        +media-screen-1024x600
+          font-size: 36px
+          line-height: 56px
+
+
+  // $Welcome version
+  &__version
+    position: absolute
+    bottom: 7px
+    left: 12px
+    right: 12px
+    display: block
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 500
+    color: $c-welcome-version-text
+    text-align: center
+
+    +media-screen-1024x768
+      bottom: 6px
+      left: 9px
+      right: 9px
+      font-size: 11px
+
+    +media-screen-1024x600
+      bottom: 6px
+      left: 9px
+      right: 9px
+      font-size: 11px

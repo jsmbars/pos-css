@@ -33,6 +33,28 @@ $block: ".pos-header"
   &_role_main
     z-index: 200
 
+  // $Header MOD: role welcome
+  &_role_welcome
+    z-index: 400
+    background-color: $c-header-welcome-bg
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      z-index: 400
+      display: block
+      width: calc((100vw - 100%) / 2)
+      background-color: $c-header-welcome-bg
+
+    &:before
+      right: 100%
+
+    &:after
+      left: 100%
+
 
   // $Header area
   &__area
@@ -42,26 +64,34 @@ $block: ".pos-header"
     &_role_info
       flex-grow: 1
       flex-shrink: 1
-      width: calc(100% - 402px)
-      padding-right: 12px
+
+      #{$block}_role_main &
+        width: calc(100% - 402px)
+        padding-right: 12px
 
       +media-screen-1024x768
-        width: calc(100% - 320px)
+        #{$block}_role_main &
+          width: calc(100% - 320px)
 
       +media-screen-1024x600
-        width: calc(100% - 320px)
+        #{$block}_role_main &
+          width: calc(100% - 320px)
 
     // $Header area MOD: role actions
     &_role_actions
       flex-grow: 0
       flex-shrink: 0
-      width: 402px
+
+      #{$block}_role_main &
+        width: 402px
 
       +media-screen-1024x768
-        width: 320px
+        #{$block}_role_main &
+          width: 320px
 
       +media-screen-1024x600
-        width: 320px
+        #{$block}_role_main &
+          width: 320px
 
 
   // $Header info
@@ -72,22 +102,30 @@ $block: ".pos-header"
     align-items: center
     height: 48px
     padding: 10px 22px
-    background-color: $c-header-info-bg
-    border-radius: 12px
+
+    #{$block}_role_main &
+      background-color: $c-header-info-bg
+      border-radius: 12px
 
     +media-screen-1280x800
       height: 35px
-      border-radius: 9px
+
+      #{$block}_role_main &
+        border-radius: 9px
 
     +media-screen-1024x768
       height: 35px
       padding: 5px 15px
-      border-radius: 9px
+
+      #{$block}_role_main &
+        border-radius: 9px
 
     +media-screen-1024x600
       height: 30px
       padding: 5px 15px
-      border-radius: 7px
+
+      #{$block}_role_main &
+        border-radius: 7px
 
 
   // $Header sidebar toggle
@@ -123,14 +161,17 @@ $block: ".pos-header"
       text-align: center
 
       +media-screen-1280x800
+        width: 28px
         font-size: 28px
         line-height: 22px
 
       +media-screen-1024x768
+        width: 28px
         font-size: 28px
         line-height: 22px
 
       +media-screen-1024x600
+        width: 24px
         font-size: 24px
         line-height: 20px
 
@@ -271,6 +312,54 @@ $block: ".pos-header"
 
       &:hover
         opacity: .4
+
+
+  // $Header menu toggle
+  &__menu-toggle
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    border: none
+    background-color: transparent
+    box-shadow: none
+    cursor: pointer
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:before
+      content: '\e91b'
+      display: block
+      width: 30px
+      font-family: icons
+      font-size: 30px
+      line-height: 10px
+      color: $c-header-menu-toggle-icon
+      text-align: center
+
+      +media-screen-1280x800
+        width: 24px
+        font-size: 24px
+        line-height: 10px
+
+      +media-screen-1024x768
+        width: 22px
+        font-size: 22px
+        line-height: 10px
+
+      +media-screen-1024x600
+        width: 20px
+        font-size: 20px
+        line-height: 10px
 
 
   // $Header actions
