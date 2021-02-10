@@ -24,6 +24,10 @@ $block: ".pos-welcome"
   height: calc(100% - 62px)
   padding: 150px 12px 75px
 
+  +media-screen-1024x600
+    height: calc(100% - 42px)
+    padding: 90px 10px 45px
+
 
   // $Welcome info
   &__info
@@ -44,12 +48,19 @@ $block: ".pos-welcome"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x600
+      font-size: 42px
+      line-height: 52px
+
 
   // $Welcome title label
   &__title-label
     display: block
     width: 100%
     margin-bottom: 75px
+
+    +media-screen-1024x600
+      margin-bottom: 45px
 
 
   // $Welcome title site name
@@ -90,6 +101,11 @@ $block: ".pos-welcome"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 58px
+      height: 58px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -106,19 +122,33 @@ $block: ".pos-welcome"
     &_role_users
       margin-right: 40px
 
+      +media-screen-1024x600
+        margin-right: 32px
+
       &:before
         content: '\e919'
         font-size: 70px
         line-height: 96px
 
+        +media-screen-1024x600
+          font-size: 42px
+          line-height: 56px
+
     // $Menu items control MOD: role sign-in
     &_role_sign-in
       margin-left: 40px
+
+      +media-screen-1024x600
+        margin-left: 32px
 
       &:before
         content: '\e91a'
         font-size: 60px
         line-height: 96px
+
+        +media-screen-1024x600
+          font-size: 36px
+          line-height: 56px
 
 
   // $Welcome version
@@ -134,3 +164,9 @@ $block: ".pos-welcome"
     font-weight: 500
     color: $c-welcome-version-text
     text-align: center
+
+    +media-screen-1024x600
+      bottom: 6px
+      left: 9px
+      right: 9px
+      font-size: 11px
