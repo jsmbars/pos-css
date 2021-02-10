@@ -23,6 +23,7 @@ $block: ".pos-welcome"
   width: 100%
   height: calc(100% - 62px)
   padding: 150px 12px 75px
+  background-color: $c-welcome-bg
 
   +media-screen-1280x800
     height: calc(100% - 49px)
@@ -35,6 +36,23 @@ $block: ".pos-welcome"
   +media-screen-1024x600
     height: calc(100% - 42px)
     padding: 90px 10px 45px
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 1
+    display: block
+    width: calc((100vw - 100%) / 2)
+    background-color: $c-welcome-bg
+
+  &:before
+    right: 100%
+
+  &:after
+    left: 100%
 
 
   // $Welcome info

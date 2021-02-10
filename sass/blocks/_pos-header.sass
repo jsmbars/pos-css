@@ -36,6 +36,24 @@ $block: ".pos-header"
   // $Header MOD: role welcome
   &_role_welcome
     z-index: 400
+    background-color: $c-header-welcome-bg
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      z-index: 400
+      display: block
+      width: calc((100vw - 100%) / 2)
+      background-color: $c-header-welcome-bg
+
+    &:before
+      right: 100%
+
+    &:after
+      left: 100%
 
 
   // $Header area
