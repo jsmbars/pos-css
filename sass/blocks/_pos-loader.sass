@@ -39,6 +39,11 @@ $block: ".pos-loader"
     background-repeat: no-repeat
     background-size: contain
 
+    +media-screen-1024x600
+      width: 50px
+      height: 50px
+      margin-right: 8px
+
     // $Loader spinner CONTEXT: $Loader MOD: type dark
     #{$block}_type_dark &
       background-image: url(../images/spinner-dark.svg)
@@ -56,6 +61,9 @@ $block: ".pos-loader"
     line-height: 1
     font-weight: 400
     text-align: left
+
+    +media-screen-1024x600
+      font-size: 35px
 
     // $Loader label CONTEXT: $Loader MOD: type dark
     #{$block}_type_dark &
