@@ -24,6 +24,11 @@ $block: ".pos-popup"
   border-radius: 15px
   background-color: $c-popup-bg
 
+  +media-screen-1024x600
+    width: 320px
+    height: 240px
+    border-radius: 9px
+
   // $Popup  MOD: role info
   &_role_info
 
@@ -44,6 +49,9 @@ $block: ".pos-popup"
     height: 100%
     padding: 20px
 
+    +media-screen-1024x600
+      padding: 12px 16px
+
 
   // $Popup icon
   &__icon
@@ -51,6 +59,9 @@ $block: ".pos-popup"
     flex-shrink: 0
     display: block
     margin-bottom: 20px
+
+    +media-screen-1024x600
+      margin-bottom: 12px
 
     &:before
       content: ''
@@ -60,6 +71,10 @@ $block: ".pos-popup"
       line-height: 100px
       font-weight: 400
       color: $c-popup-icon
+
+      +media-screen-1024x600
+        font-size: 60px
+        line-height: 60px
 
       // $Popup icon CONTEXT: $Popup MOD: role info
       #{$block}_role_info &
@@ -97,6 +112,10 @@ $block: ".pos-popup"
     color: $c-popup-title-text
     text-align: center
 
+    +media-screen-1024x600
+      margin-bottom: 12px
+      font-size: 24px
+
 
   // $Popup text
   &__text
@@ -109,8 +128,14 @@ $block: ".pos-popup"
     color: $c-popup-text
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 12px
+
     &:not(:last-child)
       margin-bottom: 10px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
 
 
   // $Popup actions
@@ -146,6 +171,12 @@ $block: ".pos-popup"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      height: 36px
+      font-size: 12px
+      line-height: 36px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -154,6 +185,9 @@ $block: ".pos-popup"
 
     &:not(:last-child)
       margin-right: 20px
+
+      +media-screen-1024x600
+        margin-right: 16px
 
     // $Popup action STATE: disabled
     &.is-disabled
