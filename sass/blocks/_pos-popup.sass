@@ -1,0 +1,169 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Popup
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-popup"
+
+#{$block}
+  flex-grow: 0
+  flex-shrink: 0
+  display: block
+  width: 400px
+  height: 400px
+  margin: auto
+  border-radius: 15px
+  background-color: $c-popup-bg
+
+  // $Popup  MOD: role info
+  &_role_info
+
+  // $Popup  MOD: role success
+  &_role_success
+
+  // $Popup  MOD: role error
+  &_role_error
+
+
+  // $Popup content
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    padding: 20px
+
+
+  // $Popup icon
+  &__icon
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    margin-bottom: 20px
+
+    &:before
+      content: ''
+      display: block
+      font-family: icons
+      font-size: 100px
+      line-height: 100px
+      font-weight: 400
+      color: $c-popup-icon
+
+      // $Popup icon CONTEXT: $Popup MOD: role info
+      #{$block}_role_info &
+        content: '\e91d'
+        color: $c-popup-info-icon
+
+      // $Popup icon CONTEXT: $Popup MOD: role success
+      #{$block}_role_success &
+        content: '\e91e'
+        color: $c-popup-success-icon
+
+      // $Popup icon CONTEXT: $Popup MOD: role error
+      #{$block}_role_error &
+        content: '\e91f'
+        color: $c-popup-error-icon
+
+
+  // $Popup info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Popup title
+  &__title
+    display: block
+    width: 100%
+    margin-bottom: 20px
+    font-family: $f-sans
+    font-size: 40px
+    line-height: 1
+    font-weight: 700
+    color: $c-popup-title-text
+    text-align: center
+
+
+  // $Popup text
+  &__text
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 20px
+    line-height: 1.25
+    font-weight: 500
+    color: $c-popup-text
+    text-align: center
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+
+  // $Popup actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Popup action
+  &__action
+    flex-grow: 0
+    flex-shrink: 1
+    display: block
+    width: 50%
+    height: 60px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 20px
+    line-height: 60px
+    font-weight: 700
+    color: $c-popup-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-popup-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 20px
+
+    // $Popup action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Popup action MOD: role retry
+    &_role_retry
+      background-color: $c-popup-action-retry-bg
+      color: $c-popup-action-retry-text
