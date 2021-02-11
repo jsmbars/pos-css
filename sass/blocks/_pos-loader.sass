@@ -1,0 +1,89 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Loader
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-loader"
+
+#{$block}
+  flex-grow: 0
+  flex-shrink: 0
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+
+  // $Loader MOD: type dark
+  &_type_dark
+
+  // $Loader MOD: type light
+  &_type_light
+
+
+  // $Loader spinner
+  &__spinner
+    display: block
+    width: 80px
+    height: 80px
+    margin-right: 10px
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: contain
+
+    +media-screen-1280x800
+      width: 65px
+      height: 65px
+
+    +media-screen-1024x768
+      width: 60px
+      height: 60px
+      margin-right: 8px
+
+    +media-screen-1024x600
+      width: 50px
+      height: 50px
+      margin-right: 8px
+
+    // $Loader spinner CONTEXT: $Loader MOD: type dark
+    #{$block}_type_dark &
+      background-image: url(../images/spinner-dark.svg)
+
+    // $Loader spinner CONTEXT: $Loader MOD: type light
+    #{$block}_type_light &
+      background-image: url(../images/spinner-light.svg)
+
+
+  // $Loader label
+  &__label
+    display: block
+    font-family: $f-sans
+    font-size: 60px
+    line-height: 1
+    font-weight: 400
+    text-align: left
+
+    +media-screen-1280x800
+      font-size: 50px
+
+    +media-screen-1024x768
+      font-size: 45px
+
+    +media-screen-1024x600
+      font-size: 35px
+
+    // $Loader label CONTEXT: $Loader MOD: type dark
+    #{$block}_type_dark &
+      color: $c-loader-dark-text
+
+    // $Loader label CONTEXT: $Loader MOD: type light
+    #{$block}_type_light &
+      color: $c-loader-light-text
