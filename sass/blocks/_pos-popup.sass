@@ -1,0 +1,267 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Popup
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-popup"
+
+#{$block}
+  flex-grow: 0
+  flex-shrink: 0
+  display: block
+  width: 400px
+  height: 400px
+  margin: auto
+  border-radius: 15px
+  background-color: $c-popup-bg
+
+  +media-screen-1280x800
+    height: 320px
+    border-radius: 12px
+
+  +media-screen-1024x768
+    width: 320px
+    height: 300px
+    border-radius: 12px
+
+  +media-screen-1024x600
+    width: 320px
+    height: 240px
+    border-radius: 9px
+
+  // $Popup MOD: role info
+  &_role_info
+
+  // $Popup MOD: role success
+  &_role_success
+
+  // $Popup MOD: role error
+  &_role_error
+
+
+  // $Popup content
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    padding: 20px
+
+    +media-screen-1280x800
+      padding: 16px 20px
+
+    +media-screen-1024x768
+      padding: 15px 16px
+
+    +media-screen-1024x600
+      padding: 12px 16px
+
+
+  // $Popup icon
+  &__icon
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    margin-bottom: 20px
+
+    +media-screen-1280x800
+      margin-bottom: 16px
+
+    +media-screen-1024x768
+      margin-bottom: 15px
+
+    +media-screen-1024x600
+      margin-bottom: 12px
+
+    &:before
+      content: ''
+      display: block
+      font-family: icons
+      font-size: 100px
+      line-height: 100px
+      font-weight: 400
+      color: $c-popup-icon
+
+      +media-screen-1280x800
+        font-size: 80px
+        line-height: 80px
+
+      +media-screen-1024x768
+        font-size: 75px
+        line-height: 75px
+
+      +media-screen-1024x600
+        font-size: 60px
+        line-height: 60px
+
+      // $Popup icon CONTEXT: $Popup MOD: role info
+      #{$block}_role_info &
+        content: '\e91d'
+        color: $c-popup-info-icon
+
+      // $Popup icon CONTEXT: $Popup MOD: role success
+      #{$block}_role_success &
+        content: '\e91e'
+        color: $c-popup-success-icon
+
+      // $Popup icon CONTEXT: $Popup MOD: role error
+      #{$block}_role_error &
+        content: '\e91f'
+        color: $c-popup-error-icon
+
+
+  // $Popup info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Popup title
+  &__title
+    display: block
+    width: 100%
+    margin-bottom: 20px
+    font-family: $f-sans
+    font-size: 40px
+    line-height: 1
+    font-weight: 700
+    color: $c-popup-title-text
+    text-align: center
+
+    +media-screen-1280x800
+      margin-bottom: 16px
+      font-size: 32px
+
+    +media-screen-1024x768
+      margin-bottom: 15px
+      font-size: 30px
+
+    +media-screen-1024x600
+      margin-bottom: 12px
+      font-size: 24px
+
+
+  // $Popup text
+  &__text
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 20px
+    line-height: 1.25
+    font-weight: 500
+    color: $c-popup-text
+    text-align: center
+
+    +media-screen-1280x800
+      margin-bottom: 16px
+
+    +media-screen-1024x768
+      font-size: 15px
+
+    +media-screen-1024x600
+      font-size: 12px
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+      +media-screen-1280x800
+        margin-bottom: 9px
+
+      +media-screen-1024x768
+        margin-bottom: 8px
+
+      +media-screen-1024x600
+        margin-bottom: 6px
+
+
+  // $Popup actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Popup action
+  &__action
+    flex-grow: 0
+    flex-shrink: 1
+    display: block
+    width: 50%
+    height: 60px
+    margin: 0
+    padding: 0
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 20px
+    line-height: 60px
+    font-weight: 700
+    color: $c-popup-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-popup-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 48px
+      font-size: 16px
+      line-height: 48px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      height: 45px
+      font-size: 15px
+      line-height: 45px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      height: 36px
+      font-size: 12px
+      line-height: 36px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      +media-screen-1024x768
+        margin-right: 16px
+
+      +media-screen-1024x600
+        margin-right: 16px
+
+    // $Popup action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Popup action MOD: role retry
+    &_role_retry
+      background-color: $c-popup-action-retry-bg
+      color: $c-popup-action-retry-text
