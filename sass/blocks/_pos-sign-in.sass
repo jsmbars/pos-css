@@ -23,12 +23,18 @@ $block: ".pos-sign-in"
   height: 100%
   padding: 33px 15px 45px
 
+  +media-screen-1024x600
+    padding: 20px 12px 27px
+
 
   // $Sign In header
   &__header
     display: block
     width: 100%
     height: 145px
+
+    +media-screen-1024x600
+      height: 87px
 
 
   // $Sign In title
@@ -40,6 +46,10 @@ $block: ".pos-sign-in"
     font-weight: 700
     color: $c-sign-in-title-text
     text-align: center
+
+    +media-screen-1024x600
+      font-size: 33px
+      line-height: 41px
 
 
   // $Sign In subtitle
@@ -53,6 +63,11 @@ $block: ".pos-sign-in"
     color: $c-sign-in-subtitle-text
     text-align: center
 
+    +media-screen-1024x600
+      padding-top: 14px
+      font-size: 14px
+      line-height: 14px
+
 
   // $Sign In note
   &__note
@@ -64,6 +79,11 @@ $block: ".pos-sign-in"
     font-weight: 500
     color: $c-sign-in-note-text
     text-align: center
+
+    +media-screen-1024x600
+      padding-top: 6px
+      font-size: 12px
+      line-height: 12px
 
 
   // $Sign In servers
@@ -79,6 +99,11 @@ $block: ".pos-sign-in"
     padding-top: 52px
     border-radius: 12px
     background-color: $c-sign-in-servers-bg
+
+    +media-screen-1024x600
+      width: 586px
+      padding-top: 31px
+      border-radius: 7px
 
 
   // $Sign In servers control
@@ -102,6 +127,11 @@ $block: ".pos-sign-in"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 38px
+      height: 46px
+      border-radius: 7px
+
     &:before
       content: ''
       display: inline-block
@@ -109,6 +139,10 @@ $block: ".pos-sign-in"
       font-size: 24px
       line-height: 24px
       color: $c-sign-in-servers-control-icon
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
 
     &:hover
       opacity: .8
@@ -143,6 +177,10 @@ $block: ".pos-sign-in"
     width: calc(100% - 96px)
     padding: 0 7px
     text-align: center
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
+      padding: 0 6px
 
 
   // $Sign In servers scroll
@@ -180,6 +218,11 @@ $block: ".pos-sign-in"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -188,6 +231,9 @@ $block: ".pos-sign-in"
 
     &:not(:last-child)
       margin-right: 7px
+
+      +media-screen-1024x600
+        margin-right: 6px
 
     // $Sign In server STATE: disabled
     &.is-disabled
@@ -209,6 +255,10 @@ $block: ".pos-sign-in"
     text-transform: uppercase
     text-align: center
 
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 46px
+
 
   // $Sign In info
   &__info
@@ -229,6 +279,11 @@ $block: ".pos-sign-in"
     color: $c-sign-in-name-text
     text-align: center
 
+    +media-screen-1024x600
+      padding-top: 9px
+      font-size: 25px
+      line-height: 31px
+
 
   // $Sign In error
   &__error
@@ -242,6 +297,11 @@ $block: ".pos-sign-in"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x600
+      padding-top: 8px
+      font-size: 30px
+      line-height: 37px
+
 
   // $Sign In label
   &__label
@@ -253,6 +313,11 @@ $block: ".pos-sign-in"
     font-weight: 700
     color: $c-sign-in-label-text
     text-align: center
+
+    +media-screen-1024x600
+      padding-top: 49px
+      font-size: 14px
+      line-height: 14px
 
 
   // $Sign In controls
@@ -267,6 +332,9 @@ $block: ".pos-sign-in"
     width: 436px
     margin: 0 auto
 
+    +media-screen-1024x600
+      width: 348px
+
 
   // $Sign In pin
   &__pin
@@ -275,12 +343,19 @@ $block: ".pos-sign-in"
     margin: 0 auto
     padding-left: 152px
 
+    +media-screen-1024x600
+      width: 470px
+      padding-left: 122px
+
 
   // $Sign In fob
   &__fob
     display: block
     width: 285px
     margin: 0 auto
+
+    +media-screen-1024x600
+      width: 228px
 
 
   // $Sign In keyboard
@@ -297,6 +372,10 @@ $block: ".pos-sign-in"
     margin: 0 auto
     padding: 20px 0 25px
 
+    +media-screen-1024x600
+      width: 140px
+      padding: 12px 0 15px
+
 
   // $Sign out actions
   &__actions
@@ -307,6 +386,8 @@ $block: ".pos-sign-in"
     width: 100%
     padding: 165px 0 35px
 
+    +media-screen-1024x600
+      padding: 99px 0 21px
 
   // $Sign out action
   &__action
@@ -329,6 +410,13 @@ $block: ".pos-sign-in"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      font-size: 16px
+      line-height: 46px
+      border-radius: 7px
 
     &:hover
       opacity: .8

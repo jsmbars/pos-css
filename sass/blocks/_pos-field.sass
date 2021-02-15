@@ -80,6 +80,10 @@ $block: ".pos-field"
       line-height: 22px
       border-radius: 5px
 
+      #{$block}_role_pin &
+        padding: 6px 9px
+        font-size: 30px
+
     &:not(:last-child)
       margin-right: 12px
 
@@ -155,6 +159,11 @@ $block: ".pos-field"
         font-size: 24px
         line-height: 24px
         color: $c-field-action-enter-icon
+
+      +media-screen-1024x600
+        #{$block}_role_pin &
+          font-size: 15px
+          line-height: 15px
 
     // $Field action STATE: disabled
     &.is-disabled
