@@ -1,0 +1,590 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Sign In
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-sign-in"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 33px 15px 45px
+
+  +media-screen-1280x800
+    padding: 26px 15px 36px
+
+  +media-screen-1024x768
+    padding: 24px 12px 33px
+
+  +media-screen-1024x600
+    padding: 20px 12px 27px
+
+
+  // $Sign In header
+  &__header
+    display: block
+    width: 100%
+    height: 145px
+
+    +media-screen-1280x800
+      height: 116px
+
+    +media-screen-1024x768
+      height: 108px
+
+    +media-screen-1024x600
+      height: 87px
+
+
+  // $Sign In title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 56px
+    line-height: 68px
+    font-weight: 700
+    color: $c-sign-in-title-text
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 45px
+      line-height: 54px
+
+    +media-screen-1024x768
+      font-size: 42px
+      line-height: 51px
+
+    +media-screen-1024x600
+      font-size: 33px
+      line-height: 41px
+
+
+  // $Sign In subtitle
+  &__subtitle
+    display: block
+    padding-top: 30px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 21px
+    font-weight: 700
+    color: $c-sign-in-subtitle-text
+    text-align: center
+
+    +media-screen-1280x800
+      padding-top: 24px
+      font-size: 18px
+      line-height: 18px
+
+    +media-screen-1024x768
+      padding-top: 22px
+      font-size: 16px
+      line-height: 16px
+
+    +media-screen-1024x600
+      padding-top: 14px
+      font-size: 14px
+      line-height: 14px
+
+
+  // $Sign In note
+  &__note
+    display: block
+    padding-top: 10px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 14px
+    font-weight: 500
+    color: $c-sign-in-note-text
+    text-align: center
+
+    +media-screen-1280x800
+      padding-top: 8px
+      font-size: 12px
+      line-height: 12px
+
+    +media-screen-1024x768
+      padding-top: 7px
+      font-size: 12px
+      line-height: 12px
+
+    +media-screen-1024x600
+      padding-top: 6px
+      font-size: 12px
+      line-height: 12px
+
+
+  // $Sign In servers
+  &__servers
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 733px
+    margin: 0 auto
+    padding-top: 52px
+    border-radius: 12px
+    background-color: $c-sign-in-servers-bg
+
+    +media-screen-1280x800
+      padding-top: 41px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 586px
+      padding-top: 39px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 586px
+      padding-top: 31px
+      border-radius: 7px
+
+
+  // $Sign In servers control
+  &__servers-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 48px
+    height: 77px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: $c-sign-in-servers-bg
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-sign-in-servers-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 38px
+      height: 57px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 38px
+      height: 46px
+      border-radius: 7px
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 24px
+      line-height: 24px
+      color: $c-sign-in-servers-control-icon
+
+      +media-screen-1280x800
+        font-size: 19px
+        line-height: 19px
+
+      +media-screen-1024x768
+        font-size: 18px
+        line-height: 18px
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sign In servers control STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Sign In servers control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $Sign In servers control MOD: role next
+    &_role_next
+      &:before
+        content: '\e902'
+
+
+  // $Sign In servers list
+  &__servers-list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 96px)
+    padding: 0 7px
+    text-align: center
+
+    +media-screen-1024x768
+      width: calc(100% - 76px)
+      padding: 0 6px
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
+      padding: 0 6px
+
+
+  // $Sign In servers scroll
+  &__servers-scroll
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    text-align: center
+
+
+  // $Sign In servers row
+  &__servers-row
+    display: inline-flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Sign In server
+  &__server
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 203px
+    height: 77px
+    border-radius: 12px
+    background-color: $c-sign-in-server-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 162px
+      height: 57px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 7px
+
+      +media-screen-1024x768
+        margin-right: 6px
+
+      +media-screen-1024x600
+        margin-right: 6px
+
+    // $Sign In server STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Sign In server text
+  &__server-text
+    display: block
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 77px
+    font-weight: 700
+    color: $c-sign-in-server-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 15px
+      line-height: 61px
+
+    +media-screen-1024x768
+      font-size: 15px
+      line-height: 57px
+
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 46px
+
+
+  // $Sign In info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Sign In name
+  &__name
+    display: block
+    padding-top: 15px
+    font-family: $f-sans
+    font-size: 42px
+    line-height: 52px
+    font-weight: 600
+    color: $c-sign-in-name-text
+    text-align: center
+
+    +media-screen-1280x800
+      padding-top: 12px
+      font-size: 33px
+      line-height: 41px
+
+    +media-screen-1024x768
+      padding-top: 11px
+      font-size: 31px
+      line-height: 39px
+
+    +media-screen-1024x600
+      padding-top: 9px
+      font-size: 25px
+      line-height: 31px
+
+
+  // $Sign In error
+  &__error
+    display: block
+    padding-top: 13px
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 61px
+    font-weight: 600
+    color: $c-sign-in-error-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      padding-top: 11px
+      font-size: 40px
+      line-height: 48px
+
+    +media-screen-1024x768
+      padding-top: 10px
+      font-size: 37px
+      line-height: 45px
+
+    +media-screen-1024x600
+      padding-top: 8px
+      font-size: 30px
+      line-height: 37px
+
+
+  // $Sign In label
+  &__label
+    display: block
+    padding-top: 82px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 21px
+    font-weight: 700
+    color: $c-sign-in-label-text
+    text-align: center
+
+    +media-screen-1280x800
+      padding-top: 65px
+      font-size: 18px
+      line-height: 18px
+
+    +media-screen-1024x768
+      padding-top: 61px
+      font-size: 16px
+      line-height: 16px
+
+    +media-screen-1024x600
+      padding-top: 49px
+      font-size: 14px
+      line-height: 14px
+
+
+  // $Sign In controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Sign In search
+  &__search
+    display: block
+    width: 436px
+    margin: 0 auto
+
+    +media-screen-1024x768
+      width: 348px
+
+    +media-screen-1024x600
+      width: 348px
+
+
+  // $Sign In pin
+  &__pin
+    display: block
+    width: 588px
+    margin: 0 auto
+    padding-left: 152px
+
+    +media-screen-1024x768
+      width: 470px
+      padding-left: 122px
+
+    +media-screen-1024x600
+      width: 470px
+      padding-left: 122px
+
+
+  // $Sign In fob
+  &__fob
+    display: block
+    width: 285px
+    margin: 0 auto
+
+    +media-screen-1024x768
+      width: 228px
+
+    +media-screen-1024x600
+      width: 228px
+
+
+  // $Sign In keyboard
+  &__keyboard
+    display: block
+    width: 100%
+    padding-top: 15px
+
+
+  // $Sign In numpad
+  &__numpad
+    display: block
+    width: 234px
+    margin: 0 auto
+    padding: 20px 0 25px
+
+    +media-screen-1280x800
+      width: 170px
+      padding: 16px 0 20px
+
+    +media-screen-1024x768
+      width: 170px
+      padding: 15px 0 18px
+
+    +media-screen-1024x600
+      width: 140px
+      padding: 12px 0 15px
+
+
+  // $Sign out actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding: 165px 0 35px
+
+    +media-screen-1280x800
+      padding: 132px 0 28px
+
+    +media-screen-1024x768
+      padding: 123px 0 26px
+
+    +media-screen-1024x600
+      padding: 99px 0 21px
+
+  // $Sign out action
+  &__action
+    display: block
+    width: 203px
+    height: 77px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 77px
+    font-weight: 600
+    color: $c-sign-in-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-sign-in-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      font-size: 18px
+      line-height: 61px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 162px
+      height: 57px
+      font-size: 18px
+      line-height: 57px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      font-size: 16px
+      line-height: 46px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sign in action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
