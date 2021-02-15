@@ -21,6 +21,11 @@ $block: ".pos-field"
   // $Field MOD: role search
   &_role_search
 
+  // $Field MOD: role pin
+  &_role_pin
+
+  // $Field MOD: role fob
+  &_role_fob
 
   // $Field group
   &__group
@@ -49,6 +54,11 @@ $block: ".pos-field"
     border-radius: 7px
     background-color: $c-field-box-bg
     overflow: hidden
+
+    // $Field box CONTEXT: $Field MOD: role pin
+    #{$block}_role_pin &
+      padding: 10px 12px
+      font-size: 50px
 
     +media-screen-1280x800
       height: 32px
@@ -104,6 +114,13 @@ $block: ".pos-field"
     user-select: none
     transition: all .2s
 
+    // $Field action CONTEXT: $Field MOD: role pin
+    #{$block}_role_pin &
+      font-size: 0
+      line-height: 0
+      color: transparent
+      background-color: $c-field-action-enter-bg
+
     +media-screen-1280x800
       height: 32px
       font-size: 18px
@@ -129,6 +146,15 @@ $block: ".pos-field"
 
     &:focus
       outline: none
+
+    &:before
+      #{$block}_role_pin &
+        content: '\e902'
+        display: inline-block
+        font-family: icons
+        font-size: 24px
+        line-height: 24px
+        color: $c-field-action-enter-icon
 
     // $Field action STATE: disabled
     &.is-disabled

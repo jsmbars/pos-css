@@ -1,0 +1,345 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Sign In
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-sign-in"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 33px 15px 45px
+
+
+  // $Sign In header
+  &__header
+    display: block
+    width: 100%
+    height: 145px
+
+
+  // $Sign In title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 56px
+    line-height: 68px
+    font-weight: 700
+    color: $c-sign-in-title-text
+    text-align: center
+
+
+  // $Sign In subtitle
+  &__subtitle
+    display: block
+    padding-top: 30px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 21px
+    font-weight: 700
+    color: $c-sign-in-subtitle-text
+    text-align: center
+
+
+  // $Sign In note
+  &__note
+    display: block
+    padding-top: 10px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 14px
+    font-weight: 500
+    color: $c-sign-in-note-text
+    text-align: center
+
+
+  // $Sign In servers
+  &__servers
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 733px
+    margin: 0 auto
+    padding-top: 52px
+    border-radius: 12px
+    background-color: $c-sign-in-servers-bg
+
+
+  // $Sign In servers control
+  &__servers-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 48px
+    height: 77px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: $c-sign-in-servers-bg
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-sign-in-servers-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 24px
+      line-height: 24px
+      color: $c-sign-in-servers-control-icon
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sign In servers control STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Sign In servers control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $Sign In servers control MOD: role next
+    &_role_next
+      &:before
+        content: '\e902'
+
+
+  // $Sign In servers list
+  &__servers-list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 96px)
+    padding: 0 7px
+    text-align: center
+
+
+  // $Sign In servers scroll
+  &__servers-scroll
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    text-align: center
+
+
+  // $Sign In servers row
+  &__servers-row
+    display: inline-flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Sign In server
+  &__server
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 203px
+    height: 77px
+    border-radius: 12px
+    background-color: $c-sign-in-server-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 7px
+
+    // $Sign In server STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Sign In server text
+  &__server-text
+    display: block
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 77px
+    font-weight: 700
+    color: $c-sign-in-server-text
+    text-transform: uppercase
+    text-align: center
+
+
+  // $Sign In info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $Sign In name
+  &__name
+    display: block
+    padding-top: 15px
+    font-family: $f-sans
+    font-size: 42px
+    line-height: 52px
+    font-weight: 600
+    color: $c-sign-in-name-text
+    text-align: center
+
+
+  // $Sign In error
+  &__error
+    display: block
+    padding-top: 13px
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 61px
+    font-weight: 600
+    color: $c-sign-in-error-text
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Sign In label
+  &__label
+    display: block
+    padding-top: 82px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 21px
+    font-weight: 700
+    color: $c-sign-in-label-text
+    text-align: center
+
+
+  // $Sign In controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Sign In search
+  &__search
+    display: block
+    width: 436px
+    margin: 0 auto
+
+
+  // $Sign In pin
+  &__pin
+    display: block
+    width: 588px
+    margin: 0 auto
+    padding-left: 152px
+
+
+  // $Sign In fob
+  &__fob
+    display: block
+    width: 285px
+    margin: 0 auto
+
+
+  // $Sign In keyboard
+  &__keyboard
+    display: block
+    width: 100%
+    padding-top: 15px
+
+
+  // $Sign In numpad
+  &__numpad
+    display: block
+    width: 234px
+    margin: 0 auto
+    padding: 20px 0 25px
+
+
+  // $Sign out actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding: 165px 0 35px
+
+
+  // $Sign out action
+  &__action
+    display: block
+    width: 203px
+    height: 77px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 77px
+    font-weight: 600
+    color: $c-sign-in-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-sign-in-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sign in action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4

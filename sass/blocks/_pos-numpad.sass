@@ -24,6 +24,9 @@ $block: ".pos-numpad"
   // $Numpad MOD: role transaction
   &_role_transaction
 
+  // $Numpad MOD: role sign-in
+  &_role_sign-in
+
 
   // $Numpad display
   &__display
@@ -186,6 +189,11 @@ $block: ".pos-numpad"
       color: $c-numpad-transaction-control-text
       background-color: $c-numpad-transaction-control-bg
 
+    // $Numpad control CONTEXT: $Numpad MOD: role sign-in
+    #{$block}_role_sign-in &
+      color: $c-numpad-sign-in-control-text
+      background-color: $c-numpad-sign-in-control-bg
+
     +media-screen-1280x800
       height: 50px
       font-size: 38px
@@ -265,6 +273,12 @@ $block: ".pos-numpad"
         color: $c-numpad-transaction-control-clear-text
         border-color: $c-numpad-transaction-control-clear-border
         background-color: $c-numpad-transaction-control-clear-bg
+
+      // $Numpad control MOD: role clear CONTEXT: $Numpad MOD: role sign-in
+      #{$block}_role_sign-in &
+        color: $c-numpad-sign-in-control-clear-text
+        border-color: $c-numpad-sign-in-control-clear-border
+        background-color: $c-numpad-sign-in-control-clear-bg
 
       +media-screen-1280x800
         width: calc(66.666% + 10px)
