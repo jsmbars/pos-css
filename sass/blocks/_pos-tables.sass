@@ -23,6 +23,10 @@ $block: ".pos-tables"
   height: calc(100% - 62px)
   padding: 21px 0 73px
 
+  +media-screen-1024x600
+    height: calc(100% - 42px)
+    padding: 0 0 20px
+
 
   // $Tables header
   &__header
@@ -43,6 +47,10 @@ $block: ".pos-tables"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
 
   // $Tables list
   &__list
@@ -51,6 +59,10 @@ $block: ".pos-tables"
     display: block
     width: 1120px
     margin: 0 auto 54px
+
+    +media-screen-1024x600
+      width: 890px
+      margin-bottom: 20px
 
 
   // $Tables row
@@ -63,6 +75,9 @@ $block: ".pos-tables"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1024x600
+        margin-bottom: 7px
 
 
   // $Tables item
@@ -84,6 +99,13 @@ $block: ".pos-tables"
     text-decoration: none
     overflow: hidden
     transition: all .2s
+
+    +media-screen-1024x600
+      width: calc(10% - 11px)
+      height: 65px
+      margin-right: 11px
+      padding: 1px
+      border-radius: 7px
 
     &:hover
       opacity: .8
@@ -128,11 +150,19 @@ $block: ".pos-tables"
     line-height: 15px
     color: $c-tables-item-server-text
 
+    +media-screen-1024x600
+      font-size: 10px
+      line-height: 11px
+
 
   &__item-time
     font-size: 14px
     line-height: 16px
     color: $c-tables-item-time-text
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 12px
 
 
   &__item-name
@@ -140,17 +170,29 @@ $block: ".pos-tables"
     line-height: 37px
     color: $c-tables-item-name-text
 
+    +media-screen-1024x600
+      font-size: 18px
+      line-height: 20px
+
 
   &__item-label
     font-size: 8px
     line-height: 10px
     color: $c-tables-item-label-text
 
+    +media-screen-1024x600
+      font-size: 6px
+      line-height: 8px
+
 
   &__item-number
     font-size: 14px
     line-height: 18px
     color: $c-tables-item-number-text
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 13px
 
 
   // $Tables actions
@@ -164,6 +206,10 @@ $block: ".pos-tables"
     width: 1046px
     margin: 0 auto
     padding-right: 14px
+
+    +media-screen-1024x600
+      width: 836px
+      padding-right: 11px
 
 
   // $Tables action
@@ -188,6 +234,13 @@ $block: ".pos-tables"
     user-select: none
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 224px
+      height: 58px
+      font-size: 20px
+      line-height: 58px
+      border-radius: 7px
+
     &:hover
       opacity: .8
 
@@ -207,6 +260,9 @@ $block: ".pos-tables"
       line-height: 37px
       color: $c-tables-action-transfer-text
       background-color: $c-tables-action-transfer-bg
+
+      +media-screen-1024x600
+        line-height: 24px
 
     // $Tables action MOD: role new
     &_role_new

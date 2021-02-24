@@ -20,6 +20,9 @@ $block: ".pos-transfer-table"
   height: 100%
   padding: 102px 128px 43px 86px
 
+  +media-screen-1024x600
+    padding: 60px 102px 25px 66px
+
 
   // $Transfer Table group
   &__group
@@ -30,6 +33,10 @@ $block: ".pos-transfer-table"
     width: 1066px
     margin-bottom: 185px
 
+    +media-screen-1024x600
+      width: 852px
+      margin-bottom: 100px
+
 
   // $Transfer Table area
   &__area
@@ -39,9 +46,16 @@ $block: ".pos-transfer-table"
     &:nth-child(1)
       width: 426px
 
+      +media-screen-1024x600
+        width: 340px
+
     &:nth-child(2)
       width: 640px
       padding: 65px 0 0 203px
+
+      +media-screen-1024x600
+        width: 512px
+        padding: 39px 0 0 162px
 
 
   // $Transfer Table header
@@ -49,6 +63,9 @@ $block: ".pos-transfer-table"
     display: block
     width: 100%
     margin-bottom: 29px
+
+    +media-screen-1024x600
+      margin-bottom: 17px
 
 
   // $Transfer Table title
@@ -61,6 +78,10 @@ $block: ".pos-transfer-table"
     color: $c-transfer-table-title-text
     text-align: center
     text-transform: uppercase
+
+    +media-screen-1024x600
+      font-size: 24px
+      line-height: 29px
 
 
   // $Transfer Table controls
@@ -83,6 +104,9 @@ $block: ".pos-transfer-table"
     flex-shrink: 0
     padding-left: 23px
 
+    +media-screen-1024x600
+      padding-left: 14px
+
 
   // $Transfer Table number label
   &__number-label
@@ -97,6 +121,11 @@ $block: ".pos-transfer-table"
     text-align: center
     color: $c-transfer-table-number-label-text
     text-transform: uppercase
+
+    +media-screen-1024x600
+      width: 40px
+      font-size: 18px
+      line-height: 22px
 
 
   // $Transfer Table number display
@@ -117,6 +146,14 @@ $block: ".pos-transfer-table"
     background-color: $c-transfer-table-number-display-bg
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 134px
+      height: 40px
+      font-size: 25px
+      line-height: 32px
+      border-width: 4px
+      border-radius: 7px
+
 
   // $Transfer Table badge
   &__badge
@@ -136,6 +173,12 @@ $block: ".pos-transfer-table"
     text-decoration: none
     overflow: hidden
     transition: all .2s
+
+    +media-screen-1024x600
+      width: 78px
+      height: 65px
+      padding: 1px
+      border-radius: 7px
 
     &:hover
       opacity: .8
@@ -180,11 +223,19 @@ $block: ".pos-transfer-table"
     line-height: 15px
     color: $c-transfer-table-badge-server-text
 
+    +media-screen-1024x600
+      font-size: 10px
+      line-height: 11px
+
 
   &__badge-time
     font-size: 14px
     line-height: 16px
     color: $c-transfer-table-badge-time-text
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 12px
 
 
   &__badge-name
@@ -192,11 +243,19 @@ $block: ".pos-transfer-table"
     line-height: 37px
     color: $c-transfer-table-badge-name-text
 
+    +media-screen-1024x600
+      font-size: 18px
+      line-height: 20px
+
 
   &__badge-label
     font-size: 8px
     line-height: 10px
     color: $c-transfer-table-badge-label-text
+
+    +media-screen-1024x600
+      font-size: 6px
+      line-height: 8px
 
 
   &__badge-number
@@ -204,12 +263,20 @@ $block: ".pos-transfer-table"
     line-height: 18px
     color: $c-transfer-table-badge-number-text
 
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 13px
+
 
   // $Transfer Table numpad
   &__numpad
     display: block
     width: 234px
     margin: 0 0 47px 162px
+
+    +media-screen-1024x600
+      width: 140px
+      margin: 0 0 28px 129px
 
 
   // $Transfer Table guests
@@ -232,6 +299,11 @@ $block: ".pos-transfer-table"
     font-weight: 700
     color: $c-transfer-table-guests-label-text
     text-transform: uppercase
+
+    +media-screen-1024x600
+      width: 129px
+      font-size: 18px
+      line-height: 22px
 
 
   // $Transfer Table guests number
@@ -258,6 +330,11 @@ $block: ".pos-transfer-table"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x600
+      margin-bottom: 6px
+      font-size: 24px
+      line-height: 29px
+
 
   // $Transfer Table floorplan image
   &__floorplan-image
@@ -269,6 +346,11 @@ $block: ".pos-transfer-table"
     border-radius: 30px
     background-color: $c-transfer-table-floorplan-image-bg
     overflow: hidden
+
+    +media-screen-1024x600
+      width: 262px
+      height: 262px
+      border-radius: 18px
 
     & img
       display: block
@@ -306,6 +388,13 @@ $block: ".pos-transfer-table"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      width: 224px
+      height: 58px
+      font-size: 20px
+      line-height: 58px
+      border-radius: 7px
 
     &:hover
       opacity: .8

@@ -20,12 +20,18 @@ $block: ".pos-new-table"
   height: 100%
   padding: 20px 80px 29px
 
+  +media-screen-1024x600
+    padding: 12px 64px 22px
+
 
   // $New Table header
   &__header
     display: block
     width: 100%
     margin-bottom: 16px
+
+    +media-screen-1024x600
+      margin-bottom: 12px
 
 
   // $New Table title
@@ -39,12 +45,19 @@ $block: ".pos-new-table"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
 
   // $New Table controls
   &__controls
     display: block
     width: 100%
     margin-bottom: 45px
+
+    +media-screen-1024x600
+      margin-bottom: 27px
 
 
   // $New Table number
@@ -54,6 +67,9 @@ $block: ".pos-new-table"
     justify-content: flex-start
     align-items: center
     margin-bottom: 18px
+
+    +media-screen-1024x600
+      margin-bottom: 11px
 
 
   // $New Table number label
@@ -66,6 +82,11 @@ $block: ".pos-new-table"
     font-weight: 700
     color: $c-new-table-number-label-text
     text-transform: uppercase
+
+    +media-screen-1024x600
+      width: 164px
+      font-size: 18px
+      line-height: 22px
 
 
   // $New Table number display
@@ -87,12 +108,25 @@ $block: ".pos-new-table"
     background-color: $c-new-table-number-display-bg
     transition: all .2s
 
+    +media-screen-1024x600
+      width: 134px
+      height: 40px
+      margin: 0 3px
+      font-size: 25px
+      line-height: 32px
+      border-width: 4px
+      border-radius: 7px
+
 
   // $New Table numpad
   &__numpad
     display: block
     width: 234px
     margin: 0 0 47px 180px
+
+    +media-screen-1024x600
+      width: 140px
+      margin: 0 0 28px 164px
 
 
   // $New Table guests
@@ -113,6 +147,11 @@ $block: ".pos-new-table"
     font-weight: 700
     color: $c-new-table-guests-label-text
     text-transform: uppercase
+
+    +media-screen-1024x600
+      width: 164px
+      font-size: 18px
+      line-height: 22px
 
 
   // $New Table guests number
@@ -151,6 +190,13 @@ $block: ".pos-new-table"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x600
+      width: 224px
+      height: 58px
+      font-size: 20px
+      line-height: 58px
+      border-radius: 7px
 
     &:hover
       opacity: .8
