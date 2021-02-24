@@ -20,6 +20,9 @@ $block: ".pos-transfer-table"
   height: 100%
   padding: 102px 128px 43px 86px
 
+  +media-screen-1024x768
+    padding: 85px 102px 35px 66px
+
   +media-screen-1024x600
     padding: 60px 102px 25px 66px
 
@@ -32,6 +35,10 @@ $block: ".pos-transfer-table"
     align-items: flex-start
     width: 1066px
     margin-bottom: 185px
+
+    +media-screen-1024x768
+      width: 852px
+      margin-bottom: 138px
 
     +media-screen-1024x600
       width: 852px
@@ -46,12 +53,19 @@ $block: ".pos-transfer-table"
     &:nth-child(1)
       width: 426px
 
+      +media-screen-1024x768
+        width: 340px
+
       +media-screen-1024x600
         width: 340px
 
     &:nth-child(2)
       width: 640px
       padding: 65px 0 0 203px
+
+      +media-screen-1024x768
+        width: 512px
+        padding: 48px 0 0 162px
 
       +media-screen-1024x600
         width: 512px
@@ -63,6 +77,9 @@ $block: ".pos-transfer-table"
     display: block
     width: 100%
     margin-bottom: 29px
+
+    +media-screen-1024x768
+      margin-bottom: 21px
 
     +media-screen-1024x600
       margin-bottom: 17px
@@ -78,6 +95,10 @@ $block: ".pos-transfer-table"
     color: $c-transfer-table-title-text
     text-align: center
     text-transform: uppercase
+
+    +media-screen-1024x768
+      font-size: 30px
+      line-height: 36px
 
     +media-screen-1024x600
       font-size: 24px
@@ -104,6 +125,9 @@ $block: ".pos-transfer-table"
     flex-shrink: 0
     padding-left: 23px
 
+    +media-screen-1024x768
+      padding-left: 19px
+
     +media-screen-1024x600
       padding-left: 14px
 
@@ -121,6 +145,11 @@ $block: ".pos-transfer-table"
     text-align: center
     color: $c-transfer-table-number-label-text
     text-transform: uppercase
+
+    +media-screen-1024x768
+      width: 50px
+      font-size: 22px
+      line-height: 27px
 
     +media-screen-1024x600
       width: 40px
@@ -145,6 +174,14 @@ $block: ".pos-transfer-table"
     border-radius: 12px
     background-color: $c-transfer-table-number-display-bg
     transition: all .2s
+
+    +media-screen-1024x768
+      width: 134px
+      height: 50px
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
 
     +media-screen-1024x600
       width: 134px
@@ -173,6 +210,12 @@ $block: ".pos-transfer-table"
     text-decoration: none
     overflow: hidden
     transition: all .2s
+
+    +media-screen-1024x768
+      width: 78px
+      height: 78px
+      padding: 1px
+      border-radius: 7px
 
     +media-screen-1024x600
       width: 78px
@@ -223,6 +266,10 @@ $block: ".pos-transfer-table"
     line-height: 15px
     color: $c-transfer-table-badge-server-text
 
+    +media-screen-1024x768
+      font-size: 10px
+      line-height: 11px
+
     +media-screen-1024x600
       font-size: 10px
       line-height: 11px
@@ -232,6 +279,10 @@ $block: ".pos-transfer-table"
     font-size: 14px
     line-height: 16px
     color: $c-transfer-table-badge-time-text
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 13px
 
     +media-screen-1024x600
       font-size: 11px
@@ -243,6 +294,10 @@ $block: ".pos-transfer-table"
     line-height: 37px
     color: $c-transfer-table-badge-name-text
 
+    +media-screen-1024x768
+      font-size: 20px
+      line-height: 24px
+
     +media-screen-1024x600
       font-size: 18px
       line-height: 20px
@@ -252,6 +307,10 @@ $block: ".pos-transfer-table"
     font-size: 8px
     line-height: 10px
     color: $c-transfer-table-badge-label-text
+
+    +media-screen-1024x768
+      font-size: 7px
+      line-height: 9px
 
     +media-screen-1024x600
       font-size: 6px
@@ -263,6 +322,10 @@ $block: ".pos-transfer-table"
     line-height: 18px
     color: $c-transfer-table-badge-number-text
 
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 14px
+
     +media-screen-1024x600
       font-size: 11px
       line-height: 13px
@@ -273,6 +336,10 @@ $block: ".pos-transfer-table"
     display: block
     width: 234px
     margin: 0 0 47px 162px
+
+    +media-screen-1024x768
+      width: 170px
+      margin: 0 0 35px 129px
 
     +media-screen-1024x600
       width: 140px
@@ -299,6 +366,11 @@ $block: ".pos-transfer-table"
     font-weight: 700
     color: $c-transfer-table-guests-label-text
     text-transform: uppercase
+
+    +media-screen-1024x768
+      width: 129px
+      font-size: 22px
+      line-height: 27px
 
     +media-screen-1024x600
       width: 129px
@@ -330,6 +402,11 @@ $block: ".pos-transfer-table"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1024x768
+      margin-bottom: 8px
+      font-size: 30px
+      line-height: 36px
+
     +media-screen-1024x600
       margin-bottom: 6px
       font-size: 24px
@@ -346,6 +423,11 @@ $block: ".pos-transfer-table"
     border-radius: 30px
     background-color: $c-transfer-table-floorplan-image-bg
     overflow: hidden
+
+    +media-screen-1024x768
+      width: 327px
+      height: 327px
+      border-radius: 24px
 
     +media-screen-1024x600
       width: 262px
@@ -388,6 +470,13 @@ $block: ".pos-transfer-table"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1024x768
+      width: 224px
+      height: 73px
+      font-size: 24px
+      line-height: 73px
+      border-radius: 9px
 
     +media-screen-1024x600
       width: 224px
