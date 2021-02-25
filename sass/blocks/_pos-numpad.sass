@@ -27,6 +27,12 @@ $block: ".pos-numpad"
   // $Numpad MOD: role sign-in
   &_role_sign-in
 
+  // $Numpad MOD: role new-table
+  &_role_new-table
+
+  // $Numpad MOD: role transfer-table
+  &_role_transfer-table
+
 
   // $Numpad display
   &__display
@@ -194,6 +200,16 @@ $block: ".pos-numpad"
       color: $c-numpad-sign-in-control-text
       background-color: $c-numpad-sign-in-control-bg
 
+    // $Numpad control CONTEXT: $Numpad MOD: role new-table
+    #{$block}_role_new-table &
+      color: $c-numpad-new-table-control-text
+      background-color: $c-numpad-new-table-control-bg
+
+    // $Numpad control CONTEXT: $Numpad MOD: role transfer-table
+    #{$block}_role_transfer-table &
+      color: $c-numpad-transfer-table-control-text
+      background-color: $c-numpad-transfer-table-control-bg
+
     +media-screen-1280x800
       height: 50px
       font-size: 38px
@@ -279,6 +295,18 @@ $block: ".pos-numpad"
         color: $c-numpad-sign-in-control-clear-text
         border-color: $c-numpad-sign-in-control-clear-border
         background-color: $c-numpad-sign-in-control-clear-bg
+
+      // $Numpad control MOD: role clear CONTEXT: $Numpad MOD: role new-table
+      #{$block}_role_new-table &
+        color: $c-numpad-new-table-control-clear-text
+        border-color: $c-numpad-new-table-control-clear-border
+        background-color: $c-numpad-new-table-control-clear-bg
+
+      // $Numpad control MOD: role clear CONTEXT: $Numpad MOD: role transfer-table
+      #{$block}_role_transfer-table &
+        color: $c-numpad-transfer-table-control-clear-text
+        border-color: $c-numpad-transfer-table-control-clear-border
+        background-color: $c-numpad-transfer-table-control-clear-bg
 
       +media-screen-1280x800
         width: calc(66.666% + 10px)

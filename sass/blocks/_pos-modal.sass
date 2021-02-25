@@ -21,6 +21,7 @@ $block: ".pos-modal"
   max-width: 1024px
   margin: auto
   border-radius: 15px
+  border: 1px solid $c-modal-border
   background-color: $c-modal-bg
 
   #{$block}-portal &
@@ -41,12 +42,14 @@ $block: ".pos-modal"
   // $Modal window MOD: role search
   // $Modal window MOD: role sign-out
   // $Modal window MOD: role sign-in
+  // $Modal window MOD: role new table
   &_role_item,
   &_role_message,
   &_role_void,
   &_role_search,
   &_role_sign-out,
-  &_role_sign-in
+  &_role_sign-in,
+  &_role_new-table
     flex-grow: 0
     flex-shrink: 0
     width: 777px
@@ -120,3 +123,7 @@ $block: ".pos-modal"
       // $Modal window overlay MOD: type transparent
       &_type_transparent
         background-color: transparent
+
+      // $Modal window overlay MOD: type light
+      &_type_light
+        background-color: $c-modal-overlay-light-bg

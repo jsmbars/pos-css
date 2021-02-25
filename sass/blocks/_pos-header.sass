@@ -55,6 +55,10 @@ $block: ".pos-header"
     &:after
       left: 100%
 
+  // $Header MOD: role tables
+  &_role_tables
+    z-index: 200
+
 
   // $Header area
   &__area
@@ -65,16 +69,19 @@ $block: ".pos-header"
       flex-grow: 1
       flex-shrink: 1
 
-      #{$block}_role_main &
+      #{$block}_role_main &,
+      #{$block}_role_tables &
         width: calc(100% - 402px)
         padding-right: 12px
 
       +media-screen-1024x768
-        #{$block}_role_main &
+        #{$block}_role_main &,
+        #{$block}_role_tables &
           width: calc(100% - 320px)
 
       +media-screen-1024x600
-        #{$block}_role_main &
+        #{$block}_role_main &,
+        #{$block}_role_tables &
           width: calc(100% - 320px)
 
     // $Header area MOD: role actions
@@ -82,15 +89,18 @@ $block: ".pos-header"
       flex-grow: 0
       flex-shrink: 0
 
-      #{$block}_role_main &
+      #{$block}_role_main &,
+      #{$block}_role_tables &
         width: 402px
 
       +media-screen-1024x768
-        #{$block}_role_main &
+        #{$block}_role_main &,
+        #{$block}_role_tables &
           width: 320px
 
       +media-screen-1024x600
-        #{$block}_role_main &
+        #{$block}_role_main &,
+        #{$block}_role_tables &
           width: 320px
 
 
@@ -103,28 +113,32 @@ $block: ".pos-header"
     height: 48px
     padding: 10px 22px
 
-    #{$block}_role_main &
+    #{$block}_role_main &,
+    #{$block}_role_tables &
       background-color: $c-header-info-bg
       border-radius: 12px
 
     +media-screen-1280x800
       height: 35px
 
-      #{$block}_role_main &
+      #{$block}_role_main &,
+      #{$block}_role_tables &
         border-radius: 9px
 
     +media-screen-1024x768
       height: 35px
       padding: 5px 15px
 
-      #{$block}_role_main &
+      #{$block}_role_main &,
+      #{$block}_role_tables &
         border-radius: 9px
 
     +media-screen-1024x600
       height: 30px
       padding: 5px 15px
 
-      #{$block}_role_main &
+      #{$block}_role_main &,
+      #{$block}_role_tables &
         border-radius: 7px
 
 

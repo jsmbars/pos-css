@@ -1,0 +1,291 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $New Table
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-new-table"
+
+#{$block}
+  display: block
+  width: 100%
+  height: 100%
+  padding: 20px 80px 29px
+
+  +media-screen-1024x768
+    padding: 16px 64px 24px
+
+  +media-screen-1024x600
+    padding: 12px 64px 22px
+
+
+  // $New Table header
+  &__header
+    display: block
+    width: 100%
+    margin-bottom: 16px
+
+    +media-screen-1024x768
+      margin-bottom: 14px
+
+    +media-screen-1024x600
+      margin-bottom: 12px
+
+
+  // $New Table title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 61px
+    font-weight: 700
+    color: $c-new-table-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 40px
+      line-height: 48px
+
+    +media-screen-1024x768
+      font-size: 37px
+      line-height: 45px
+
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
+
+  // $New Table controls
+  &__controls
+    display: block
+    width: 100%
+    margin-bottom: 45px
+
+    +media-screen-1024x768
+      margin-bottom: 36px
+
+    +media-screen-1024x600
+      margin-bottom: 27px
+
+
+  // $New Table number
+  &__number
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 18px
+
+    +media-screen-1024x768
+      margin-bottom: 14px
+
+    +media-screen-1024x600
+      margin-bottom: 11px
+
+
+  // $New Table number label
+  &__number-label
+    display: block
+    width: 180px
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 37px
+    font-weight: 700
+    color: $c-new-table-number-label-text
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      width: 210px
+      font-size: 24px
+      line-height: 29px
+
+    +media-screen-1024x768
+      width: 150px
+      font-size: 22px
+      line-height: 27px
+
+    +media-screen-1024x600
+      width: 164px
+      font-size: 18px
+      line-height: 22px
+
+
+  // $New Table number display
+  &__number-display
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 168px
+    height: 70px
+    margin: 0 33px
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-new-table-number-display-text
+    text-align: center
+    border: 5px solid $c-new-table-number-display-border
+    border-radius: 12px
+    background-color: $c-new-table-number-display-bg
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 50px
+      margin: 0
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 134px
+      height: 50px
+      margin: 0 20px
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 134px
+      height: 40px
+      margin: 0 3px
+      font-size: 25px
+      line-height: 32px
+      border-width: 4px
+      border-radius: 7px
+
+
+  // $New Table numpad
+  &__numpad
+    display: block
+    width: 234px
+    margin: 0 0 47px 180px
+
+    +media-screen-1280x800
+      width: 170px
+      margin: 0 0 45px 210px
+
+    +media-screen-1024x768
+      width: 170px
+      margin: 0 0 38px 150px
+
+    +media-screen-1024x600
+      width: 140px
+      margin: 0 0 28px 164px
+
+
+  // $New Table guests
+  &__guests
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $New Table guests label
+  &__guests-label
+    display: block
+    width: 180px
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 37px
+    font-weight: 700
+    color: $c-new-table-guests-label-text
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      width: 210px
+      font-size: 24px
+      line-height: 29px
+
+    +media-screen-1024x768
+      width: 150px
+      font-size: 22px
+      line-height: 27px
+
+    +media-screen-1024x600
+      width: 164px
+      font-size: 18px
+      line-height: 22px
+
+
+  // $New Table guests number
+  &__guests-number
+    flex-grow: 0
+    flex-shrink: 0
+
+
+  // $New Table actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $New Table action
+  &__action
+    display: block
+    width: 280px
+    height: 98px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 98px
+    font-weight: 700
+    color: $c-new-table-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-new-table-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 78px
+      font-size: 26px
+      line-height: 78px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 224px
+      height: 73px
+      font-size: 24px
+      line-height: 73px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 224px
+      height: 58px
+      font-size: 20px
+      line-height: 58px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $New table action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4

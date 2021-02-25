@@ -1,0 +1,582 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Transfer Table
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-transfer-table"
+
+#{$block}
+  display: block
+  width: 100%
+  height: 100%
+  padding: 102px 128px 43px 86px
+
+  +media-screen-1280x800
+    padding: 87px 128px 37px 86px
+
+  +media-screen-1024x768
+    padding: 85px 102px 35px 66px
+
+  +media-screen-1024x600
+    padding: 60px 102px 25px 66px
+
+
+  // $Transfer Table group
+  &__group
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 1066px
+    margin-bottom: 185px
+
+    +media-screen-1280x800
+      margin-bottom: 148px
+
+    +media-screen-1024x768
+      width: 852px
+      margin-bottom: 138px
+
+    +media-screen-1024x600
+      width: 852px
+      margin-bottom: 100px
+
+
+  // $Transfer Table area
+  &__area
+    flex-grow: 1
+    flex-shrink: 1
+
+    &:nth-child(1)
+      width: 426px
+
+      +media-screen-1024x768
+        width: 340px
+
+      +media-screen-1024x600
+        width: 340px
+
+    &:nth-child(2)
+      width: 640px
+      padding: 65px 0 0 203px
+
+      +media-screen-1280x800
+        padding: 52px 0 0 203px
+
+      +media-screen-1024x768
+        width: 512px
+        padding: 48px 0 0 162px
+
+      +media-screen-1024x600
+        width: 512px
+        padding: 39px 0 0 162px
+
+
+  // $Transfer Table header
+  &__header
+    display: block
+    width: 100%
+    margin-bottom: 29px
+
+    +media-screen-1280x800
+      margin-bottom: 23px
+
+    +media-screen-1024x768
+      margin-bottom: 21px
+
+    +media-screen-1024x600
+      margin-bottom: 17px
+
+
+  // $Transfer Table title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 40px
+    line-height: 49px
+    font-weight: 700
+    color: $c-transfer-table-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 32px
+      line-height: 39px
+
+    +media-screen-1024x768
+      font-size: 30px
+      line-height: 36px
+
+    +media-screen-1024x600
+      font-size: 24px
+      line-height: 29px
+
+
+  // $Transfer Table controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Transfer Table nimber
+  &__number
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Transfer Table number item
+  &__number-item
+    flex-grow: 0
+    flex-shrink: 0
+    padding-left: 23px
+
+    +media-screen-1280x800
+      padding-left: 14px
+
+    +media-screen-1024x768
+      padding-left: 19px
+
+    +media-screen-1024x600
+      padding-left: 14px
+
+
+  // $Transfer Table number label
+  &__number-label
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 70px
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 37px
+    font-weight: 700
+    text-align: center
+    color: $c-transfer-table-number-label-text
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      width: 50px
+      font-size: 24px
+      line-height: 29px
+
+    +media-screen-1024x768
+      width: 50px
+      font-size: 22px
+      line-height: 27px
+
+    +media-screen-1024x600
+      width: 40px
+      font-size: 18px
+      line-height: 22px
+
+
+  // $Transfer Table number display
+  &__number-display
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 168px
+    height: 70px
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-transfer-table-number-display-text
+    text-align: center
+    border: 5px solid $c-transfer-table-number-display-border
+    border-radius: 12px
+    background-color: $c-transfer-table-number-display-bg
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 50px
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 134px
+      height: 50px
+      font-size: 32px
+      line-height: 42px
+      border-width: 4px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 134px
+      height: 40px
+      font-size: 25px
+      line-height: 32px
+      border-width: 4px
+      border-radius: 7px
+
+
+  // $Transfer Table badge
+  &__badge
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 98px
+    height: 98px
+    padding: 2px
+    border-radius: 12px
+    background-color: $c-transfer-table-badge-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 82px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 78px
+      height: 78px
+      padding: 1px
+      border-radius: 7px
+
+    +media-screen-1024x600
+      width: 78px
+      height: 65px
+      padding: 1px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Transfer Table badge STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Transfer Table badge meta
+  &__badge-meta
+    display: block
+    width: 100%
+
+
+  // $Transfer Table badge server
+  // $Transfer Table badge time
+  // $Transfer Table badge name
+  // $Transfer Table badge label
+  // $Transfer Table badge number
+  &__badge-server,
+  &__badge-time,
+  &__badge-name,
+  &__badge-label,
+  &__badge-number
+    display: block
+    font-family: $f-sans
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+
+  &__badge-server
+    font-size: 12px
+    line-height: 15px
+    color: $c-transfer-table-badge-server-text
+
+    +media-screen-1280x800
+      font-size: 11px
+      line-height: 12px
+
+    +media-screen-1024x768
+      font-size: 10px
+      line-height: 11px
+
+    +media-screen-1024x600
+      font-size: 10px
+      line-height: 11px
+
+
+  &__badge-time
+    font-size: 14px
+    line-height: 16px
+    color: $c-transfer-table-badge-time-text
+
+    +media-screen-1280x800
+      font-size: 12px
+      line-height: 13px
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 13px
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 12px
+
+
+  &__badge-name
+    font-size: 30px
+    line-height: 37px
+    color: $c-transfer-table-badge-name-text
+
+    +media-screen-1280x800
+      font-size: 22px
+      line-height: 26px
+
+    +media-screen-1024x768
+      font-size: 20px
+      line-height: 24px
+
+    +media-screen-1024x600
+      font-size: 18px
+      line-height: 20px
+
+
+  &__badge-label
+    font-size: 8px
+    line-height: 10px
+    color: $c-transfer-table-badge-label-text
+
+    +media-screen-1024x768
+      font-size: 7px
+      line-height: 9px
+
+    +media-screen-1024x768
+      font-size: 7px
+      line-height: 9px
+
+    +media-screen-1024x600
+      font-size: 6px
+      line-height: 8px
+
+
+  &__badge-number
+    font-size: 14px
+    line-height: 18px
+    color: $c-transfer-table-badge-number-text
+
+    +media-screen-1280x800
+      font-size: 13px
+      line-height: 15px
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 14px
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 13px
+
+
+  // $Transfer Table numpad
+  &__numpad
+    display: block
+    width: 234px
+    margin: 0 0 47px 162px
+
+    +media-screen-1280x800
+      width: 170px
+      margin: 0 0 37px 162px
+
+    +media-screen-1024x768
+      width: 170px
+      margin: 0 0 35px 129px
+
+    +media-screen-1024x600
+      width: 140px
+      margin: 0 0 28px 129px
+
+
+  // $Transfer Table guests
+  &__guests
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Transfer Table guests label
+  &__guests-label
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 162px
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 37px
+    font-weight: 700
+    color: $c-transfer-table-guests-label-text
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 24px
+      line-height: 29px
+
+    +media-screen-1024x768
+      width: 129px
+      font-size: 22px
+      line-height: 27px
+
+    +media-screen-1024x600
+      width: 129px
+      font-size: 18px
+      line-height: 22px
+
+
+  // $Transfer Table guests number
+  &__guests-number
+    flex-grow: 0
+    flex-shrink: 0
+
+
+  // $Transfer Table floorplan
+  &__floorplan
+    display: block
+    width: 100%
+
+
+  // $Transfer Table floorplan label
+  &__floorplan-label
+    display: block
+    margin-bottom: 11px
+    font-family: $f-sans
+    font-size: 40px
+    line-height: 49px
+    font-weight: 700
+    color: $c-transfer-table-floorplan-label-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      margin-bottom: 9px
+      font-size: 32px
+      line-height: 39px
+
+    +media-screen-1024x768
+      margin-bottom: 8px
+      font-size: 30px
+      line-height: 36px
+
+    +media-screen-1024x600
+      margin-bottom: 6px
+      font-size: 24px
+      line-height: 29px
+
+
+  // $Transfer Table floorplan image
+  &__floorplan-image
+    position: relative
+    display: block
+    width: 437px
+    height: 437px
+    margin: 0 auto
+    border-radius: 30px
+    background-color: $c-transfer-table-floorplan-image-bg
+    overflow: hidden
+
+    +media-screen-1280x800
+      width: 349px
+      height: 349px
+      border-radius: 24px
+
+    +media-screen-1024x768
+      width: 327px
+      height: 327px
+      border-radius: 24px
+
+    +media-screen-1024x600
+      width: 262px
+      height: 262px
+      border-radius: 18px
+
+    & img
+      display: block
+      width: 100%
+      height: 100%
+
+
+  // $Transfer Table actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Transfer Table action
+  &__action
+    display: block
+    width: 280px
+    height: 98px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 98px
+    font-weight: 700
+    color: $c-transfer-table-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-transfer-table-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 78px
+      font-size: 26px
+      line-height: 78px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 224px
+      height: 73px
+      font-size: 24px
+      line-height: 73px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 224px
+      height: 58px
+      font-size: 20px
+      line-height: 58px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $New table action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+

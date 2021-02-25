@@ -1,0 +1,374 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Tables
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-tables"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  height: calc(100% - 62px)
+  padding: 21px 0 73px
+
+  +media-screen-1280x800
+    height: calc(100% - 49px)
+    padding: 5px 0 30px
+
+  +media-screen-1024x768
+    height: calc(100% - 47px)
+    padding: 5px 0 30px
+
+  +media-screen-1024x600
+    height: calc(100% - 42px)
+    padding: 0 0 20px
+
+
+  // $Tables header
+  &__header
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 100%
+
+
+  // $Tables title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 60px
+    font-weight: 700
+    color: $c-tables-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 40px
+      line-height: 48px
+
+    +media-screen-1024x768
+      font-size: 37px
+      line-height: 45px
+
+    +media-screen-1024x600
+      font-size: 30px
+      line-height: 36px
+
+
+  // $Tables list
+  &__list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 1120px
+    margin: 0 auto 54px
+
+    +media-screen-1280x800
+      margin-bottom: 40px
+
+    +media-screen-1024x768
+      width: 890px
+      margin-bottom: 30px
+
+    +media-screen-1024x600
+      width: 890px
+      margin-bottom: 20px
+
+
+  // $Tables row
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 14px
+
+      +media-screen-1280x800
+        margin-bottom: 11px
+
+      +media-screen-1024x768
+        margin-bottom: 9px
+
+      +media-screen-1024x600
+        margin-bottom: 7px
+
+
+  // $Tables item
+  &__item
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: calc(10% - 14px)
+    height: 98px
+    margin-right: 14px
+    padding: 2px
+    border-radius: 12px
+    background-color: $c-tables-item-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 82px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: calc(10% - 11px)
+      height: 78px
+      margin-right: 11px
+      padding: 1px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: calc(10% - 11px)
+      height: 65px
+      margin-right: 11px
+      padding: 1px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Tables item STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $Tables item meta
+  &__item-meta
+    display: block
+    width: 100%
+
+
+  // $Tables item server
+  // $Tables item time
+  // $Tables item name
+  // $Tables item label
+  // $Tables item number
+  &__item-server,
+  &__item-time,
+  &__item-name,
+  &__item-label,
+  &__item-number
+    display: block
+    font-family: $f-sans
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+
+  &__item-server
+    font-size: 12px
+    line-height: 15px
+    color: $c-tables-item-server-text
+
+    +media-screen-1280x800
+      font-size: 11px
+      line-height: 12px
+
+    +media-screen-1024x768
+      font-size: 10px
+      line-height: 11px
+
+    +media-screen-1024x600
+      font-size: 10px
+      line-height: 11px
+
+
+  &__item-time
+    font-size: 14px
+    line-height: 16px
+    color: $c-tables-item-time-text
+
+    +media-screen-1280x800
+      font-size: 12px
+      line-height: 13px
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 13px
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 12px
+
+
+  &__item-name
+    font-size: 30px
+    line-height: 37px
+    color: $c-tables-item-name-text
+
+    +media-screen-1280x800
+      font-size: 22px
+      line-height: 26px
+
+    +media-screen-1024x768
+      font-size: 20px
+      line-height: 24px
+
+    +media-screen-1024x600
+      font-size: 18px
+      line-height: 20px
+
+
+  &__item-label
+    font-size: 8px
+    line-height: 10px
+    color: $c-tables-item-label-text
+
+    +media-screen-1024x768
+      font-size: 7px
+      line-height: 9px
+
+    +media-screen-1024x600
+      font-size: 6px
+      line-height: 8px
+
+
+  &__item-number
+    font-size: 14px
+    line-height: 18px
+    color: $c-tables-item-number-text
+
+    +media-screen-1280x800
+      font-size: 13px
+      line-height: 15px
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 14px
+
+    +media-screen-1024x600
+      font-size: 11px
+      line-height: 13px
+
+
+  // $Tables actions
+  &__actions
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 1046px
+    margin: 0 auto
+    padding-right: 14px
+
+    +media-screen-1024x768
+      width: 836px
+      padding-right: 11px
+
+    +media-screen-1024x600
+      width: 836px
+      padding-right: 11px
+
+
+  // $Tables action
+  &__action
+    display: block
+    width: 280px
+    height: 98px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 30px
+    line-height: 98px
+    font-weight: 700
+    color: $c-tables-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-tables-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 78px
+      font-size: 26px
+      line-height: 78px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 224px
+      height: 73px
+      font-size: 24px
+      line-height: 73px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 224px
+      height: 58px
+      font-size: 20px
+      line-height: 58px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Tables action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Tables action MOD: role transfer
+    &_role_transfer
+      line-height: 37px
+      color: $c-tables-action-transfer-text
+      background-color: $c-tables-action-transfer-bg
+
+      +media-screen-1280x800
+        line-height: 29px
+
+      +media-screen-1024x768
+        line-height: 27px
+
+      +media-screen-1024x600
+        line-height: 24px
+
+    // $Tables action MOD: role new
+    &_role_new
+      color: $c-tables-action-new-text
+      background-color: $c-tables-action-new-bg
+
+    // $Tables action MOD: role open
+    &_role_open
+      color: $c-tables-action-open-text
+      background-color: $c-tables-action-open-bg
