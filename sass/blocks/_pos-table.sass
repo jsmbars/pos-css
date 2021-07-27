@@ -1,0 +1,298 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Table
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-table"
+
+#{$block}
+  position: relative
+  display: block
+  width: 100%
+
+  // $Table MOD: role sales review
+  &_role_sales-review
+    height: 100%
+
+
+  // $Table sorting
+  &__sorting
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    z-index: 10
+    display: block
+    width: 20px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    outline: none
+    cursor: pointer
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      left: 5px
+      display: block
+      width: 0
+      height: 0
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      transition: all .2s
+
+    &:before
+      top: 5px
+      border-bottom: 10px solid $c-table-sorting-bg
+
+    &:after
+      bottom: 5px
+      border-top: 10px solid $c-table-sorting-bg
+
+    &:hover,
+    &:focus
+      outline: none
+
+    &:hover
+      &:before,
+      &:after
+        opacity: .8
+
+    // $Table sorting MOD: type ascending
+    &_type_asc
+      &:before
+        top: 50%
+        transform: translateY(-50%)
+
+      &:after
+        display: none
+
+    // $Table sorting MOD: type descending
+    &_type_desc
+      &:before
+        display: none
+
+      &:after
+        top: 50%
+        transform: translateY(-50%)
+
+
+  // $Table scroll
+  &__scroll
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+
+  // $Table scroll content
+  &__scroll-content
+    display: block
+    width: 100%
+
+
+  // $Table group
+  &__group
+    display: block
+    width: 100%
+
+    // $Table group MOD: role header
+    &_role_header
+      height: 35px
+      margin-bottom: 3px
+
+    // $Table group MOD: role main
+    &_role_main
+      // $Table group MOD: role main CONTEXT: $Table mOD: role sales review
+      #{$block}_role_sales-review &
+        height: calc(100% - 35px)
+
+
+  // $Table row
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+    background-color: $c-table-row-bg
+
+    #{$block}_role_sales-review &
+      cursor: pointer
+      transition: all .2s
+
+    &:not(:last-child)
+      margin-bottom: 3px
+
+    &:hover
+      #{$block}_role_sales-review &
+        background-color: $c-table-row-active-bg
+
+    // $Table row MOD: role header
+    &_role_header
+      background-color: $c-table-row-header-bg
+      cursor: default
+
+      &:hover
+        #{$block}_role_sales-review &
+          background-color: $c-table-row-header-bg
+
+    // $Table row STATE: active
+    &.is-active
+      background-color: $c-table-row-active-bg
+
+    // $Table row STATE: no sale
+    &.is-no-sale
+      background-color: $c-table-row-no-sale-bg
+
+    // $Table row STATE: void
+    &.is-void
+      background-color: $c-table-row-void-bg
+
+    // $Table row STATE: void all
+    &.is-void-all
+      background-color: $c-table-row-void-all-bg
+
+    // $Table row STATE: wtl
+    &.is-wtl
+      background-color: $c-table-row-wtl-bg
+
+    // $Table row STATE: refund
+    &.is-refund
+      background-color: $c-table-row-refund-bg
+
+    // $Table row STATE: deposit
+    &.is-deposit
+      background-color: $c-table-row-deposit-bg
+
+    // $Table row STATE: discount
+    &.is-discount
+      background-color: $c-table-row-discount-bg
+
+
+  // $Table cell
+  &__cell
+    position: relative
+    flex-grow: 1
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    min-height: 35px
+    padding: 5px
+
+    // $Table cell CONTEXT: $Table MOD: role sales review
+    #{$block}_role_sales-review &
+      justify-content: center
+
+    // $Table cell first column
+    &:nth-child(1)
+      #{$block}_role_sales-review &
+        width: 13%
+        justify-content: flex-start
+
+    // $Table cell second column
+    &:nth-child(2)
+      #{$block}_role_sales-review &
+        width: 12%
+
+    // $Table cell third column
+    &:nth-child(3)
+      #{$block}_role_sales-review &
+        width: 20%
+
+    // $Table cell fourth column
+    &:nth-child(4)
+      #{$block}_role_sales-review &
+        width: 12%
+
+    // $Table cell fifth column
+    &:nth-child(5)
+      #{$block}_role_sales-review &
+        width: 12%
+
+    // $Table cell sixth column
+    &:nth-child(6)
+      #{$block}_role_sales-review &
+        width: 12%
+
+    // $Table cell seventh column
+    &:nth-child(7)
+      #{$block}_role_sales-review &
+        width: 12%
+
+    // $Table cell eighth column
+    &:nth-child(8)
+      #{$block}_role_sales-review &
+        width: 6%
+
+    // $Table cell MOD: role header
+    &_role_header
+      font-family: $f-sans
+      font-size: 14px
+      font-weight: 500
+      line-height: 1
+      color: $c-table-cell-text
+      text-transform: uppercase
+
+      // $Table cell MOD: role header CONTEXT: $Table MOD: role sales review
+      #{$block}_role_sales-review &
+        padding-left: 20px
+
+      &:not(:last-child)
+        border-right: 3px solid $c-table-cell-border
+
+
+  // $Table text
+  &__text
+    font-family: $f-sans
+    font-size: 17px
+    font-weight: 500
+    line-height: 1
+    color: $c-table-cell-text
+
+    // $Table text CONTEXT: $Table MOD: role sales review
+    #{$block}_role_sales-review &
+      text-align: center
+      text-transform: uppercase
+
+    #{$block}_role_sales-review #{$block}__cell:nth-child(1) &
+      text-align: left
+
+    &:not(:last-child)
+      margin-bottom: 5px
+
+
+  // $Table text meta
+  &__text-meta
+    font-size: 10px
+    vertical-align: top
+
+
+  // $Table placeholder
+  &__placeholder
+    padding: 20px 5px
+
+
+  // $Table placeholder text
+  &__placeholder-text
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1
+    font-weight: 500
+    color: $c-table-palceholder-text
+    text-align: center
+    text-transform: uppercase

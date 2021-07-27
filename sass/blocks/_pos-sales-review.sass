@@ -1,0 +1,153 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Sales Review
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-sales-review"
+
+#{$block}
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  height: calc(100% - 70px)
+  padding: 45px 0 40px
+
+
+  // $Sales Review table
+  &__table
+    position: relative
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 1205px
+    margin: 0 auto
+    border: 5px solid $c-sales-review-table-border
+
+
+  // $Sales Review table content
+  &__table-content
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+
+  // $Sales Review controls
+  &__controls
+    display: block
+    width: 100%
+
+
+  // $Sales Review field
+  &__field
+    display: block
+    width: 297px
+    margin: 0 auto
+    padding-top: 15px
+
+
+  // $Sales Review keyboard
+  &__keyboard
+    display: block
+    width: 100%
+    padding-top: 15px
+
+
+  // $Sales Review control
+  &__control
+    position: absolute
+    bottom: 67px
+    right: 70px
+    display: block
+
+
+  // $Sales Review actions
+  &__actions
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 540px
+    margin: 54px 0 48px 90px
+
+
+  // $Sales Review action
+  &__action
+    display: block
+    width: 140px
+    height: 70px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-sales-review-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-sales-review-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sales Review action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Sales Review action MOD: role display sale
+    &_role_display-sale
+      color: $c-sales-review-action-display-sale-text
+      background-color: $c-sales-review-action-display-sale-bg
+
+    // $Sales Review action MOD: role main menu
+    &_role_main-menu
+      color: $c-sales-review-action-main-menu-text
+      background-color: $c-sales-review-action-main-menu-bg
+
+    // $Sales Review action MOD: role search
+    &_role_search
+      color: $c-sales-review-action-search-text
+      background-color: $c-sales-review-action-search-bg
+
+
+  // $Sales Review version
+  &__version
+    position: absolute
+    bottom: 7px
+    left: 5px
+    right: 5px
+    display: block
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 500
+    color: $c-sales-review-version-text
+    text-align: center
