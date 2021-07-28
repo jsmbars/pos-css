@@ -129,6 +129,10 @@ $block: ".pos-data"
       #{$block}_role_sale &
         margin-bottom: 45px
 
+      +media-screen-1024x600
+        #{$block}_role_sale &
+          margin-bottom: 20px
+
 
   // $Data item label
   &__item-label
@@ -231,6 +235,10 @@ $block: ".pos-data"
 
       #{$block}_role_summary #{$block}__item_role_total &
         font-size: 36px
+
+      #{$block}_role_sale &
+        padding-right: 10px
+        font-size: 13px
 
 
   // $Data item value
@@ -378,4 +386,7 @@ $block: ".pos-data"
       #{$block}_role_summary #{$block}__item_role_total &,
       #{$block}_role_summary #{$block}__item_role_change &
         font-size: 48px
+
+      #{$block}_role_sale &
+        font-size: 13px
 

@@ -39,6 +39,9 @@ $block: ".pos-table"
     outline: none
     cursor: pointer
 
+    +media-screen-1024x600
+      width: 16px
+
     &:before,
     &:after
       content: ""
@@ -55,9 +58,15 @@ $block: ".pos-table"
       top: 5px
       border-bottom: 10px solid $c-table-sorting-bg
 
+      +media-screen-1024x600
+        border-bottom-width: 8px
+
     &:after
       bottom: 5px
       border-top: 10px solid $c-table-sorting-bg
+
+      +media-screen-1024x600
+        border-top-width: 8px
 
     &:hover,
     &:focus
@@ -112,11 +121,18 @@ $block: ".pos-table"
       height: 35px
       margin-bottom: 3px
 
+      +media-screen-1024x600
+        height: 30px
+
     // $Table group MOD: role main
     &_role_main
       // $Table group MOD: role main CONTEXT: $Table mOD: role sales review
       #{$block}_role_sales-review &
         height: calc(100% - 35px)
+
+      +media-screen-1024x600
+        #{$block}_role_sales-review &
+          height: calc(100% - 30px)
 
 
   // $Table row
@@ -192,6 +208,9 @@ $block: ".pos-table"
     min-height: 35px
     padding: 5px
 
+    +media-screen-1024x600
+      min-height: 30px
+
     // $Table cell CONTEXT: $Table MOD: role sales review
     #{$block}_role_sales-review &
       justify-content: center
@@ -246,6 +265,9 @@ $block: ".pos-table"
       color: $c-table-cell-text
       text-transform: uppercase
 
+      +media-screen-1024x600
+        font-size: 12px
+
       // $Table cell MOD: role header CONTEXT: $Table MOD: role sales review
       #{$block}_role_sales-review &
         padding-left: 20px
@@ -261,6 +283,9 @@ $block: ".pos-table"
     font-weight: 500
     line-height: 1
     color: $c-table-cell-text
+
+    +media-screen-1024x600
+      font-size: 13px
 
     // $Table text CONTEXT: $Table MOD: role sales review
     #{$block}_role_sales-review &
@@ -284,6 +309,9 @@ $block: ".pos-table"
   &__placeholder
     padding: 20px 5px
 
+    +media-screen-1024x600
+      padding: 12px 5px
+
 
   // $Table placeholder text
   &__placeholder-text
@@ -296,3 +324,6 @@ $block: ".pos-table"
     color: $c-table-palceholder-text
     text-align: center
     text-transform: uppercase
+
+    +media-screen-1024x600
+      font-size: 12px
