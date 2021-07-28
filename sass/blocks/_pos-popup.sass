@@ -52,6 +52,10 @@ $block: ".pos-popup"
     width: 664px
     height: 378px
 
+    +media-screen-1024x768
+      width: 532px
+      height: 283px
+
     +media-screen-1024x600
       width: 532px
       height: 226px
@@ -76,6 +80,9 @@ $block: ".pos-popup"
 
     +media-screen-1024x768
       padding: 15px 16px
+
+      #{$block}_role_confirmation &
+        padding: 45px 24px 38px
 
     +media-screen-1024x600
       padding: 12px 16px
@@ -172,6 +179,9 @@ $block: ".pos-popup"
       margin-bottom: 15px
       font-size: 30px
 
+      #{$block}_role_confirmation &
+        font-size: 54px
+
     +media-screen-1024x600
       margin-bottom: 12px
       font-size: 24px
@@ -265,6 +275,12 @@ $block: ".pos-popup"
       line-height: 45px
       border-radius: 9px
 
+      #{$block}_role_confirmation &
+        width: 140px
+        height: 46px
+        font-size: 27px
+        line-height: 46px
+
     +media-screen-1024x600
       height: 36px
       font-size: 12px
@@ -292,6 +308,9 @@ $block: ".pos-popup"
 
       +media-screen-1024x768
         margin-right: 16px
+
+        #{$block}_role_confirmation &
+          margin-right: 56px
 
       +media-screen-1024x600
         margin-right: 16px
