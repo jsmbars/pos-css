@@ -52,6 +52,9 @@ $block: ".pos-popup"
     width: 664px
     height: 378px
 
+    +media-screen-1280x800
+      height: 302px
+
     +media-screen-1024x768
       width: 532px
       height: 283px
@@ -77,6 +80,9 @@ $block: ".pos-popup"
 
     +media-screen-1280x800
       padding: 16px 20px
+
+      #{$block}_role_confirmation &
+        padding: 48px 30px 40px
 
     +media-screen-1024x768
       padding: 15px 16px
@@ -175,6 +181,9 @@ $block: ".pos-popup"
       margin-bottom: 16px
       font-size: 32px
 
+      #{$block}_role_confirmation &
+        font-size: 56px
+
     +media-screen-1024x768
       margin-bottom: 15px
       font-size: 30px
@@ -268,6 +277,11 @@ $block: ".pos-popup"
       font-size: 16px
       line-height: 48px
       border-radius: 9px
+
+      #{$block}_role_confirmation &
+        height: 50px
+        font-size: 31px
+        line-height: 50px
 
     +media-screen-1024x768
       height: 45px
