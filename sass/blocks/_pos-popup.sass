@@ -47,6 +47,22 @@ $block: ".pos-popup"
   // $Popup MOD: role error
   &_role_error
 
+  // $Popup MOD: role confirmation
+  &_role_confirmation
+    width: 664px
+    height: 378px
+
+    +media-screen-1280x800
+      height: 302px
+
+    +media-screen-1024x768
+      width: 532px
+      height: 283px
+
+    +media-screen-1024x600
+      width: 532px
+      height: 226px
+
 
   // $Popup content
   &__content
@@ -58,14 +74,27 @@ $block: ".pos-popup"
     height: 100%
     padding: 20px
 
+    // $Popup content CONTEXT: $Popup MOD: role confirmation
+    #{$block}_role_confirmation &
+      padding: 60px 30px 50px
+
     +media-screen-1280x800
       padding: 16px 20px
+
+      #{$block}_role_confirmation &
+        padding: 48px 30px 40px
 
     +media-screen-1024x768
       padding: 15px 16px
 
+      #{$block}_role_confirmation &
+        padding: 45px 24px 38px
+
     +media-screen-1024x600
       padding: 12px 16px
+
+      #{$block}_role_confirmation &
+        padding: 36px 24px 30px
 
 
   // $Popup icon
@@ -141,17 +170,33 @@ $block: ".pos-popup"
     color: $c-popup-title-text
     text-align: center
 
+    // $Popup title CONTEXT: $Popup MOD: role confirmation
+    #{$block}_role_confirmation &
+      margin-bottom: 0
+      font-size: 72px
+      color: $c-popup-confirmation-title-text
+      text-transform: uppercase
+
     +media-screen-1280x800
       margin-bottom: 16px
       font-size: 32px
+
+      #{$block}_role_confirmation &
+        font-size: 56px
 
     +media-screen-1024x768
       margin-bottom: 15px
       font-size: 30px
 
+      #{$block}_role_confirmation &
+        font-size: 54px
+
     +media-screen-1024x600
       margin-bottom: 12px
       font-size: 24px
+
+      #{$block}_role_confirmation &
+        font-size: 44px
 
 
   // $Popup text
@@ -220,11 +265,23 @@ $block: ".pos-popup"
     user-select: none
     transition: all .2s
 
+    // $Popup action CONTEXT: $Popup MOD: role confirmation
+    #{$block}_role_confirmation &
+      width: 175px
+      height: 63px
+      font-size: 35px
+      line-height: 63px
+
     +media-screen-1280x800
       height: 48px
       font-size: 16px
       line-height: 48px
       border-radius: 9px
+
+      #{$block}_role_confirmation &
+        height: 50px
+        font-size: 31px
+        line-height: 50px
 
     +media-screen-1024x768
       height: 45px
@@ -232,11 +289,24 @@ $block: ".pos-popup"
       line-height: 45px
       border-radius: 9px
 
+      #{$block}_role_confirmation &
+        width: 140px
+        height: 46px
+        font-size: 27px
+        line-height: 46px
+
     +media-screen-1024x600
       height: 36px
       font-size: 12px
       line-height: 36px
       border-radius: 7px
+
+      #{$block}_role_confirmation &
+        width: 140px
+        height: 40px
+        font-size: 21px
+        line-height: 40px
+
 
     &:hover
       opacity: .8
@@ -247,11 +317,20 @@ $block: ".pos-popup"
     &:not(:last-child)
       margin-right: 20px
 
+      #{$block}_role_confirmation &
+        margin-right: 70px
+
       +media-screen-1024x768
         margin-right: 16px
 
+        #{$block}_role_confirmation &
+          margin-right: 56px
+
       +media-screen-1024x600
         margin-right: 16px
+
+        #{$block}_role_confirmation &
+          margin-right: 56px
 
     // $Popup action STATE: disabled
     &.is-disabled
@@ -265,3 +344,13 @@ $block: ".pos-popup"
     &_role_retry
       background-color: $c-popup-action-retry-bg
       color: $c-popup-action-retry-text
+
+    // $Popup action MOD: role no
+    &_role_no
+      background-color: $c-popup-action-no-bg
+      color: $c-popup-action-no-text
+
+    // $Popup action MOD: role yes
+    &_role_yes
+      background-color: $c-popup-action-yes-bg
+      color: $c-popup-action-yes-text

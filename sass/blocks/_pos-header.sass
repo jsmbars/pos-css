@@ -23,6 +23,9 @@ $block: ".pos-header"
   width: 100%
   padding: 7px 12px
 
+  +media-screen-1280x800
+    padding: 7px 12px
+
   +media-screen-1024x768
     padding: 6px 10px
 
@@ -58,6 +61,27 @@ $block: ".pos-header"
   // $Header MOD: role tables
   &_role_tables
     z-index: 200
+
+  // $Header MOD: role sales-review
+  &_role_sales-review
+    padding: 5px
+    background-color: $c-header-sales-review-bg
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      display: block
+      width: calc((100vw - 100%) / 2)
+      background-color: $c-header-sales-review-bg
+
+    &:before
+      right: 100%
+
+    &:after
+      left: 100%
 
 
   // $Header area
@@ -441,3 +465,28 @@ $block: ".pos-header"
 
       &:hover
         opacity: .4
+
+
+  // $Header title
+  &__title
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 60px
+    line-height: 60px
+    font-weight: 500
+    color: $c-header-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 48px
+      line-height: 48px
+
+    +media-screen-1024x768
+      font-size: 45px
+      line-height: 45px
+
+    +media-screen-1024x600
+      font-size: 35px
+      line-height: 35px

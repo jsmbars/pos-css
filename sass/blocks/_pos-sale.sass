@@ -1,0 +1,256 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Sale
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-sale"
+
+#{$block}
+  position: relative
+  display: block
+  width: 100%
+  padding: 10px 25px 20px
+
+  +media-screen-1280x800
+    padding: 9px 25px 18px
+
+  +media-screen-1024x768
+    padding: 9px 20px 16px
+
+  +media-screen-1024x600
+    padding: 8px 20px 16px
+
+  // $Sale group
+  &__group
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+    margin-bottom: 64px
+
+    +media-screen-1280x800
+      margin-bottom: 50px
+
+    +media-screen-1024x768
+      margin-bottom: 40px
+
+    +media-screen-1024x600
+      margin-bottom: 50px
+
+
+  // $Sale order
+  &__order
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 402px
+
+    +media-screen-1024x768
+      width: 322px
+
+    +media-screen-1024x600
+      width: 322px
+
+
+  // $Sale invoice
+  &__invoice
+    display: block
+    width: 100%
+    margin-bottom: 14px
+
+    +media-screen-1024x768
+      margin-bottom: 12px
+
+    +media-screen-1024x600
+      margin-bottom: 12px
+
+  // $Sale tender
+  &__tender
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+    padding-left: 10px
+
+    +media-screen-1024x768
+      padding-left: 8px
+
+    +media-screen-1024x600
+      padding-left: 8px
+
+
+  // $Sale data
+  &__data
+    display: block
+    width: 100%
+    margin-bottom: 20px
+
+    +media-screen-1024x768
+      margin-bottom: 16px
+
+    +media-screen-1024x600
+      margin-bottom: 16px
+
+
+  // $Sale actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+  // $Sale action
+  &__action
+    display: block
+    height: 70px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-sale-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-sale-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 56px
+      font-size: 18px
+      line-height: 21px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      height: 52px
+      font-size: 16px
+      line-height: 18px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      height: 42px
+      padding: 0 15px
+      font-size: 15px
+      line-height: 17px
+      border-radius: 7px
+
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Sale action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $Sale action MOD: role page down
+    &_role_page-down
+      width: 98px
+      margin-right: 35px
+      color: $c-sale-action-page-down-text
+      background-color: $c-sale-action-page-down-bg
+
+      +media-screen-1024x768
+        width: 78px
+        margin-right: 28px
+
+      +media-screen-1024x600
+        width: 78px
+        margin-right: 28px
+
+    // $Sale action MOD: role print
+    &_role_print
+      width: 98px
+      margin-right: 35px
+      color: $c-sale-action-print-text
+      background-color: $c-sale-action-print-bg
+
+      +media-screen-1024x768
+        width: 78px
+        margin-right: 28px
+
+      +media-screen-1024x600
+        width: 78px
+        margin-right: 28px
+
+    // $Sale action MOD: role page up
+    &_role_page-up
+      width: 98px
+      color: $c-sale-action-page-up-text
+      background-color: $c-sale-action-page-up-bg
+
+      +media-screen-1024x768
+        width: 78px
+
+      +media-screen-1024x600
+        width: 78px
+
+    // $Sale action MOD: role tender
+    &_role_change-tender
+      width: 140px
+      height: 63px
+      color: $c-sale-action-change-tender-text
+      background-color: $c-sale-action-change-tender-bg
+
+      +media-screen-1280x800
+        height: 50px
+
+      +media-screen-1024x768
+        width: 110px
+        height: 46px
+
+      +media-screen-1024x600
+        width: 110px
+        height: 40px
+
+    // $Sale action MOD: role done
+    &_role_done
+      width: 175px
+      height: 63px
+      font-size: 35px
+      line-height: 43px
+      color: $c-sale-action-done-text
+      background-color: $c-sale-action-done-bg
+
+      +media-screen-1280x800
+        height: 50px
+        font-size: 31px
+        line-height: 34px
+
+      +media-screen-1024x768
+        width: 140px
+        height: 46px
+        font-size: 27px
+        line-height: 32px
+
+      +media-screen-1024x600
+        width: 140px
+        height: 40px
+        font-size: 25px
+        line-height: 28px

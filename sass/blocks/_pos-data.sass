@@ -24,6 +24,9 @@ $block: ".pos-data"
   // $Data MOD: role summary
   &_role_summary
 
+  // $Data MOD: role sale
+  &_role_sale
+
 
   // $Data list
   &__list
@@ -40,8 +43,13 @@ $block: ".pos-data"
     width: 100%
     height: 50px
 
+    // $Data item CONTEXT: $Data MOD: role summary
     #{$block}_role_summary &
       height: 100px
+
+    // $Data item CONTEXT: $Data MOD: role sale
+    #{$block}_role_sale &
+      height: auto
 
     +media-screen-1280x800
       height: 40px
@@ -94,6 +102,8 @@ $block: ".pos-data"
     &_role_change
       height: 70px
 
+      // $Data item MOD: role balance CONTEXT: $Data MOD: role summary
+      // $Data item MOD: role change CONTEXT: $Data MOD: role summary
       #{$block}_role_summary &
         height: 140px
 
@@ -115,6 +125,22 @@ $block: ".pos-data"
         #{$block}_role_summary &
           height: 80px
 
+    &:not(:last-child)
+      #{$block}_role_sale &
+        margin-bottom: 45px
+
+      +media-screen-1280x800
+        #{$block}_role_sale &
+          margin-bottom: 34px
+
+      +media-screen-1024x768
+        #{$block}_role_sale &
+          margin-bottom: 34px
+
+      +media-screen-1024x600
+        #{$block}_role_sale &
+          margin-bottom: 20px
+
 
   // $Data item label
   &__item-label
@@ -130,10 +156,18 @@ $block: ".pos-data"
     text-transform: uppercase
     text-align: right
 
+    // $Data item label CONTEXT: $Data MOD: role summary
     #{$block}_role_summary &
       width: 50%
       padding-right: 20px
       font-size: 60px
+
+    // $Data item label CONTEXT: $Data MOD: role sale
+    #{$block}_role_sale &
+      padding-right: 12px
+      font-size: 17px
+      font-weight: 500
+      color: $c-data-sale-item-label-text
 
     // $Data item label CONTEXT: $Data item MOD: role total
     #{$block}__item_role_total &
@@ -195,6 +229,10 @@ $block: ".pos-data"
       #{$block}_role_summary #{$block}__item_role_total &
         font-size: 45px
 
+      #{$block}_role_sale &
+        padding-right: 10px
+        font-size: 13px
+
     +media-screen-1024x600
       width: 96px
       padding-right: 5px
@@ -210,6 +248,10 @@ $block: ".pos-data"
       #{$block}_role_summary #{$block}__item_role_total &
         font-size: 36px
 
+      #{$block}_role_sale &
+        padding-right: 10px
+        font-size: 13px
+
 
   // $Data item value
   &__item-value
@@ -223,9 +265,16 @@ $block: ".pos-data"
     font-weight: 700
     text-align: center
 
+    // $Data item value CONTEXT: $Data MOD: role summary
     #{$block}_role_summary &
       width: 50%
       font-size: 70px
+
+    // $Data item value CONTEXT: $Data MOD: role sale
+    #{$block}_role_sale &
+      font-size: 17px
+      font-weight: 500
+      text-align: left
 
     // $Data item value CONTEXT: $Data item MOD: role total
     #{$block}__item_role_total &
@@ -327,6 +376,9 @@ $block: ".pos-data"
       #{$block}_role_summary #{$block}__item_role_change &
         font-size: 60px
 
+      #{$block}_role_sale &
+        font-size: 13px
+
     +media-screen-1024x600
       width: calc(100% - 96px)
       font-size: 17px
@@ -349,4 +401,7 @@ $block: ".pos-data"
       #{$block}_role_summary #{$block}__item_role_total &,
       #{$block}_role_summary #{$block}__item_role_change &
         font-size: 48px
+
+      #{$block}_role_sale &
+        font-size: 13px
 
