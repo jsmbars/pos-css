@@ -76,25 +76,25 @@ $block: ".pos-popup"
 
     // $Popup content CONTEXT: $Popup MOD: role confirmation
     #{$block}_role_confirmation &
-      padding: 60px 30px 50px
+      padding: 35px 30px 40px
 
     +media-screen-1280x800
       padding: 16px 20px
 
       #{$block}_role_confirmation &
-        padding: 48px 30px 40px
+        padding: 28px 30px 32px
 
     +media-screen-1024x768
       padding: 15px 16px
 
       #{$block}_role_confirmation &
-        padding: 45px 24px 38px
+        padding: 26px 24px 30px
 
     +media-screen-1024x600
       padding: 12px 16px
 
       #{$block}_role_confirmation &
-        padding: 36px 24px 30px
+        padding: 21px 24px 24px
 
 
   // $Popup icon
@@ -172,7 +172,7 @@ $block: ".pos-popup"
 
     // $Popup title CONTEXT: $Popup MOD: role confirmation
     #{$block}_role_confirmation &
-      margin-bottom: 0
+      margin-bottom: 30px
       font-size: 72px
       color: $c-popup-confirmation-title-text
       text-transform: uppercase
@@ -182,6 +182,7 @@ $block: ".pos-popup"
       font-size: 32px
 
       #{$block}_role_confirmation &
+        margin-bottom: 24px
         font-size: 56px
 
     +media-screen-1024x768
@@ -189,6 +190,7 @@ $block: ".pos-popup"
       font-size: 30px
 
       #{$block}_role_confirmation &
+        margin-bottom: 22px
         font-size: 54px
 
     +media-screen-1024x600
@@ -196,7 +198,44 @@ $block: ".pos-popup"
       font-size: 24px
 
       #{$block}_role_confirmation &
+        margin-bottom: 18px
         font-size: 44px
+
+
+  // $Popup label
+  &__label
+    display: block
+    width: 100%
+    margin-bottom: 20px
+    font-family: $f-sans
+    font-size: 32px
+    line-height: 1
+    font-weight: 700
+    color: $c-popup-label-text
+    text-align: center
+
+    // $Popup subtitle CONTEXT: $Popup MOD: role confirmation
+    #{$block}_role_confirmation &
+      color: $c-popup-confirmation-label-text
+      text-transform: uppercase
+
+    +media-screen-1280x800
+      margin-bottom: 16px
+
+      #{$block}_role_confirmation &
+        font-size: 26px
+
+    +media-screen-1024x768
+      font-size: 15px
+
+      #{$block}_role_confirmation &
+        font-size: 24px
+
+    +media-screen-1024x600
+      font-size: 12px
+
+      #{$block}_role_confirmation &
+        font-size: 20px
 
 
   // $Popup text
@@ -210,14 +249,30 @@ $block: ".pos-popup"
     color: $c-popup-text
     text-align: center
 
+    // $Popup text CONTEXT: $Popup MOD: role confirmation
+    #{$block}_role_confirmation &
+      font-size: 32px
+      font-weight: 700
+      color: $c-popup-confirmation-text
+      text-transform: uppercase
+
     +media-screen-1280x800
       margin-bottom: 16px
+
+      #{$block}_role_confirmation &
+        font-size: 26px
 
     +media-screen-1024x768
       font-size: 15px
 
+      #{$block}_role_confirmation &
+        font-size: 24px
+
     +media-screen-1024x600
       font-size: 12px
+
+      #{$block}_role_confirmation &
+        font-size: 20px
 
     &:not(:last-child)
       margin-bottom: 10px
