@@ -87,18 +87,8 @@ $block: ".pos-invoice"
     flex-shrink: 0
     display: block
     width: 100%
-    height: 43px
     border-bottom: 1px solid $c-invoice-panel-border
     background-color: $c-invoice-panel-header-bg
-
-    +media-screen-1280x800
-      height: 32px
-
-    +media-screen-1024x768
-      height: 32px
-
-    +media-screen-1024x600
-      height: 25px
 
 
   // $Invoice panel title
@@ -130,18 +120,10 @@ $block: ".pos-invoice"
   &__panel-content
     flex-grow: 1
     flex-shrink: 1
+    position: relative
+    display: block
     width: 100%
-    height: calc(100% - 86px)
     overflow: hidden
-
-    +media-screen-1280x800
-      height: calc(100% - 64px)
-
-    +media-screen-1024x768
-      height: calc(100% - 64px)
-
-    +media-screen-1024x600
-      height: calc(100% - 50px)
 
 
   // $Invoice panel footer
@@ -150,17 +132,118 @@ $block: ".pos-invoice"
     flex-shrink: 0
     display: block
     width: 100%
-    height: 43px
     background-color: $c-invoice-panel-footer-bg
 
+
+  // $Invoice panel deposit
+  &__panel-deposit
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    background-color: $c-invoice-panel-deposit-bg
+
+
+  // $Invoice panel deposit info
+  &__panel-deposit-info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 65%
+    padding: 8px 0 8px 12px
+
     +media-screen-1280x800
-      height: 32px
+      padding: 7px 0 7px 12px
 
     +media-screen-1024x768
-      height: 32px
+      padding: 6px 0 6px 8px
 
     +media-screen-1024x600
-      height: 25px
+      padding: 4px 0 4px 8px
+
+
+  // $Invoice panel deposit label
+  &__panel-deposit-label
+    display: block
+    width: 100%
+    margin-bottom: 2px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 14px
+    font-weight: 700
+    color: $c-invoice-panel-deposit-text
+    text-transform: uppercase
+    text-align: center
+    white-space: nowrap
+
+    +media-screen-1280x800
+      font-size: 13px
+      line-height: 13px
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 12px
+
+    +media-screen-1024x600
+      font-size: 12px
+      line-height: 12px
+
+
+  // $Invoice panel deposit name
+  &__panel-deposit-name
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 14px
+    font-weight: 500
+    color: $c-invoice-panel-deposit-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 13px
+      line-height: 13px
+
+    +media-screen-1024x768
+      font-size: 12px
+      line-height: 12px
+
+    +media-screen-1024x600
+      font-size: 12px
+      line-height: 12px
+
+
+  // $Invoice panel deposit value
+  &__panel-deposit-value
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 35%
+    font-family: $f-sans
+    font-size: 28px
+    line-height: 28px
+    font-weight: 700
+    color: $c-invoice-panel-deposit-text
+    text-transform: uppercase
+    text-align: center
+    padding: 8px 12px 8px 0
+
+    +media-screen-1280x800
+      padding: 6px 8px 6px 0
+      font-size: 24px
+      line-height: 24px
+
+    +media-screen-1024x768
+      padding: 6px 8px 6px 0
+      font-size: 21px
+      line-height: 21px
+
+    +media-screen-1024x600
+      padding: 4px 8px 4px 0
+      font-size: 17px
+      line-height: 17px
 
 
   // $Invoice panel function
@@ -193,12 +276,15 @@ $block: ".pos-invoice"
 
   // $Invoice list
   &__list
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
     display: flex
     flex-direction: column
     justify-content: flex-start
     align-items: stretch
-    width: 100%
-    height: 100%
 
 
   // $Invoice list labels
@@ -525,7 +611,7 @@ $block: ".pos-invoice"
     flex-grow: 0
     flex-shrink: 0
     display: block
-    width: 160px
+    width: 150px
     height: 43px
     font-family: $f-sans
     font-size: 30px
