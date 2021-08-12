@@ -48,6 +48,10 @@ $block: ".pos-datepicker"
       padding-bottom: 10px
       border-bottom: 1px solid $c-datepicker-calendar-border
 
+      +media-screen-1024x768
+        margin-bottom: 15px
+        padding-bottom: 7px
+
       +media-screen-1024x600
         margin-bottom: 12px
         padding-bottom: 6px
@@ -64,6 +68,9 @@ $block: ".pos-datepicker"
     width: 100%
     margin-bottom: 20px
 
+    +media-screen-1024x768
+      margin-bottom: 15px
+
     +media-screen-1024x600
       margin-bottom: 12px
 
@@ -78,6 +85,10 @@ $block: ".pos-datepicker"
     font-weight: 700
     color: $c-datepicker-preview-text
     text-align: center
+
+    +media-screen-1024x768
+      font-size: 22px
+      line-height: 22px
 
     +media-screen-1024x600
       font-size: 18px
@@ -118,6 +129,13 @@ $block: ".pos-datepicker"
     border: none
     transition: all .3s
 
+    +media-screen-1024x768
+      width: 156px
+      height: 46px
+      font-size: 16px
+      line-height: 46px
+      border-radius: 9px
+
     +media-screen-1024x600
       width: 156px
       height: 40px
@@ -140,6 +158,9 @@ $block: ".pos-datepicker"
 
     &:not(:last-child)
       margin-right: 70px
+
+      +media-screen-1024x768
+        margin-right: 56px
 
       +media-screen-1024x600
         margin-right: 56px
@@ -172,6 +193,10 @@ $block: ".pos-datepicker"
     padding-bottom: 20px
     border-bottom: 1px solid $c-datepicker-month-border
 
+    +media-screen-1024x768
+      margin-bottom: 7px
+      padding-bottom: 15px
+
     +media-screen-1024x600
       margin-bottom: 6px
       padding-bottom: 12px
@@ -191,6 +216,11 @@ $block: ".pos-datepicker"
     border: 2px solid $c-datepicker-month-control-border
     text-align: center
 
+    +media-screen-1024x768
+      width: 64px
+      height: 35px
+      border-radius: 9px
+
     +media-screen-1024x600
       width: 64px
       height: 30px
@@ -203,6 +233,10 @@ $block: ".pos-datepicker"
       font-size: 36px
       line-height: 34px
       color: $c-datepicker-month-control-icon
+
+      +media-screen-1024x768
+        font-size: 30px
+        line-height: 30px
 
       +media-screen-1024x600
         font-size: 26px
@@ -228,6 +262,13 @@ $block: ".pos-datepicker"
     line-height: 40px
     border-color: $c-datepicker-time-border
 
+    +media-screen-1024x768
+      height: 42px
+      max-height: 42px
+      margin-top: 7px
+      padding-top: 7px
+      line-height: 35px
+
     +media-screen-1024x600
       height: 36px
       max-height: 36px
@@ -242,6 +283,10 @@ $block: ".pos-datepicker"
     padding-top: 0
     border: none
 
+    +media-screen-1024x768
+      height: 35px
+      max-height: 35px
+
     +media-screen-1024x600
       height: 30px
       max-height: 30px
@@ -254,6 +299,9 @@ $block: ".pos-datepicker"
     font-family: $f-sans
     font-size: 21px
 
+    +media-screen-1024x768
+      font-size: 18px
+
     +media-screen-1024x600
       font-size: 18px
 
@@ -261,11 +309,17 @@ $block: ".pos-datepicker"
   & .flatpickr-calendar.showTimeInput.hasTime .flatpickr-time-separator
     height: 40px
 
+    +media-screen-1024x768
+      height: 35px
+
     +media-screen-1024x600
       height: 30px
 
   & .flatpickr-time .numInputWrapper
     height: 40px
+
+    +media-screen-1024x768
+      height: 35px
 
     +media-screen-1024x600
       height: 30px
@@ -297,6 +351,9 @@ $block: ".pos-datepicker"
     height: 40px
     overflow: visible
 
+    +media-screen-1024x768
+      height: 35px
+
     +media-screen-1024x600
       height: 30px
 
@@ -310,6 +367,10 @@ $block: ".pos-datepicker"
     padding: 0
     font-size: 21px
     white-space: nowrap
+
+    +media-screen-1024x768
+      height: 35px
+      font-size: 16px
 
     +media-screen-1024x600
       height: 30px
@@ -329,6 +390,10 @@ $block: ".pos-datepicker"
       line-height: 1
       font-weight: 400
 
+      +media-screen-1024x768
+        top: 7px
+        font-size: 20px
+
       +media-screen-1024x600
         top: 4px
         font-size: 20px
@@ -337,12 +402,18 @@ $block: ".pos-datepicker"
     &:after
       left: 155px
 
+      +media-screen-1024x768
+        left: 125px
+
       +media-screen-1024x600
         left: 125px
 
   & .flatpickr-current-year
     &:after
       right: 10px
+
+      +media-screen-1024x768
+        right: 8px
 
       +media-screen-1024x600
         right: 8px
@@ -364,6 +435,10 @@ $block: ".pos-datepicker"
     -moz-appearance: none
     -webkit-appearance: none
 
+    +media-screen-1024x768
+      height: 35px
+      padding: 0 8px
+
     +media-screen-1024x600
       height: 30px
       padding: 0 8px
@@ -378,6 +453,11 @@ $block: ".pos-datepicker"
     border-bottom-left-radius: 12px
     border-right: none
 
+    +media-screen-1024x768
+      width: 144px
+      border-top-left-radius: 9px
+      border-bottom-left-radius: 9px
+
     +media-screen-1024x600
       width: 144px
       border-top-left-radius: 7px
@@ -388,6 +468,11 @@ $block: ".pos-datepicker"
     border-top-right-radius: 12px
     border-bottom-right-radius: 12px
 
+    +media-screen-1024x768
+      width: 80px
+      border-top-right-radius: 9px
+      border-bottom-right-radius: 9px
+
     +media-screen-1024x600
       width: 80px
       border-top-right-radius: 7px
@@ -395,6 +480,9 @@ $block: ".pos-datepicker"
 
   & .flatpickr-current-month .numInputWrapper
     width: 80px
+
+    +media-screen-1024x768
+      width: 64px
 
     +media-screen-1024x600
       width: 64px
@@ -407,6 +495,12 @@ $block: ".pos-datepicker"
     border: 2px solid $c-datepicker-input-border
     border-top-right-radius: 12px
     border-bottom-right-radius: 12px
+
+    +media-screen-1024x768
+      height: 35px
+      padding: 0 8px
+      border-top-right-radius: 9px
+      border-bottom-right-radius: 9px
 
     +media-screen-1024x600
       height: 30px
@@ -427,6 +521,9 @@ $block: ".pos-datepicker"
     color: $c-datepicker-weekday-text
     user-select: none
 
+    +media-screen-1024x768
+      font-size: 15px
+
     +media-screen-1024x600
       font-size: 14px
 
@@ -440,6 +537,11 @@ $block: ".pos-datepicker"
     color: $c-datepicker-day-text
     border-radius: 0
     user-select: none
+
+    +media-screen-1024x768
+      height: 48px
+      font-size: 18px
+      line-height: 48px
 
     +media-screen-1024x600
       height: 39px
