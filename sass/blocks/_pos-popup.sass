@@ -102,6 +102,9 @@ $block: ".pos-popup"
       #{$block}_role_confirmation &
         padding: 21px 24px 24px
 
+      #{$block}_role_redeem-deposit &
+        padding: 12px 24px 24px
+
 
   // $Popup icon
   &__icon
@@ -214,6 +217,10 @@ $block: ".pos-popup"
         margin-bottom: 18px
         font-size: 44px
 
+      #{$block}_role_redeem-deposit &
+        margin-bottom: 18px
+        font-size: 29px
+
 
   // $Popup label
   &__label
@@ -255,6 +262,9 @@ $block: ".pos-popup"
 
       #{$block}_role_confirmation &
         font-size: 20px
+
+      #{$block}_role_redeem-deposit &
+        font-size: 25px
 
 
   // $Popup text
@@ -300,6 +310,9 @@ $block: ".pos-popup"
 
       #{$block}_role_confirmation &
         font-size: 20px
+
+      #{$block}_role_redeem-deposit &
+        font-size: 40px
 
     &:not(:last-child)
       margin-bottom: 10px
@@ -385,7 +398,8 @@ $block: ".pos-popup"
       line-height: 36px
       border-radius: 7px
 
-      #{$block}_role_confirmation &
+      #{$block}_role_confirmation &,
+      #{$block}_role_redeem-deposit &
         width: 140px
         height: 40px
         font-size: 21px
@@ -413,7 +427,8 @@ $block: ".pos-popup"
       +media-screen-1024x600
         margin-right: 16px
 
-        #{$block}_role_confirmation &
+        #{$block}_role_confirmation &,
+        #{$block}_role_redeem-deposit &
           margin-right: 56px
 
     // $Popup action STATE: disabled
