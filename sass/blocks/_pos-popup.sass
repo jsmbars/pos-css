@@ -48,7 +48,9 @@ $block: ".pos-popup"
   &_role_error
 
   // $Popup MOD: role confirmation
-  &_role_confirmation
+  // $Popup MOD: role redeem deposit
+  &_role_confirmation,
+  &_role_redeem-deposit
     width: 664px
     height: 378px
 
@@ -77,6 +79,10 @@ $block: ".pos-popup"
     // $Popup content CONTEXT: $Popup MOD: role confirmation
     #{$block}_role_confirmation &
       padding: 35px 30px 40px
+
+    // $Popup content CONTEXT: $Popup MOD: role redeem deposit
+    #{$block}_role_redeem-deposit &
+      padding: 20px 30px 40px
 
     +media-screen-1280x800
       padding: 16px 20px
@@ -177,6 +183,13 @@ $block: ".pos-popup"
       color: $c-popup-confirmation-title-text
       text-transform: uppercase
 
+    // $Popup title CONTEXT: $Popup MOD: role redeem deposit
+    #{$block}_role_redeem-deposit &
+      margin-bottom: 30px
+      font-size: 49px
+      color: $c-popup-redeem-deposit-title-text
+      text-transform: uppercase
+
     +media-screen-1280x800
       margin-bottom: 16px
       font-size: 32px
@@ -214,9 +227,15 @@ $block: ".pos-popup"
     color: $c-popup-label-text
     text-align: center
 
-    // $Popup subtitle CONTEXT: $Popup MOD: role confirmation
+    // $Popup label CONTEXT: $Popup MOD: role confirmation
     #{$block}_role_confirmation &
       color: $c-popup-confirmation-label-text
+      text-transform: uppercase
+
+    // $Popup title CONTEXT: $Popup MOD: role redeem deposit
+    #{$block}_role_redeem-deposit &
+      font-size: 42px
+      color: $c-popup-redeem-deposit-label-text
       text-transform: uppercase
 
     +media-screen-1280x800
@@ -254,6 +273,14 @@ $block: ".pos-popup"
       font-size: 32px
       font-weight: 700
       color: $c-popup-confirmation-text
+      text-transform: uppercase
+
+    // $Popup text CONTEXT: $Popup MOD: role redeem deposit
+    #{$block}_role_redeem-deposit &
+      font-size: 63px
+      line-height: 1
+      font-weight: 700
+      color: $c-popup-redeem-deposit-text
       text-transform: uppercase
 
     +media-screen-1280x800
@@ -321,7 +348,9 @@ $block: ".pos-popup"
     transition: all .2s
 
     // $Popup action CONTEXT: $Popup MOD: role confirmation
-    #{$block}_role_confirmation &
+    // $Popup action CONTEXT: $Popup MOD: role redeem deposit
+    #{$block}_role_confirmation &,
+    #{$block}_role_redeem-deposit &
       width: 175px
       height: 63px
       font-size: 35px
@@ -362,7 +391,6 @@ $block: ".pos-popup"
         font-size: 21px
         line-height: 40px
 
-
     &:hover
       opacity: .8
 
@@ -372,7 +400,8 @@ $block: ".pos-popup"
     &:not(:last-child)
       margin-right: 20px
 
-      #{$block}_role_confirmation &
+      #{$block}_role_confirmation &,
+      #{$block}_role_redeem-deposit &
         margin-right: 70px
 
       +media-screen-1024x768

@@ -1,0 +1,353 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Bookings
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-bookings"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 6px 30px 18px
+
+
+  // $Bookings header
+  &__header
+    display: block
+    width: 100%
+
+
+  // $Bookings title
+  &__title
+    display: block
+    margin-bottom: 15px
+    font-family: $f-sans
+    font-size: 49px
+    line-height: 59px
+    font-weight: 800
+    color: $c-bookings-title-text
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Bookings datepicker
+  &__datepicker
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+
+  // $Bookings info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+
+  // $Bookings meta
+  &__meta
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    margin-bottom: 15px
+
+
+  // $Bookings meta date
+  &__meta-date
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    padding: 0 26px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 40px
+    font-weight: 700
+    color: $c-bookings-meta-date-text
+    text-align: center
+    text-transform: uppercase
+    border-top-left-radius: 7px
+    border-bottom-left-radius: 7px
+    background-color: $c-bookings-meta-date-bg
+
+
+  // $Bookings meta count
+  &__meta-count
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    padding: 0 13px
+    font-family: $f-sans
+    font-size: 26px
+    line-height: 40px
+    font-weight: 700
+    color: $c-bookings-meta-count-text
+    text-align: center
+    border-top-right-radius: 7px
+    border-bottom-right-radius: 7px
+    background-color: $c-bookings-meta-count-bg
+
+
+  // $Bookings list
+  &__list
+    flex-grow: 1
+    flex-shrink: 1
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 715px
+    margin: 0 auto
+    border-radius: 15px
+    border: 1px solid $c-bookings-list-border
+    background-color: $c-bookings-list-bg
+
+
+  // $Bookings list scroll
+  &__list-scroll
+    position: absolute
+    top: 7px
+    right: 0
+    bottom: 7px
+    left: 0
+    display: block
+    width: 100%
+    padding: 0 37px 0 53px
+    overflow: hidden
+
+
+  // $Bookings list content
+  &__scroll-content
+    display: block
+    width: 100%
+
+
+  // $Bookings item
+  &__item
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    width: 100%
+    cursor: pointer
+    transition: all .2s
+
+    &:not(:last-child)
+      margin-bottom: 14px
+
+    &:hover
+      opacity: .8
+
+    // $Bookings item STATE: redeemed
+    &.is-redeemed
+      cursor: default
+
+      &:hover
+        opacity: 1
+
+
+  // $Bookings item status
+  &__item-status
+    position: absolute
+    top: calc(50% - 9px)
+    left: 190px
+    display: block
+    width: 100px
+    height: 18px
+    font-family: $f-sans
+    font-size: 18px
+    line-height: 18px
+    font-weight: 700
+    color: $c-bookings-item-status-text
+    text-transform: uppercase
+    transform-origin: 50% 50%
+    transform: rotate(-90deg) translateY(-9px)
+
+
+  // $Bookings item area
+  &__item-area
+    display: block
+
+    // $Bookings item area MOD: role summary
+    &_role_summary
+      flex-grow: 0
+      flex-shrink: 0
+      width: 240px
+      padding: 7px 25px 7px 7px
+      border-top-left-radius: 20px
+      border-bottom-left-radius: 20px
+      border-right: 1px solid $c-bookings-item-area-summary-border
+      background-color: $c-bookings-item-area-summary-bg
+
+      // $Bookings item area MOD: role summary CONTEXT: $Bookings item STATE: redeemed
+      #{$block}__item.is-redeemed &
+        background-color: $c-bookings-item-redeemed-area-summary-bg
+
+    // $Bookings item area MOD: role details
+    &_role_details
+      flex-grow: 1
+      flex-shrink: 1
+      display: block
+      width: calc(100% - 240px)
+      padding: 7px 40px
+      border-top-right-radius: 20px
+      border-bottom-right-radius: 20px
+      background-color: $c-bookings-item-area-details-bg
+
+      // $Bookings item area MOD: role details CONTEXT: $Bookings item STATE: redeemed
+      #{$block}__item.is-redeemed &
+        background-color: $c-bookings-item-redeemed-area-details-bg
+
+
+  // $Bookings item name
+  &__item-name
+    display: block
+    width: 100%
+    margin-bottom: 10px
+    font-family: $f-sans
+    font-size: 18px
+    line-height: 18px
+    font-weight: 700
+    color: $c-bookings-item-name-text
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Bookings item summary
+  &__item-summary
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 14px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Bookings item summary line
+  &__item-summary-line
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 8px
+
+
+  // $Bookings item summary label
+  &__item-summary-label
+    display: inline-block
+    color: $c-bookings-item-summary-label-text
+
+
+  // $Bookings item summary  value
+  &__item-summary-value
+    display: inline-block
+    color: $c-bookings-item-summary-value-text
+
+
+  // $Bookings item details
+  &__item-details
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 15px
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+
+  // $Bookings item details record
+  &__item-details-record
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 15px
+
+
+  // $Bookings item details label
+  &__item-details-label
+    display: block
+    margin-bottom: 5px
+    color: $c-bookings-item-details-label-text
+    text-decoration: underline
+
+
+  // $Bookings item details value
+  &__item-details-value
+    display: block
+    color: $c-bookings-item-details-value-text
+
+
+  // $Bookings actions
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding-top: 15px
+
+
+  // $Bookings action
+  &__action
+    display: block
+    width: 191px
+    height: 65px
+    margin: 0
+    padding: 0 5px
+    border: none
+    box-shadow: none
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 65px
+    font-weight: 700
+    color: $c-bookings-action-text
+    text-align: center
+    text-transform: uppercase
+    border-radius: 12px
+    background-color: $c-bookings-action-bg
+    cursor: pointer
+    user-select: none
+    transition: all .2s
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $Bookings action STATE: disabled
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
