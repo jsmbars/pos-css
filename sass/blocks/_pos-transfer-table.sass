@@ -236,11 +236,9 @@ $block: ".pos-transfer-table"
     padding: 2px
     border-radius: 12px
     background-color: $c-transfer-table-badge-bg
-    cursor: pointer
     user-select: none
     text-decoration: none
     overflow: hidden
-    transition: all .2s
 
     +media-screen-1280x800
       height: 82px
@@ -257,20 +255,6 @@ $block: ".pos-transfer-table"
       height: 65px
       padding: 1px
       border-radius: 7px
-
-    &:hover
-      opacity: .8
-
-    &:focus
-      outline: none
-
-    // $Transfer Table badge STATE: disabled
-    &.is-disabled
-      cursor: default
-      opacity: .4
-
-      &:hover
-        opacity: .4
 
 
   // $Transfer Table badge meta
@@ -571,6 +555,8 @@ $block: ".pos-transfer-table"
       outline: none
 
     // $New table action STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
