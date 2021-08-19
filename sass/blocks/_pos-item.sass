@@ -311,6 +311,8 @@ $block: ".pos-item"
       outline: none
 
     // $Item modifiers control STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
@@ -416,6 +418,8 @@ $block: ".pos-item"
         margin-right: 8px
 
     // $Item modifier STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
@@ -892,6 +896,8 @@ $block: ".pos-item"
 
     // $Item condiments control STATE: disabled
     // $Item condiments action STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
@@ -1019,8 +1025,9 @@ $block: ".pos-item"
       +media-screen-1024x600
         margin-right: 8px
 
-
-    // $Item condiment control STATE: disabled
+    // $Item condiment STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4

@@ -261,6 +261,8 @@ $block: ".pos-servers-overview"
       outline: none
 
     // $Servers Overview servers control STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
@@ -405,6 +407,8 @@ $block: ".pos-servers-overview"
       background-color: $c-servers-overview-server-active-bg
 
     // $Servers Overview server STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
@@ -547,6 +551,8 @@ $block: ".pos-servers-overview"
       outline: none
 
     // $Servers Overview action STATE: disabled
+    &:disabled,
+    &[disabled],
     &.is-disabled
       cursor: default
       opacity: .4
