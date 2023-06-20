@@ -52,5 +52,9 @@
     @content
 
 =media-screen-1024x600
-  @media screen and (width: 1024px) and (height: 600px) and (orientation: landscape)
+  @media screen and (width: 1024px) and (height: 600px) and (orientation: landscape), screen and (min-width: 960px) and (max-width: 965px) and (min-height: 600px) and (max-height: 605px) and (orientation: landscape)
+    @content
+
+=media-screen-960x600
+  @media screen and (min-width: 960px) and (max-width: 965px) and (min-height: 600px) and (max-height: 605px) and (orientation: landscape)
     @content
