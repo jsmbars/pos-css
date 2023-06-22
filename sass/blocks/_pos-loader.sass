@@ -29,6 +29,15 @@ $block: ".pos-loader"
   &_type_light
 
 
+  // $Loader group
+  &__group
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+
   // $Loader spinner
   &__spinner
     display: block
@@ -82,8 +91,72 @@ $block: ".pos-loader"
 
     // $Loader label CONTEXT: $Loader MOD: type dark
     #{$block}_type_dark &
-      color: $c-loader-dark-text
+      color: $c-loader-dark-label-text
 
     // $Loader label CONTEXT: $Loader MOD: type light
     #{$block}_type_light &
-      color: $c-loader-light-text
+      color: $c-loader-light-label-text
+
+
+  // $Loader message
+  &__message
+    display: block
+    padding-top: 25px
+
+    +media-screen-1280x800
+      padding-top: 20px
+
+    +media-screen-1024x768
+      padding-top: 18px
+
+    +media-screen-1024x600
+      padding-top: 14px
+
+
+  // $Loader message text
+  &__message-text
+    display: block
+    font-family: $f-sans
+    font-size: 50px
+    line-height: 1
+    font-weight: 400
+    text-align: center
+
+    // $Loader message text CONTEXT: $Loader MOD: type dark
+    #{$block}_type_dark &
+      color: $c-loader-dark-message-text
+
+    // $Loader message text CONTEXT: $Loader MOD: type light
+    #{$block}_type_light &
+      color: $c-loader-light-message-text
+
+    +media-screen-1280x800
+      font-size: 40px
+
+    +media-screen-1024x768
+      font-size: 35px
+
+    +media-screen-1024x600
+      font-size: 30px
+
+
+  // $Loader message text bold
+  &__message-text-bold
+    font-weight: 500
+
+
+  // $Loader message text line
+  &__message-text-line
+    display: block
+
+    &:not(:last-child)
+      margin-bottom: 15px
+
+      +media-screen-1280x800
+        margin-bottom: 12px
+
+      +media-screen-1024x768
+        margin-bottom: 11px
+
+      +media-screen-1024x600
+        margin-bottom: 9px

@@ -46,6 +46,7 @@ $block: ".pos-modal"
   // $Modal window MOD: role sale
   // $Modal window MOD: role servers-overview
   // $Modal window MOD: role bookings
+  // $Modal window MOD: role pin-entry-devices
   &_role_item,
   &_role_message,
   &_role_void,
@@ -55,7 +56,8 @@ $block: ".pos-modal"
   &_role_new-table,
   &_role_sale,
   &_role_servers-overview,
-  &_role_bookings
+  &_role_bookings,
+  &_role_pin-entry-devices
     flex-grow: 0
     flex-shrink: 0
     width: 777px
@@ -107,7 +109,7 @@ $block: ".pos-modal"
     justify-content: center
     align-items: center
     border-radius: 15px
-    background-color: $c-modal-loader-bg
+    background-color: $c-modal-overlay-bg
 
     +media-screen-1280x800
       border-radius: 12px
@@ -117,6 +119,11 @@ $block: ".pos-modal"
 
     +media-screen-1024x600
       border-radius: 9px
+
+    // $Modal loader MOD: type light
+    // $Modal popup MOD: type light
+    &_type_light
+      background-color: $c-modal-overlay-light-bg
 
 
   @at-root

@@ -1,0 +1,411 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $PIN Entry Devices
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".pos-pin-entry-devices"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 30px 10px 20px
+
+  +media-screen-1280x800
+    padding: 24px 10px 16px
+
+  +media-screen-1024x768
+    padding: 22px 8px 15px
+
+  +media-screen-1024x600
+    padding: 18px 8px 12px
+
+
+  // $PIN Entry Devices header
+  &__header
+    display: block
+    width: 100%
+
+
+  // $PIN Entry Devices title
+  &__title
+    display: block
+    font-family: $f-sans
+    font-size: 56px
+    line-height: 68px
+    font-weight: 800
+    color: $c-pin-entry-devices-title-text
+    text-align: center
+    text-transform: uppercase
+
+    +media-screen-1280x800
+      font-size: 45px
+      line-height: 54px
+
+    +media-screen-1024x768
+      font-size: 42px
+      line-height: 51px
+
+    +media-screen-1024x600
+      font-size: 33px
+      line-height: 41px
+
+
+  // $PIN Entry Devices subtitle
+  &__subtitle
+    display: block
+    padding-top: 25px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 21px
+    font-weight: 800
+    color: $c-pin-entry-devices-subtitle-text
+    text-align: center
+
+    +media-screen-1280x800
+      padding-top: 20px
+      font-size: 18px
+      line-height: 18px
+
+    +media-screen-1024x768
+      padding-top: 18px
+      font-size: 16px
+      line-height: 16px
+
+    +media-screen-1024x600
+      padding-top: 14px
+      font-size: 14px
+      line-height: 14px
+
+
+  // $PIN Entry Devices info
+  &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+
+
+  // $PIN Entry Devices devices
+  &__devices
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 755px
+    margin: 0 auto
+    padding-top: 26px
+    border-radius: 12px
+    background-color: $c-pin-entry-devices-devices-bg
+
+    +media-screen-1280x800
+      padding-top: 21px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 602px
+      padding-top: 20px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 602px
+      padding-top: 15px
+      border-radius: 7px
+
+
+  // $PIN Entry Devices devices control
+  &__devices-control
+    flex-grow: 0
+    flex-shrink: 0
+    position: relative
+    display: block
+    width: 48px
+    height: 77px
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: $c-pin-entry-devices-devices-bg
+    text-align: center
+    border: none
+    box-shadow: none
+    border-radius: 12px
+    background-color: $c-pin-entry-devices-devices-control-bg
+    cursor: pointer
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 38px
+      height: 57px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 38px
+      height: 46px
+      border-radius: 7px
+
+    &:before
+      content: ''
+      display: inline-block
+      font-family: icons
+      font-size: 24px
+      line-height: 24px
+      color: $c-pin-entry-devices-devices-control-icon
+
+      +media-screen-1280x800
+        font-size: 19px
+        line-height: 19px
+
+      +media-screen-1024x768
+        font-size: 18px
+        line-height: 18px
+
+      +media-screen-1024x600
+        font-size: 15px
+        line-height: 15px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    // $PIN Entry Devices devices control STATE: disabled
+    &:disabled,
+    &[disabled],
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+    // $PIN Entry Devices devices control MOD: role previous
+    &_role_previous
+      &:before
+        content: '\e901'
+
+    // $PIN Entry Devices devices control MOD: role next
+    &_role_next
+      &:before
+        content: '\e902'
+
+
+  // $PIN Entry Devices devices list
+  &__devices-list
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 96px)
+    padding: 0 18px
+    text-align: center
+
+    +media-screen-1024x768
+      width: calc(100% - 76px)
+      padding: 0 14px
+
+    +media-screen-1024x600
+      width: calc(100% - 76px)
+      padding: 0 14px
+
+
+  // $PIN Entry Devices devices scroll
+  &__devices-scroll
+    position: relative
+    display: block
+    width: 100%
+    overflow: hidden
+    text-align: center
+
+
+  // $PIN Entry Devices devices row
+  &__devices-row
+    display: inline-flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+      +media-screen-1280x800
+        margin-bottom: 16px
+
+      +media-screen-1024x768
+        margin-bottom: 15px
+
+      +media-screen-1024x600
+        margin-bottom: 12px
+
+
+  // $PIN Entry Devices devices group
+  &__devices-group
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 623px
+
+    +media-screen-1024x768
+      width: 498px
+
+    +media-screen-1024x600
+      width: 498px
+
+    &:not(:last-child)
+      margin-right: 7px
+
+      +media-screen-1024x768
+        margin-right: 6px
+
+      +media-screen-1024x600
+        margin-right: 6px
+
+
+  // $PIN Entry Devices device
+  &__device
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 203px
+    height: 77px
+    padding: 8px
+    border-radius: 12px
+    background-color: $c-pin-entry-devices-device-bg
+    cursor: pointer
+    user-select: none
+    text-decoration: none
+    overflow: hidden
+    transition: all .2s
+
+    +media-screen-1280x800
+      height: 61px
+      padding: 6px 8px
+      border-radius: 9px
+
+    +media-screen-1024x768
+      width: 162px
+      height: 57px
+      padding: 5px
+      border-radius: 9px
+
+    +media-screen-1024x600
+      width: 162px
+      height: 46px
+      padding: 3px
+      border-radius: 7px
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+    &:not(:last-child)
+      margin-right: 7px
+
+      +media-screen-1024x768
+        margin-right: 6px
+
+      +media-screen-1024x600
+        margin-right: 6px
+
+    // $PIN Entry Devices device STATE: active
+    &.is-active
+      background-color: $c-pin-entry-devices-device-active-bg
+
+    // $PIN Entry Devices device STATE: disabled
+    &:disabled,
+    &[disabled],
+    &.is-disabled
+      cursor: default
+      opacity: .4
+
+      &:hover
+        opacity: .4
+
+
+  // $PIN Entry Devices device text
+  &__device-text
+    display: block
+    margin-bottom: 2px
+    font-family: $f-sans
+    font-size: 21px
+    line-height: 25px
+    font-weight: 700
+    color: $c-pin-entry-devices-device-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 15px
+      line-height: 19px
+
+    +media-screen-1024x768
+      font-size: 15px
+      line-height: 18px
+
+    +media-screen-1024x600
+      font-size: 13px
+      line-height: 15px
+
+
+  // $PIN Entry Devices device meta
+  &__device-meta
+    display: block
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 15px
+    font-weight: 400
+    color: $c-pin-entry-devices-device-text
+    text-transform: uppercase
+    text-align: center
+
+    +media-screen-1280x800
+      font-size: 11px
+      line-height: 12px
+
+    +media-screen-1024x768
+      font-size: 10px
+      line-height: 11px
+
+    +media-screen-1024x600
+      font-size: 9px
+      line-height: 10px
+
+
+  // $PIN Entry Devices device meta line
+  &__device-meta-line
+    display: block
+
+    &:not(:last-child)
+      margin-bottom: 4px
+
+      +media-screen-1280x800
+        margin-bottom: 3px
+
+      +media-screen-1024x768
+        margin-bottom: 3px
+
+      +media-screen-1024x600
+        margin-bottom: 2px
