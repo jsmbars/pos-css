@@ -202,7 +202,7 @@ $block: ".pos-main"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-main-action-hover-bg
 
     &:focus
       outline: none
@@ -225,9 +225,7 @@ $block: ".pos-main"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Main subtotal
@@ -279,7 +277,7 @@ $block: ".pos-main"
       border-radius: 21px 21px 0 0
 
     &:hover
-      opacity: .8
+      background-color: $c-main-subtotal-hover-bg
 
     &:focus
       outline: none
@@ -290,7 +288,5 @@ $block: ".pos-main"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 

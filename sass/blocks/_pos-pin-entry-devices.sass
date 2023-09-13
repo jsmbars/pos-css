@@ -183,7 +183,7 @@ $block: ".pos-pin-entry-devices"
         line-height: 15px
 
     &:hover
-      opacity: .8
+      background-color: $c-pin-entry-devices-devices-control-hover-bg
 
     &:focus
       outline: none
@@ -194,9 +194,7 @@ $block: ".pos-pin-entry-devices"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $PIN Entry Devices devices control MOD: role previous
     &_role_previous
@@ -316,7 +314,7 @@ $block: ".pos-pin-entry-devices"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-pin-entry-devices-device-hover-bg
 
     &:focus
       outline: none
@@ -340,9 +338,7 @@ $block: ".pos-pin-entry-devices"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $PIN Entry Devices device text

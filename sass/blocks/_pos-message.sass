@@ -301,9 +301,7 @@ $block: ".pos-message"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Message preset test
@@ -406,7 +404,7 @@ $block: ".pos-message"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-message-action-hover-bg
 
     &:focus
       outline: none
@@ -417,6 +415,4 @@ $block: ".pos-message"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none

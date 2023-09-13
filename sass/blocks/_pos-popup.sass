@@ -462,7 +462,7 @@ $block: ".pos-popup"
         line-height: 40px
 
     &:hover
-      opacity: .8
+      background-color: $c-popup-action-hover-bg
 
     &:focus
       outline: none
@@ -494,21 +494,28 @@ $block: ".pos-popup"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Popup action MOD: role retry
     &_role_retry
       background-color: $c-popup-action-retry-bg
       color: $c-popup-action-retry-text
 
+      &:hover
+        background-color: $c-popup-action-retry-hover-bg
+
     // $Popup action MOD: role no
     &_role_no
       background-color: $c-popup-action-no-bg
       color: $c-popup-action-no-text
 
+      &:hover
+        background-color: $c-popup-action-no-hover-bg
+
     // $Popup action MOD: role yes
     &_role_yes
       background-color: $c-popup-action-yes-bg
       color: $c-popup-action-yes-text
+
+      &:hover
+        background-color: $c-popup-action-yes-hover-bg

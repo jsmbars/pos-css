@@ -143,9 +143,6 @@ $block: ".pos-split"
       line-height: 58px
       border-radius: 7px
 
-    &:hover
-      opacity: .8
-
     &:focus
       outline: none
 
@@ -155,14 +152,15 @@ $block: ".pos-split"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Split action MOD: role receipt
     &_role_receipt
       color: $c-split-action-receipt-text
       background-color: $c-split-action-receipt-bg
+
+      &:hover
+        background-color: $c-split-action-receipt-hover-bg
 
     // $Split action MOD: role add
     &_role_add
@@ -218,10 +216,16 @@ $block: ".pos-split"
           font-size: 20px
           line-height: 20px
 
+      &:hover
+        background-color: $c-split-action-add-hover-bg
+
     // $Split action MOD: role done
     &_role_done
       color: $c-split-action-done-text
       background-color: $c-split-action-done-bg
+
+      &:hover
+        background-color: $c-split-action-done-hover-bg
 
 
   // $Split controls
@@ -304,7 +308,10 @@ $block: ".pos-split"
         line-height: 40px
 
     &:hover
-      opacity: .8
+      background-color: $c-split-control-hover-bg
+
+      &:before
+        color: $c-split-control-hover-icon
 
     &:focus
       outline: none
@@ -327,9 +334,7 @@ $block: ".pos-split"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Split control MOD: role add-to
     &_role_add-to

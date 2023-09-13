@@ -255,7 +255,7 @@ $block: ".pos-servers-overview"
         line-height: 15px
 
     &:hover
-      opacity: .8
+      background-color: $c-servers-overview-servers-control-hover-bg
 
     &:focus
       outline: none
@@ -266,9 +266,7 @@ $block: ".pos-servers-overview"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Servers Overview servers control MOD: role previous
     &_role_previous
@@ -388,7 +386,7 @@ $block: ".pos-servers-overview"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-servers-overview-server-hover-bg
 
     &:focus
       outline: none
@@ -412,9 +410,7 @@ $block: ".pos-servers-overview"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Servers Overview server text
@@ -545,7 +541,7 @@ $block: ".pos-servers-overview"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-servers-overview-action-hover-bg
 
     &:focus
       outline: none
@@ -556,6 +552,4 @@ $block: ".pos-servers-overview"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none

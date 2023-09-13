@@ -142,7 +142,7 @@ $block: ".pos-search"
         line-height: 15px
 
     &:hover
-      opacity: .8
+      background-color: $c-search-products-control-hover-bg
 
     &:focus
       outline: none
@@ -153,9 +153,7 @@ $block: ".pos-search"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Search products control MOD: role previous
     &_role_previous
@@ -239,7 +237,7 @@ $block: ".pos-search"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-search-product-hover-bg !important
 
     &:focus
       outline: none
@@ -259,9 +257,7 @@ $block: ".pos-search"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Search product meta

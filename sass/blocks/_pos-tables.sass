@@ -148,7 +148,7 @@ $block: ".pos-tables"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-tables-item-hover-bg
 
     &:focus
       outline: none
@@ -337,7 +337,7 @@ $block: ".pos-tables"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-tables-action-hover-bg
 
     &:focus
       outline: none
@@ -348,9 +348,7 @@ $block: ".pos-tables"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Tables action MOD: role transfer
     &_role_transfer
@@ -367,12 +365,21 @@ $block: ".pos-tables"
       +media-screen-1024x600
         line-height: 24px
 
+      &:hover
+        background-color: $c-tables-action-transfer-hover-bg
+
     // $Tables action MOD: role new
     &_role_new
       color: $c-tables-action-new-text
       background-color: $c-tables-action-new-bg
 
+      &:hover
+        background-color: $c-tables-action-new-hover-bg
+
     // $Tables action MOD: role open
     &_role_open
       color: $c-tables-action-open-text
       background-color: $c-tables-action-open-bg
+
+      &:hover
+        background-color: $c-tables-action-open-hover-bg
