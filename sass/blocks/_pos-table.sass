@@ -83,8 +83,10 @@ $block: ".pos-table"
 
     &:hover
       &:before,
+        border-bottom-color: $c-table-sorting-hover-bg
+
       &:after
-        opacity: .8
+        border-top-color: $c-table-sorting-hover-bg
 
     // $Table sorting MOD: type ascending
     &_type_asc
@@ -169,7 +171,7 @@ $block: ".pos-table"
 
     &:hover
       #{$block}_role_sales-review &
-        background-color: $c-table-row-active-bg
+        background-color: $c-table-row-hover-bg
 
     // $Table row MOD: role header
     &_role_header
@@ -188,29 +190,50 @@ $block: ".pos-table"
     &.is-no-sale
       background-color: $c-table-row-no-sale-bg
 
+      &:hover
+        background-color: $c-table-row-no-sale-hover-bg
+
     // $Table row STATE: void
     &.is-void
       background-color: $c-table-row-void-bg
+
+      &:hover
+        background-color: $c-table-row-void-hover-bg
 
     // $Table row STATE: void all
     &.is-void-all
       background-color: $c-table-row-void-all-bg
 
+      &:hover
+        background-color: $c-table-row-void-all-hover-bg
+
     // $Table row STATE: wtl
     &.is-wtl
       background-color: $c-table-row-wtl-bg
+
+      &:hover
+        background-color: $c-table-row-wtl-hover-bg
 
     // $Table row STATE: refund
     &.is-refund
       background-color: $c-table-row-refund-bg
 
+      &:hover
+        background-color: $c-table-row-refund-hover-bg
+
     // $Table row STATE: deposit
     &.is-deposit
       background-color: $c-table-row-deposit-bg
 
+      &:hover
+        background-color: $c-table-row-deposit-hover-bg
+
     // $Table row STATE: discount
     &.is-discount
       background-color: $c-table-row-discount-bg
+
+      &:hover
+        background-color: $c-table-row-discount-hover-bg
 
 
   // $Table cell

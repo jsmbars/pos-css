@@ -154,7 +154,10 @@ $block: ".pos-field"
       border-radius: 5px
 
     &:hover
-      opacity: .8
+      background-color: $c-field-action-hover-bg
+
+      #{$block}_role_pin &
+        background-color: $c-field-action-enter-hover-bg
 
     &:focus
       outline: none
@@ -189,6 +192,4 @@ $block: ".pos-field"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none

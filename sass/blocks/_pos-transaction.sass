@@ -141,9 +141,7 @@ $block: ".pos-transaction"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Transaction invoice
@@ -237,9 +235,7 @@ $block: ".pos-transaction"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Transaction action MOD: role split
     &_role_split
@@ -256,10 +252,16 @@ $block: ".pos-transaction"
       +media-screen-1024x600
         margin-bottom: 19px
 
+      &:hover
+        background-color: $c-transaction-action-split-hover-bg
+
     // $Transaction action MOD: role receipt
     &_role_receipt
       color: $c-transaction-action-receipt-text
       background-color: $c-transaction-action-receipt-bg
+
+      &:hover
+        background-color: $c-transaction-action-receipt-hover-bg
 
 
   // $Transaction calculation
@@ -380,7 +382,7 @@ $block: ".pos-transaction"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-transaction-denomination-hover-bg
 
     &:focus
       outline: none
@@ -403,9 +405,7 @@ $block: ".pos-transaction"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Transaction methods
@@ -466,26 +466,48 @@ $block: ".pos-transaction"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Transaction action MOD: role cash
     &_role_cash
-      margin-bottom: 150px
+      margin-bottom: 60px
       color: $c-transaction-method-cash-text
       background-color: $c-transaction-method-cash-bg
 
       +media-screen-1280x800
-        margin-bottom: 117px
+        margin-bottom: 48px
 
       +media-screen-1024x768
-        margin-bottom: 112px
+        margin-bottom: 46px
 
       +media-screen-1024x600
-        margin-bottom: 90px
+        margin-bottom: 26px
+
+      &:hover
+        background-color: $c-transaction-method-cash-hover-bg
 
     // $Transaction action MOD: role card
     &_role_card
+      margin-bottom: 60px
       color: $c-transaction-method-card-text
       background-color: $c-transaction-method-card-bg
+
+      +media-screen-1280x800
+        margin-bottom: 48px
+
+      +media-screen-1024x768
+        margin-bottom: 46px
+
+      +media-screen-1024x600
+        margin-bottom: 26px
+
+      &:hover
+        background-color: $c-transaction-method-card-hover-bg
+
+    // $Transaction action MOD: role deposit
+    &_role_deposit
+      color: $c-transaction-method-deposit-text
+      background-color: $c-transaction-method-deposit-bg
+
+      &:hover
+        background-color: $c-transaction-method-deposit-hover-bg

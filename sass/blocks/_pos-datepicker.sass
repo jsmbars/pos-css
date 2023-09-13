@@ -161,7 +161,7 @@ $block: ".pos-datepicker"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-datepicker-action-hover-bg
 
     &:focus
       outline: none
@@ -172,9 +172,7 @@ $block: ".pos-datepicker"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     &:not(:last-child)
       margin-right: 70px
@@ -190,10 +188,16 @@ $block: ".pos-datepicker"
       background-color: $c-datepicker-action-cancel-bg
       color: $c-datepicker-action-cancel-text
 
+      &:hover
+        background-color: $c-datepicker-action-cancel-hover-bg
+
     // $Datepicker action MOD: role confirm
     &_role_confirm
       background-color: $c-datepicker-action-confirm-bg
       color: $c-datepicker-action-confirm-text
+
+      &:hover
+        background-color: $c-datepicker-action-confirm-hover-bg
 
 
   // Vendor styles overrides
@@ -238,8 +242,10 @@ $block: ".pos-datepicker"
     padding: 0
     border-radius: 12px
     border: 2px solid $c-datepicker-month-control-border
+    background-color: $c-datepicker-month-control-bg
     text-align: center
     user-select: none
+    transition: all .2s
 
     +media-screen-1280x800
       height: 35px
@@ -262,6 +268,7 @@ $block: ".pos-datepicker"
       font-size: 36px
       line-height: 34px
       color: $c-datepicker-month-control-icon
+      transition: all .3s
 
       +media-screen-1280x800
         font-size: 30px
@@ -274,6 +281,12 @@ $block: ".pos-datepicker"
       +media-screen-1024x600
         font-size: 26px
         line-height: 26px
+
+    &:hover
+      background-color: $c-datepicker-month-control-hover-bg
+
+      &:before
+        color: $c-datepicker-month-control-hover-icon
 
   & .flatpickr-months .flatpickr-prev-month
     &:before

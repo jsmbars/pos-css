@@ -211,7 +211,7 @@ $block: ".pos-sign-in"
         line-height: 15px
 
     &:hover
-      opacity: .8
+      background-color: $c-sign-in-servers-control-hover-bg
 
     &:focus
       outline: none
@@ -222,9 +222,7 @@ $block: ".pos-sign-in"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Sign In servers control MOD: role previous
     &_role_previous
@@ -305,7 +303,7 @@ $block: ".pos-sign-in"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-sign-in-server-hover-bg
 
     &:focus
       outline: none
@@ -325,9 +323,7 @@ $block: ".pos-sign-in"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Sign In server text
@@ -581,7 +577,7 @@ $block: ".pos-sign-in"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-sign-in-action-hover-bg
 
     &:focus
       outline: none
@@ -592,6 +588,4 @@ $block: ".pos-sign-in"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none

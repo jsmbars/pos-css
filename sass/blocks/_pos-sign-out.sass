@@ -157,17 +157,21 @@ $block: ".pos-sign-out"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Sign Out action MOD: role change fob
     &_role_change-fob
       color: $c-sign-out-action-change-fob-text
       background-color: $c-sign-out-action-change-fob-bg
 
+      &:hover
+        background-color: $c-sign-out-action-change-fob-hover-bg
+
     // $Sign Out action MOD: role confirm
     &_role_confirm
       color: $c-sign-out-action-confirm-text
       background-color: $c-sign-out-action-confirm-bg
+
+      &:hover
+        background-color: $c-sign-out-action-confirm-hover-bg
 

@@ -244,7 +244,19 @@ $block: ".pos-numpad"
         line-height: 72px
 
     &:hover
-      opacity: .8
+      background-color: $c-numpad-control-hover-bg
+
+      #{$block}_role_transaction &
+        background-color: $c-numpad-transaction-control-hover-bg
+
+      #{$block}_role_sign-in &
+        background-color: $c-numpad-sign-in-control-hover-bg
+
+      #{$block}_role_new-table &
+        background-color: $c-numpad-new-table-control-hover-bg
+
+      #{$block}_role_transfer-table &
+        background-color: $c-numpad-transfer-table-control-hover-bg
 
     &:focus
       outline: none
@@ -337,4 +349,24 @@ $block: ".pos-numpad"
           width: calc(66.666% + 8px)
           line-height: 64px
           border-width: 4px
+
+      &:hover
+        color: $c-numpad-control-clear-hover-text
+        background-color: $c-numpad-control-clear-hover-bg
+
+        #{$block}_role_transaction &
+          color: $c-numpad-transaction-control-clear-hover-text
+          background-color: $c-numpad-transaction-control-clear-hover-bg
+
+        #{$block}_role_sign-in &
+          color: $c-numpad-sign-in-control-clear-hover-text
+          background-color: $c-numpad-sign-in-control-clear-hover-bg
+
+        #{$block}_role_new-table &
+          color: $c-numpad-new-table-control-clear-hover-text
+          background-color: $c-numpad-new-table-control-clear-hover-bg
+
+        #{$block}_role_transfer-table &
+          color: $c-numpad-transfer-table-control-clear-hover-text
+          background-color: $c-numpad-transfer-table-control-clear-hover-bg
 

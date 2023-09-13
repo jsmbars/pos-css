@@ -87,7 +87,7 @@ $block: ".pos-menu"
       border-radius: 7px 7px 23px 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-menu-category-hover-bg
 
     &:focus
       outline: none
@@ -98,9 +98,7 @@ $block: ".pos-menu"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Menu category STATE: active
     &.is-active
@@ -278,7 +276,7 @@ $block: ".pos-menu"
         line-height: 15px
 
     &:hover
-      opacity: .8
+      background-color: $c-menu-subcategories-control-hover-bg
 
     &:focus
       outline: none
@@ -289,9 +287,7 @@ $block: ".pos-menu"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Menu subcategories control MOD: role previous
     &_role_previous
@@ -375,7 +371,7 @@ $block: ".pos-menu"
       border-radius: 7px 7px 23px 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-menu-subcategory-hover-bg !important
 
     &:focus
       outline: none
@@ -395,9 +391,7 @@ $block: ".pos-menu"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Menu subcategory STATE: active
     &.is-active
@@ -535,7 +529,10 @@ $block: ".pos-menu"
         line-height: 26px
 
     &:hover
-      opacity: .8
+      background-color: $c-menu-items-control-hover-bg !important
+
+      &:before
+        color: $c-menu-items-control-hover-icon
 
     &:focus
       outline: none
@@ -546,9 +543,7 @@ $block: ".pos-menu"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Menu items control MOD: role previous
     &_role_previous
@@ -599,7 +594,7 @@ $block: ".pos-menu"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-menu-subcategory-hover-bg !important
 
     &:focus
       outline: none
@@ -610,9 +605,7 @@ $block: ".pos-menu"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
 
   // $Menu item meta

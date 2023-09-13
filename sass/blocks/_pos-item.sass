@@ -305,7 +305,7 @@ $block: ".pos-item"
         line-height: 15px
 
     &:hover
-      opacity: .8
+      background-color: $c-item-modifiers-control-hover-bg
 
     &:focus
       outline: none
@@ -316,9 +316,7 @@ $block: ".pos-item"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Item modifiers control MOD: role previous
     &_role_previous
@@ -423,9 +421,7 @@ $block: ".pos-item"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Item modifier STATE: active
     &.is-active
@@ -880,7 +876,10 @@ $block: ".pos-item"
         line-height: 22px
 
     &:hover
-      opacity: .8
+      background-color: $c-item-condiments-control-hover-bg
+
+      &:before
+        color: $c-item-condiments-control-hover-icon
 
     &:focus
       outline: none
@@ -901,9 +900,7 @@ $block: ".pos-item"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Item condiments control MOD: role previous
     &_role_previous
@@ -964,14 +961,23 @@ $block: ".pos-item"
       font-size: 16px
       line-height: 18px
 
+    &:hover
+      background-color: $c-item-condiments-action-hover-bg
+
     // $Item condiments action MOD: role take off
     &_role_take-off
       background-color: $c-item-condiments-action-take-off-bg
+
+      &:hover
+        background-color: $c-item-condiments-action-take-off-hover-bg
 
     // $Item condiments action MOD: role add on
     &_role_add-on
       margin-left: auto
       background-color: $c-item-condiments-action-add-on-bg
+
+      &:hover
+        background-color: $c-item-condiments-action-add-on-hover-bg
 
 
   // $Item condiment
@@ -1011,7 +1017,7 @@ $block: ".pos-item"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-item-condiment-hover-bg
 
     &:focus
       outline: none
@@ -1031,9 +1037,7 @@ $block: ".pos-item"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Item modifier STATE: active
     &.is-active
@@ -1210,7 +1214,7 @@ $block: ".pos-item"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-item-action-hover-bg
 
     &:focus
       outline: none
@@ -1221,6 +1225,4 @@ $block: ".pos-item"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none

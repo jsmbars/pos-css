@@ -46,6 +46,20 @@ $block: ".pos-popup"
 
   // $Popup MOD: role error
   &_role_error
+    height: auto
+    min-height: 400px
+    width: 600px
+
+    +media-screen-1280x800
+      min-height: 320px
+
+    +media-screen-1024x768
+      width: 480px
+      min-height: 300px
+
+    +media-screen-1024x600
+      width: 480px
+      min-height: 240px
 
   // $Popup MOD: role confirmation
   // $Popup MOD: role redeem deposit
@@ -298,6 +312,11 @@ $block: ".pos-popup"
     color: $c-popup-text
     text-align: center
 
+    // $Popup text CONTEXT: $Popup MOD: role error
+    #{$block}_role_error &
+      min-height: 100px
+      margin-bottom: 20px
+
     // $Popup text CONTEXT: $Popup MOD: role confirmation
     #{$block}_role_confirmation &
       font-size: 32px
@@ -316,6 +335,9 @@ $block: ".pos-popup"
     +media-screen-1280x800
       margin-bottom: 16px
 
+      #{$block}_role_error &
+        min-height: 76px
+
       #{$block}_role_confirmation &
         font-size: 26px
 
@@ -325,6 +347,9 @@ $block: ".pos-popup"
     +media-screen-1024x768
       font-size: 15px
 
+      #{$block}_role_error &
+        min-height: 70px
+
       #{$block}_role_confirmation &
         font-size: 24px
 
@@ -333,6 +358,9 @@ $block: ".pos-popup"
 
     +media-screen-1024x600
       font-size: 12px
+
+      #{$block}_role_error &
+        min-height: 52px
 
       #{$block}_role_confirmation &
         font-size: 20px
@@ -434,7 +462,7 @@ $block: ".pos-popup"
         line-height: 40px
 
     &:hover
-      opacity: .8
+      background-color: $c-popup-action-hover-bg
 
     &:focus
       outline: none
@@ -466,21 +494,28 @@ $block: ".pos-popup"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Popup action MOD: role retry
     &_role_retry
       background-color: $c-popup-action-retry-bg
       color: $c-popup-action-retry-text
 
+      &:hover
+        background-color: $c-popup-action-retry-hover-bg
+
     // $Popup action MOD: role no
     &_role_no
       background-color: $c-popup-action-no-bg
       color: $c-popup-action-no-text
 
+      &:hover
+        background-color: $c-popup-action-no-hover-bg
+
     // $Popup action MOD: role yes
     &_role_yes
       background-color: $c-popup-action-yes-bg
       color: $c-popup-action-yes-text
+
+      &:hover
+        background-color: $c-popup-action-yes-hover-bg

@@ -154,9 +154,8 @@ $block: ".pos-sale"
       line-height: 17px
       border-radius: 7px
 
-
     &:hover
-      opacity: .8
+      background-color: $c-sale-action-hover-bg
 
     &:focus
       outline: none
@@ -167,9 +166,7 @@ $block: ".pos-sale"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Sale action MOD: role page down
     &_role_page-down
@@ -186,6 +183,9 @@ $block: ".pos-sale"
         width: 78px
         margin-right: 28px
 
+      &:hover
+        background-color: $c-sale-action-page-down-hover-bg
+
     // $Sale action MOD: role print
     &_role_print
       width: 98px
@@ -201,6 +201,9 @@ $block: ".pos-sale"
         width: 78px
         margin-right: 28px
 
+      &:hover
+        background-color: $c-sale-action-print-hover-bg
+
     // $Sale action MOD: role page up
     &_role_page-up
       width: 98px
@@ -212,6 +215,9 @@ $block: ".pos-sale"
 
       +media-screen-1024x600
         width: 78px
+
+      &:hover
+        background-color: $c-sale-action-page-up-hover-bg
 
     // $Sale action MOD: role tender
     &_role_change-tender
@@ -230,6 +236,9 @@ $block: ".pos-sale"
       +media-screen-1024x600
         width: 110px
         height: 40px
+
+      &:hover
+        background-color: $c-sale-action-change-tender-hover-bg
 
     // $Sale action MOD: role done
     &_role_done
@@ -256,3 +265,6 @@ $block: ".pos-sale"
         height: 40px
         font-size: 25px
         line-height: 28px
+
+      &:hover
+        background-color: $c-sale-action-done-hover-bg

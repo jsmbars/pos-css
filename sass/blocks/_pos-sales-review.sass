@@ -191,7 +191,7 @@ $block: ".pos-sales-review"
       border-radius: 7px
 
     &:hover
-      opacity: .8
+      background-color: $c-sales-review-action-hover-bg
 
     &:focus
       outline: none
@@ -202,24 +202,31 @@ $block: ".pos-sales-review"
     &.is-disabled
       cursor: default
       opacity: .4
-
-      &:hover
-        opacity: .4
+      pointer-events: none
 
     // $Sales Review action MOD: role display sale
     &_role_display-sale
       color: $c-sales-review-action-display-sale-text
       background-color: $c-sales-review-action-display-sale-bg
 
+      &:hover
+        background-color: $c-sales-review-action-display-sale-hover-bg
+
     // $Sales Review action MOD: role main menu
     &_role_main-menu
       color: $c-sales-review-action-main-menu-text
       background-color: $c-sales-review-action-main-menu-bg
 
+      &:hover
+        background-color: $c-sales-review-action-main-menu-hover-bg
+
     // $Sales Review action MOD: role search
     &_role_search
       color: $c-sales-review-action-search-text
       background-color: $c-sales-review-action-search-bg
+
+      &:hover
+        background-color: $c-sales-review-action-search-hover-bg
 
 
   // $Sales Review version
