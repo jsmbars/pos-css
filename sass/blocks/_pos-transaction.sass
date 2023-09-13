@@ -472,20 +472,35 @@ $block: ".pos-transaction"
 
     // $Transaction action MOD: role cash
     &_role_cash
-      margin-bottom: 150px
+      margin-bottom: 60px
       color: $c-transaction-method-cash-text
       background-color: $c-transaction-method-cash-bg
 
       +media-screen-1280x800
-        margin-bottom: 117px
+        margin-bottom: 48px
 
       +media-screen-1024x768
-        margin-bottom: 112px
+        margin-bottom: 46px
 
       +media-screen-1024x600
-        margin-bottom: 90px
+        margin-bottom: 26px
 
     // $Transaction action MOD: role card
     &_role_card
+      margin-bottom: 60px
       color: $c-transaction-method-card-text
       background-color: $c-transaction-method-card-bg
+
+      +media-screen-1280x800
+        margin-bottom: 48px
+
+      +media-screen-1024x768
+        margin-bottom: 46px
+
+      +media-screen-1024x600
+        margin-bottom: 26px
+
+    // $Transaction action MOD: role deposit
+    &_role_deposit
+      color: $c-transaction-method-deposit-text
+      background-color: $c-transaction-method-deposit-bg
