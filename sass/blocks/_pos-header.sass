@@ -182,12 +182,6 @@ $block: ".pos-header"
     cursor: pointer
     transition: all .2s
 
-    &:hover
-      opacity: .8
-
-    &:focus
-      outline: none
-
     &:before
       content: '\e904'
       display: block
@@ -197,6 +191,7 @@ $block: ".pos-header"
       line-height: 30px
       color: $c-header-sidebar-toggle-icon
       text-align: center
+      transition: all .2s
 
       +media-screen-1280x800
         width: 28px
@@ -212,6 +207,13 @@ $block: ".pos-header"
         width: 24px
         font-size: 24px
         line-height: 20px
+
+    &:hover
+      &:before
+        color: $c-header-sidebar-toggle-hover-icon
+
+    &:focus
+      outline: none
 
     // $Header sidebar toggle STATE: active
     &.is-active
@@ -315,12 +317,6 @@ $block: ".pos-header"
       font-size: 12px
       line-height: 20px
 
-    &:hover
-      opacity: .8
-
-    &:focus
-      outline: none
-
     &:after
       content: '\e905'
       position: absolute
@@ -331,6 +327,7 @@ $block: ".pos-header"
       font-size: 20px
       line-height: 30px
       color: $c-header-search-toggle-icon
+      transition: all .2s
 
       +media-screen-1280x800
         font-size: 14px
@@ -345,6 +342,16 @@ $block: ".pos-header"
         right: 8px
         font-size: 14px
         line-height: 20px
+
+    &:hover
+      color: $c-header-search-toggle-hover-text
+      background-color: $c-header-search-toggle-hover-bg
+
+      &:after
+        color: $c-header-search-toggle-hover-icon
+
+    &:focus
+      outline: none
 
     // $Header search toggle STATE: disabled
     &:disabled,
@@ -371,12 +378,6 @@ $block: ".pos-header"
     cursor: pointer
     transition: all .2s
 
-    &:hover
-      opacity: .8
-
-    &:focus
-      outline: none
-
     &:before
       content: '\e91b'
       display: block
@@ -386,6 +387,7 @@ $block: ".pos-header"
       line-height: 10px
       color: $c-header-menu-toggle-icon
       text-align: center
+      transition: all .2s
 
       +media-screen-1280x800
         width: 24px
@@ -401,6 +403,13 @@ $block: ".pos-header"
         width: 20px
         font-size: 20px
         line-height: 10px
+
+    &:hover
+      &:before
+        color: $c-header-menu-toggle-hover-icon
+
+    &:focus
+      outline: none
 
 
   // $Header actions
