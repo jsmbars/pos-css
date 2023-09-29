@@ -166,6 +166,71 @@ $block: ".pos-header"
         border-radius: 7px
 
 
+  // $Header menu toggle
+  &__menu-toggle
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 0
+    line-height: 0
+    color: transparent
+    border: none
+    background-color: transparent
+    box-shadow: none
+    cursor: pointer
+    transition: all .2s
+
+    &:before
+      content: '\e91b'
+      display: block
+      width: 30px
+      font-family: icons
+      font-size: 30px
+      line-height: 10px
+      color: $c-header-menu-toggle-icon
+      text-align: center
+      transition: all .2s
+
+      +media-screen-1280x800
+        width: 24px
+        font-size: 24px
+        line-height: 10px
+
+      +media-screen-1024x768
+        width: 22px
+        font-size: 22px
+        line-height: 10px
+
+      +media-screen-1024x600
+        width: 20px
+        font-size: 20px
+        line-height: 10px
+
+    &:hover
+      &:before
+        color: $c-header-menu-toggle-hover-icon
+
+    &:focus
+      outline: none
+
+    // $Header menu toggle STATE: active
+    &.is-active
+      &:before
+        content: '\e900'
+        font-size: 26px
+
+        +media-screen-1280x800
+          font-size: 22px
+
+        +media-screen-1024x768
+          font-size: 20px
+
+        +media-screen-1024x600
+          font-size: 18px
+
+
   // $Header sidebar toggle
   &__sidebar-toggle
     flex-grow: 0
@@ -360,56 +425,6 @@ $block: ".pos-header"
       cursor: default
       opacity: .4
       pointer-events: none
-
-
-  // $Header menu toggle
-  &__menu-toggle
-    flex-grow: 0
-    flex-shrink: 0
-    display: block
-    margin: 0
-    padding: 0
-    font-size: 0
-    line-height: 0
-    color: transparent
-    border: none
-    background-color: transparent
-    box-shadow: none
-    cursor: pointer
-    transition: all .2s
-
-    &:before
-      content: '\e91b'
-      display: block
-      width: 30px
-      font-family: icons
-      font-size: 30px
-      line-height: 10px
-      color: $c-header-menu-toggle-icon
-      text-align: center
-      transition: all .2s
-
-      +media-screen-1280x800
-        width: 24px
-        font-size: 24px
-        line-height: 10px
-
-      +media-screen-1024x768
-        width: 22px
-        font-size: 22px
-        line-height: 10px
-
-      +media-screen-1024x600
-        width: 20px
-        font-size: 20px
-        line-height: 10px
-
-    &:hover
-      &:before
-        color: $c-header-menu-toggle-hover-icon
-
-    &:focus
-      outline: none
 
 
   // $Header actions
