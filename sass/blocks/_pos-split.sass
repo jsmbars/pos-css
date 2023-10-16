@@ -23,6 +23,9 @@ $block: ".pos-split"
   height: 100%
   padding: 62px 26px 38px
 
+  +media-screen-1500x900
+    padding: 55px 30px 33px
+
   +media-screen-1280x800
     padding: 49px 26px 30px
 
@@ -42,6 +45,9 @@ $block: ".pos-split"
     width: 402px
     height: 100%
 
+    +media-screen-1500x900
+      width: 480px
+
     +media-screen-1024x768
       width: 320px
 
@@ -59,6 +65,9 @@ $block: ".pos-split"
     align-items: center
     width: calc(100% - 804px)
     height: 100%
+
+    +media-screen-1500x900
+      width: calc(100% - 960px)
 
     +media-screen-1024x768
       width: calc(100% - 640px)
@@ -99,6 +108,9 @@ $block: ".pos-split"
     width: 280px
     margin: 0 auto
 
+    +media-screen-1500x900
+      width: 324px
+
     +media-screen-1024x768
       width: 224px
 
@@ -124,6 +136,12 @@ $block: ".pos-split"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1500x900
+      height: 86px
+      font-size: 44px
+      line-height: 86px
+      border-radius: 10px
 
     +media-screen-1280x800
       height: 76px
@@ -171,6 +189,11 @@ $block: ".pos-split"
       color: $c-split-action-add-text
       background-color: $c-split-action-add-bg
 
+      +media-screen-1500x900
+        padding: 0 15px
+        font-size: 33px
+        line-height: 38px
+
       +media-screen-1280x800
         height: 78px
         font-size: 31px
@@ -197,6 +220,12 @@ $block: ".pos-split"
         font-size: 34px
         line-height: 34px
         color: $c-split-action-add-icon
+
+        +media-screen-1500x900
+          bottom: 7px
+          right: 68px
+          font-size: 32px
+          line-height: 32px
 
         +media-screen-1280x800
           bottom: 6px
@@ -237,6 +266,10 @@ $block: ".pos-split"
     margin: 0 auto
     padding-top: 84px
 
+    +media-screen-1500x900
+      width: 328px
+      padding-top: 74px
+
     +media-screen-1280x800
       padding-top: 67px
 
@@ -270,6 +303,11 @@ $block: ".pos-split"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1500x900
+      height: 81px
+      border-width: 4px
+      border-radius: 10px
+
     +media-screen-1280x800
       height: 73px
       border-width: 4px
@@ -295,6 +333,10 @@ $block: ".pos-split"
       line-height: 70px
       color: $c-split-control-icon
 
+      +media-screen-1500x900
+        font-size: 62px
+        line-height: 62px
+
       +media-screen-1280x800
         font-size: 55px
         line-height: 55px
@@ -318,6 +360,9 @@ $block: ".pos-split"
 
     &:not(:last-child)
       margin-bottom: 92px
+
+      +media-screen-1500x900
+        margin-bottom: 81px
 
       +media-screen-1280x800
         margin-bottom: 73px

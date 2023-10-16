@@ -42,6 +42,9 @@ $block: ".pos-keyboard"
     &:not(:last-child)
       margin-bottom: 10px
 
+      +media-screen-1500x900
+        margin-bottom: 9px
+
       +media-screen-1280x800
         margin-bottom: 9px
 
@@ -53,6 +56,9 @@ $block: ".pos-keyboard"
 
     &:last-child
       margin-top: 20px
+
+      +media-screen-1500x900
+        margin-bottom: 18px
 
       +media-screen-1280x800
         margin-bottom: 18px
@@ -88,6 +94,13 @@ $block: ".pos-keyboard"
     user-select: none
     transition: all .2s
 
+    +media-screen-1500x900
+      width: 56px
+      height: 56px
+      font-size: 37px
+      line-height: 56px
+      border-radius: 10px
+
     +media-screen-1280x800
       width: 48px
       height: 48px
@@ -118,6 +131,9 @@ $block: ".pos-keyboard"
     &:not(:last-child)
       margin-right: 10px
 
+      +media-screen-1500x900
+        margin-right: 9px
+
       +media-screen-1280x800
         margin-right: 9px
 
@@ -135,6 +151,9 @@ $block: ".pos-keyboard"
       font-size: 0
       line-height: 0
       color: transparent
+
+      +media-screen-1500x900
+        width: 131px
 
       +media-screen-1024x768
         width: 89px
@@ -154,6 +173,10 @@ $block: ".pos-keyboard"
         font-size: 30px
         line-height: 30px
 
+        +media-screen-1500x900
+          font-size: 26px
+          line-height: 26px
+
         +media-screen-1280x800
           font-size: 24px
           line-height: 24px
@@ -172,6 +195,10 @@ $block: ".pos-keyboard"
         font-size: 42px
         line-height: 30px
 
+        +media-screen-1500x900
+          font-size: 36px
+          line-height: 26px
+
         +media-screen-1280x800
           font-size: 34px
           line-height: 26px
@@ -187,6 +214,9 @@ $block: ".pos-keyboard"
     // $Keyboard control MOD: role space
     &_role_space
       width: 453px
+
+      +media-screen-1500x900
+        width: 530px
 
       +media-screen-1024x600
         width: 362px

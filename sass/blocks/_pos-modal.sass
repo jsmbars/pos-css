@@ -27,6 +27,9 @@ $block: ".pos-modal"
   #{$block}-portal &
     z-index: 400
 
+  +media-screen-1500x900
+    border-radius: 13px
+
   +media-screen-1280x800
     border-radius: 12px
 
@@ -63,6 +66,10 @@ $block: ".pos-modal"
     width: 777px
     height: 777px
 
+    +media-screen-1500x900
+      width: 910px
+      height: 684px
+
     +media-screen-1280x800
       height: 620px
 
@@ -76,6 +83,9 @@ $block: ".pos-modal"
 
   &_role_item
     height: 870px
+
+    +media-screen-1500x900
+      height: 766px
 
     +media-screen-1280x800
       height: 696px
@@ -110,6 +120,9 @@ $block: ".pos-modal"
     align-items: center
     border-radius: 15px
     background-color: $c-modal-overlay-bg
+
+    +media-screen-1500x900
+      border-radius: 13px
 
     +media-screen-1280x800
       border-radius: 12px

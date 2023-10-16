@@ -61,6 +61,18 @@ $block: ".pos-numpad"
       border-color: $c-numpad-transaction-display-border
       background-color: $c-numpad-transaction-display-bg
 
+    +media-screen-1500x900
+      height: 53px
+      font-size: 26px
+      line-height: 44px
+      border-width: 4px
+      border-radius: 10px
+
+      #{$block}_role_transaction &
+        height: 86px
+        font-size: 53px
+        line-height: 77px
+
     +media-screen-1280x800
       height: 45px
       font-size: 30px
@@ -105,6 +117,12 @@ $block: ".pos-numpad"
       #{$block}_role_transaction &
         margin-bottom: 10px
 
+      +media-screen-1500x900
+        margin-bottom: 7px
+
+        #{$block}_role_transaction &
+          margin-bottom: 9px
+
       +media-screen-1280x800
         margin-bottom: 7px
 
@@ -143,6 +161,12 @@ $block: ".pos-numpad"
 
       #{$block}_role_transaction &
         margin-bottom: 14px
+
+      +media-screen-1500x900
+        margin-bottom: 6px
+
+        #{$block}_role_transaction &
+          margin-bottom: 12px
 
       +media-screen-1280x800
         margin-bottom: 6px
@@ -210,6 +234,17 @@ $block: ".pos-numpad"
       color: $c-numpad-transfer-table-control-text
       background-color: $c-numpad-transfer-table-control-bg
 
+    +media-screen-1500x900
+      height: 60px
+      font-size: 44px
+      line-height: 60px
+      border-radius: 10px
+
+      #{$block}_role_transaction &
+        height: 106px
+        font-size: 62px
+        line-height: 106px
+
     +media-screen-1280x800
       height: 50px
       font-size: 38px
@@ -267,6 +302,12 @@ $block: ".pos-numpad"
       #{$block}_role_transaction &
         margin-right: 14px
 
+      +media-screen-1500x900
+        margin-right: 10px
+
+        #{$block}_role_transaction &
+          margin-right: 12px
+
       +media-screen-1280x800
         margin-right: 10px
 
@@ -319,6 +360,16 @@ $block: ".pos-numpad"
         color: $c-numpad-transfer-table-control-clear-text
         border-color: $c-numpad-transfer-table-control-clear-border
         background-color: $c-numpad-transfer-table-control-clear-bg
+
+      +media-screen-1500x900
+        width: calc(66.666% + 10px)
+        line-height: 53px
+        border-width: 4px
+
+        #{$block}_role_transaction &
+          width: calc(66.666% + 10px)
+          line-height: 97px
+          border-width: 4px
 
       +media-screen-1280x800
         width: calc(66.666% + 10px)
