@@ -23,6 +23,10 @@ $block: ".pos-tables"
   height: calc(100% - 62px)
   padding: 21px 0 73px
 
+  +media-screen-1500x900
+    height: calc(100% - 56px)
+    padding: 10px 0 40px
+
   +media-screen-1280x800
     height: calc(100% - 49px)
     padding: 5px 0 30px
@@ -55,6 +59,10 @@ $block: ".pos-tables"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1500x900
+      font-size: 44px
+      line-height: 53px
+
     +media-screen-1280x800
       font-size: 40px
       line-height: 48px
@@ -75,6 +83,10 @@ $block: ".pos-tables"
     display: block
     width: 1120px
     margin: 0 auto 54px
+
+    +media-screen-1500x900
+      width: 1310px
+      margin-bottom: 48px
 
     +media-screen-1280x800
       margin-bottom: 40px
@@ -98,6 +110,9 @@ $block: ".pos-tables"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1500x900
+        margin-bottom: 12px
 
       +media-screen-1280x800
         margin-bottom: 11px
@@ -128,6 +143,12 @@ $block: ".pos-tables"
     text-decoration: none
     overflow: hidden
     transition: all .2s
+
+    +media-screen-1500x900
+      width: calc(10% - 16px)
+      height: 86px
+      margin-right: 16px
+      border-radius: 10px
 
     +media-screen-1280x800
       height: 82px
@@ -192,6 +213,10 @@ $block: ".pos-tables"
     line-height: 15px
     color: $c-tables-item-server-text
 
+    +media-screen-1500x900
+      font-size: 11px
+      line-height: 13px
+
     +media-screen-1280x800
       font-size: 11px
       line-height: 12px
@@ -210,6 +235,10 @@ $block: ".pos-tables"
     line-height: 16px
     color: $c-tables-item-time-text
 
+    +media-screen-1500x900
+      font-size: 12px
+      line-height: 14px
+
     +media-screen-1280x800
       font-size: 12px
       line-height: 13px
@@ -227,6 +256,10 @@ $block: ".pos-tables"
     font-size: 30px
     line-height: 37px
     color: $c-tables-item-name-text
+
+    +media-screen-1500x900
+      font-size: 26px
+      line-height: 32px
 
     +media-screen-1280x800
       font-size: 22px
@@ -260,6 +293,10 @@ $block: ".pos-tables"
     line-height: 18px
     color: $c-tables-item-number-text
 
+    +media-screen-1500x900
+      font-size: 13px
+      line-height: 16px
+
     +media-screen-1280x800
       font-size: 13px
       line-height: 15px
@@ -284,6 +321,10 @@ $block: ".pos-tables"
     width: 1046px
     margin: 0 auto
     padding-right: 14px
+
+    +media-screen-1500x900
+      width: 1224px
+      padding-right: 16px
 
     +media-screen-1024x768
       width: 836px
@@ -315,6 +356,13 @@ $block: ".pos-tables"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1500x900
+      width: 328px
+      height: 86px
+      font-size: 28px
+      line-height: 86px
+      border-radius: 10px
 
     +media-screen-1280x800
       height: 78px
@@ -355,6 +403,9 @@ $block: ".pos-tables"
       line-height: 37px
       color: $c-tables-action-transfer-text
       background-color: $c-tables-action-transfer-bg
+
+      +media-screen-1500x900
+        line-height: 33px
 
       +media-screen-1280x800
         line-height: 29px

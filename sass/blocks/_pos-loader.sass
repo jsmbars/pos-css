@@ -48,6 +48,11 @@ $block: ".pos-loader"
     background-repeat: no-repeat
     background-size: contain
 
+    +media-screen-1500x900
+      width: 70px
+      height: 70px
+      margin-right: 12px
+
     +media-screen-1280x800
       width: 65px
       height: 65px
@@ -80,6 +85,9 @@ $block: ".pos-loader"
     font-weight: 400
     text-align: left
 
+    +media-screen-1500x900
+      font-size: 53px
+
     +media-screen-1280x800
       font-size: 50px
 
@@ -102,6 +110,9 @@ $block: ".pos-loader"
   &__message
     display: block
     padding-top: 25px
+
+    +media-screen-1500x900
+      padding-top: 22px
 
     +media-screen-1280x800
       padding-top: 20px
@@ -130,6 +141,9 @@ $block: ".pos-loader"
     #{$block}_type_light &
       color: $c-loader-light-message-text
 
+    +media-screen-1500x900
+      font-size: 44px
+
     +media-screen-1280x800
       font-size: 40px
 
@@ -151,6 +165,9 @@ $block: ".pos-loader"
 
     &:not(:last-child)
       margin-bottom: 15px
+
+      +media-screen-1500x900
+        margin-bottom: 13px
 
       +media-screen-1280x800
         margin-bottom: 12px

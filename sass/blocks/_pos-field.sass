@@ -60,6 +60,16 @@ $block: ".pos-field"
       padding: 10px 12px
       font-size: 50px
 
+    +media-screen-1500x900
+      height: 35px
+      font-size: 19px
+      line-height: 33px
+      border-radius: 6px
+
+      #{$block}_role_pin &
+        padding: 9px 14px
+        font-size: 44px
+
     +media-screen-1280x800
       height: 32px
       font-size: 18px
@@ -94,6 +104,9 @@ $block: ".pos-field"
 
     &:not(:last-child)
       margin-right: 12px
+
+      +media-screen-1500x900
+        margin-right: 14px
 
       +media-screen-1024x768
         margin-right: 10px
@@ -133,6 +146,12 @@ $block: ".pos-field"
       color: transparent
       background-color: $c-field-action-enter-bg
 
+    +media-screen-1500x900
+      height: 35px
+      font-size: 19px
+      line-height: 35px
+      border-radius: 6px
+
     +media-screen-1280x800
       height: 32px
       font-size: 18px
@@ -170,6 +189,11 @@ $block: ".pos-field"
         font-size: 24px
         line-height: 24px
         color: $c-field-action-enter-icon
+
+      +media-screen-1500x900
+        #{$block}_role_pin &
+          font-size: 21px
+          line-height: 21px
 
       +media-screen-1280x800
         #{$block}_role_pin &

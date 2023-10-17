@@ -51,6 +51,12 @@ $block: ".pos-data"
     #{$block}_role_sale &
       height: auto
 
+    +media-screen-1500x900
+      height: 44px
+
+      #{$block}_role_summary &
+        height: 88px
+
     +media-screen-1280x800
       height: 40px
 
@@ -77,6 +83,12 @@ $block: ".pos-data"
       #{$block}_role_summary &
         height: 140px
         border-bottom: none
+
+      +media-screen-1500x900
+        height: 53px
+
+        #{$block}_role_summary &
+          height: 123px
 
       +media-screen-1280x800
         height: 45px
@@ -107,6 +119,12 @@ $block: ".pos-data"
       #{$block}_role_summary &
         height: 140px
 
+      +media-screen-1500x900
+        height: 62px
+
+        #{$block}_role_summary &
+          height: 123px
+
       +media-screen-1280x800
         height: 52px
 
@@ -128,6 +146,10 @@ $block: ".pos-data"
     &:not(:last-child)
       #{$block}_role_sale &
         margin-bottom: 45px
+
+      +media-screen-1500x900
+        #{$block}_role_sale &
+          margin-bottom: 40px
 
       +media-screen-1280x800
         #{$block}_role_sale &
@@ -201,6 +223,25 @@ $block: ".pos-data"
     // $Data item label CONTEXT: $Data item MOD: role change
     #{$block}__item_role_change &
       color: $c-data-item-label-change-text
+
+    +media-screen-1500x900
+      width: 140px
+      padding-right: 8px
+      font-size: 19px
+
+      #{$block}__item_role_total &
+        font-size: 31px
+
+      #{$block}_role_summary &
+        padding-right: 23px
+        font-size: 53px
+
+      #{$block}_role_summary #{$block}__item_role_total &
+        font-size: 53px
+
+      #{$block}_role_sale &
+        padding-right: 14px
+        font-size: 15px
 
     +media-screen-1280x800
       font-size: 18px
@@ -330,6 +371,32 @@ $block: ".pos-data"
     // $Data item value STATE: active CONTEXT: $Data item MOD: role change
     #{$block}__item_role_change.is-active &
       background-color: $c-data-item-value-change-active-text
+
+    +media-screen-1500x900
+      width: calc(100% - 140px)
+      font-size: 25px
+
+      #{$block}__item_role_total &
+        font-size: 35px
+
+      #{$block}__item_role_total#{$block}__item_adjust_split &
+        font-size: 19px
+
+      #{$block}__item_role_balance &
+        height: 62px
+        font-size: 35px
+        line-height: 62px
+        border-radius: 10px
+
+      #{$block}_role_summary &
+        font-size: 62px
+
+      #{$block}_role_summary #{$block}__item_role_total &,
+      #{$block}_role_summary #{$block}__item_role_change &
+        font-size: 70px
+
+      #{$block}_role_sale &
+        font-size: 15px
 
     +media-screen-1280x800
       font-size: 21px

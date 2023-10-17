@@ -25,6 +25,10 @@ $block: ".pos-welcome"
   padding: 150px 12px 75px
   background-color: $c-welcome-bg
 
+  +media-screen-1500x900
+    height: calc(100% - 56px)
+    padding: 132px 14px 66px
+
   +media-screen-1280x800
     height: calc(100% - 49px)
     padding: 120px 12px 60px
@@ -74,6 +78,10 @@ $block: ".pos-welcome"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1500x900
+      font-size: 61px
+      line-height: 76px
+
     +media-screen-1280x800
       font-size: 56px
       line-height: 68px
@@ -92,6 +100,9 @@ $block: ".pos-welcome"
     display: block
     width: 100%
     margin-bottom: 75px
+
+    +media-screen-1500x900
+      margin-bottom: 66px
 
     +media-screen-1280x800
       margin-bottom: 60px
@@ -141,6 +152,11 @@ $block: ".pos-welcome"
     overflow: hidden
     transition: all .2s
 
+    +media-screen-1500x900
+      width: 86px
+      height: 86px
+      border-radius: 10px
+
     +media-screen-1280x800
       width: 78px
       height: 78px
@@ -172,6 +188,9 @@ $block: ".pos-welcome"
     &_role_users
       margin-right: 40px
 
+      +media-screen-1500x900
+        margin-right: 46px
+
       +media-screen-1024x768
         margin-right: 32px
 
@@ -182,6 +201,10 @@ $block: ".pos-welcome"
         content: '\e919'
         font-size: 70px
         line-height: 96px
+
+        +media-screen-1500x900
+          font-size: 61px
+          line-height: 84px
 
         +media-screen-1280x800
           font-size: 56px
@@ -199,6 +222,9 @@ $block: ".pos-welcome"
     &_role_sign-in
       margin-left: 40px
 
+      +media-screen-1500x900
+        margin-left: 46px
+
       +media-screen-1024x768
         margin-left: 32px
 
@@ -209,6 +235,10 @@ $block: ".pos-welcome"
         content: '\e91a'
         font-size: 60px
         line-height: 96px
+
+        +media-screen-1500x900
+          font-size: 52px
+          line-height: 84px
 
         +media-screen-1280x800
           font-size: 48px
@@ -236,6 +266,12 @@ $block: ".pos-welcome"
     font-weight: 500
     color: $c-welcome-version-text
     text-align: center
+
+    +media-screen-1500x900
+      bottom: 7px
+      left: 14px
+      right: 14px
+      font-size: 12px
 
     +media-screen-1024x768
       bottom: 6px

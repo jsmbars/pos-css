@@ -23,6 +23,9 @@ $block: ".pos-header"
   width: 100%
   padding: 7px 12px
 
+  +media-screen-1500x900
+    padding: 7px 14px
+
   +media-screen-1280x800
     padding: 7px 12px
 
@@ -98,6 +101,11 @@ $block: ".pos-header"
         width: calc(100% - 402px)
         padding-right: 12px
 
+      +media-screen-1500x900
+        #{$block}_role_main &,
+        #{$block}_role_tables &
+          width: calc(100% - 480px)
+
       +media-screen-1024x768
         #{$block}_role_main &,
         #{$block}_role_tables &
@@ -116,6 +124,11 @@ $block: ".pos-header"
       #{$block}_role_main &,
       #{$block}_role_tables &
         width: 402px
+
+      +media-screen-1500x900
+        #{$block}_role_main &,
+        #{$block}_role_tables &
+          width: 480px
 
       +media-screen-1024x768
         #{$block}_role_main &,
@@ -141,6 +154,13 @@ $block: ".pos-header"
     #{$block}_role_tables &
       background-color: $c-header-info-bg
       border-radius: 12px
+
+    +media-screen-1500x900
+      height: 42px
+
+      #{$block}_role_main &,
+      #{$block}_role_tables &
+        border-radius: 10px
 
     +media-screen-1280x800
       height: 35px
@@ -193,6 +213,11 @@ $block: ".pos-header"
       text-align: center
       transition: all .2s
 
+      +media-screen-1500x900
+        width: 35px
+        font-size: 26px
+        line-height: 10px
+
       +media-screen-1280x800
         width: 24px
         font-size: 24px
@@ -220,6 +245,9 @@ $block: ".pos-header"
       &:before
         content: '\e900'
         font-size: 26px
+
+        +media-screen-1500x900
+          font-size: 24px
 
         +media-screen-1280x800
           font-size: 22px
@@ -258,6 +286,11 @@ $block: ".pos-header"
       text-align: center
       transition: all .2s
 
+      +media-screen-1500x900
+        width: 46px
+        font-size: 35px
+        line-height: 24px
+
       +media-screen-1280x800
         width: 28px
         font-size: 28px
@@ -286,6 +319,9 @@ $block: ".pos-header"
         content: '\e900'
         font-size: 30px
 
+        +media-screen-1500x900
+          font-size: 24px
+
         +media-screen-1280x800
           font-size: 22px
 
@@ -306,6 +342,9 @@ $block: ".pos-header"
     align-items: center
     padding: 0 55px
 
+    +media-screen-1500x900
+      padding: 0 65px
+
     +media-screen-1024x768
       padding: 0 40px
 
@@ -325,6 +364,9 @@ $block: ".pos-header"
     color: $c-header-label-text
     text-align: center
     white-space: nowrap
+
+    +media-screen-1500x900
+      font-size: 18px
 
     +media-screen-1280x800
       font-size: 17px
@@ -363,6 +405,12 @@ $block: ".pos-header"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1500x900
+      width: 160px
+      height: 26px
+      font-size: 12px
+      line-height: 26px
+
     +media-screen-1280x800
       height: 22px
       font-size: 12px
@@ -393,6 +441,10 @@ $block: ".pos-header"
       line-height: 30px
       color: $c-header-search-toggle-icon
       transition: all .2s
+
+      +media-screen-1500x900
+        font-size: 17px
+        line-height: 26px
 
       +media-screen-1280x800
         font-size: 14px
@@ -458,6 +510,12 @@ $block: ".pos-header"
     user-select: none
     transition: all .2s
 
+    +media-screen-1500x900
+      height: 40px
+      font-size: 18px
+      line-height: 40px
+      border-radius: 10px
+
     +media-screen-1280x800
       height: 35px
       font-size: 17px
@@ -505,6 +563,10 @@ $block: ".pos-header"
     color: $c-header-title-text
     text-align: center
     text-transform: uppercase
+
+    +media-screen-1500x900
+      font-size: 52px
+      line-height: 52px
 
     +media-screen-1280x800
       font-size: 48px

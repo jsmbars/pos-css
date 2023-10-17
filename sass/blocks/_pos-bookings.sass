@@ -23,6 +23,9 @@ $block: ".pos-bookings"
   height: 100%
   padding: 6px 30px 18px
 
+  +media-screen-1500x900
+    padding: 6px 35px 15px
+
   +media-screen-1280x800
     padding: 6px 30px 14px
 
@@ -50,6 +53,11 @@ $block: ".pos-bookings"
     color: $c-bookings-title-text
     text-align: center
     text-transform: uppercase
+
+    +media-screen-1500x900
+      margin-bottom: 13px
+      font-size: 43px
+      line-height: 52px
 
     +media-screen-1280x800
       margin-bottom: 12px
@@ -99,6 +107,9 @@ $block: ".pos-bookings"
     align-items: center
     margin-bottom: 15px
 
+    +media-screen-1500x900
+      margin-bottom: 13px
+
     +media-screen-1280x800
       margin-bottom: 12px
 
@@ -125,6 +136,11 @@ $block: ".pos-bookings"
     border-top-left-radius: 7px
     border-bottom-left-radius: 7px
     background-color: $c-bookings-meta-date-bg
+
+    +media-screen-1500x900
+      padding: 0 30px
+      font-size: 18px
+      line-height: 35px
 
     +media-screen-1280x800
       font-size: 17px
@@ -157,6 +173,11 @@ $block: ".pos-bookings"
     border-bottom-right-radius: 7px
     background-color: $c-bookings-meta-count-bg
 
+    +media-screen-1500x900
+      padding: 0 15px
+      font-size: 24px
+      line-height: 35px
+
     +media-screen-1280x800
       font-size: 23px
       line-height: 32px
@@ -187,6 +208,10 @@ $block: ".pos-bookings"
     border: 1px solid $c-bookings-list-border
     background-color: $c-bookings-list-bg
 
+    +media-screen-1500x900
+      width: 836px
+      border-radius: 13px
+
     +media-screen-1280x800
       border-radius: 12px
 
@@ -210,6 +235,9 @@ $block: ".pos-bookings"
     width: 100%
     padding: 0 37px 0 53px
     overflow: hidden
+
+    +media-screen-1500x900
+      padding: 0 43px 0 62px
 
     +media-screen-1024x768
       top: 6px
@@ -241,6 +269,9 @@ $block: ".pos-bookings"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1500x900
+        margin-bottom: 12px
 
       +media-screen-1280x800
         margin-bottom: 11px
@@ -278,6 +309,15 @@ $block: ".pos-bookings"
     text-transform: uppercase
     transform-origin: 50% 50%
     transform: rotate(-90deg) translateY(-9px)
+
+    +media-screen-1500x900
+      top: calc(50% - 8px)
+      left: 232px
+      height: 16px
+      width: 94px
+      font-size: 16px
+      line-height: 16px
+      transform: rotate(-90deg) translateY(-8px)
 
     +media-screen-1280x800
       top: calc(50% - 7px)
@@ -326,6 +366,12 @@ $block: ".pos-bookings"
       #{$block}__item.is-redeemed &
         background-color: $c-bookings-item-redeemed-area-summary-bg
 
+      +media-screen-1500x900
+        width: 280px
+        padding: 7px 29px 7px 8px
+        border-top-left-radius: 17px
+        border-bottom-left-radius: 17px
+
       +media-screen-1280x800
         border-top-left-radius: 16px
         border-bottom-left-radius: 16px
@@ -357,6 +403,12 @@ $block: ".pos-bookings"
       #{$block}__item.is-redeemed &
         background-color: $c-bookings-item-redeemed-area-details-bg
 
+      +media-screen-1500x900
+        width: calc(100% - 280px)
+        padding: 7px 47px
+        border-top-right-radius: 17px
+        border-bottom-right-radius: 17px
+
       +media-screen-1280x800
         border-top-right-radius: 16px
         border-bottom-right-radius: 16px
@@ -387,6 +439,10 @@ $block: ".pos-bookings"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1500x900
+      font-size: 16px
+      line-height: 16px
+
     +media-screen-1280x800
       font-size: 16px
       line-height: 16px
@@ -413,6 +469,10 @@ $block: ".pos-bookings"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1500x900
+      font-size: 13px
+      line-height: 13px
+
     +media-screen-1280x800
       font-size: 13px
       line-height: 13px
@@ -433,6 +493,9 @@ $block: ".pos-bookings"
 
     &:not(:last-child)
       margin-bottom: 8px
+
+      +media-screen-1500x900
+        margin-bottom: 7px
 
       +media-screen-1280x800
         margin-bottom: 7px
@@ -467,6 +530,9 @@ $block: ".pos-bookings"
     text-align: center
     text-transform: uppercase
 
+    +media-screen-1500x900
+      line-height: 14px
+
     +media-screen-1280x800
       line-height: 14px
 
@@ -487,6 +553,9 @@ $block: ".pos-bookings"
     &:not(:last-child)
       margin-bottom: 15px
 
+      +media-screen-1500x900
+        margin-bottom: 13px
+
       +media-screen-1280x800
         margin-bottom: 12px
 
@@ -503,6 +572,9 @@ $block: ".pos-bookings"
     margin-bottom: 5px
     color: $c-bookings-item-details-label-text
     text-decoration: underline
+
+    +media-screen-1500x900
+      margin-bottom: 4px
 
     +media-screen-1280x800
       margin-bottom: 4px
@@ -528,6 +600,9 @@ $block: ".pos-bookings"
     align-items: center
     width: 100%
     padding-top: 15px
+
+    +media-screen-1500x900
+      padding-top: 13px
 
     +media-screen-1280x800
       padding-top: 12px
@@ -560,6 +635,13 @@ $block: ".pos-bookings"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1500x900
+      width: 224px
+      height: 57px
+      font-size: 19px
+      line-height: 57px
+      border-radius: 10px
 
     +media-screen-1280x800
       height: 48px

@@ -23,6 +23,9 @@ $block: ".pos-main"
   height: calc(100% - 62px)
   padding: 0 12px
 
+  +media-screen-1500x900
+    height: calc(100% - 55px)
+
   +media-screen-1280x800
     height: calc(100% - 49px)
 
@@ -45,6 +48,10 @@ $block: ".pos-main"
     height: 100%
     padding: 7px 14px 0 0
 
+    +media-screen-1500x900
+      width: calc(100% - 480px)
+      padding: 3px 16px 0 0
+
     +media-screen-1024x768
       width: calc(100% - 320px)
       padding: 3px 12px 0 0
@@ -62,6 +69,9 @@ $block: ".pos-main"
     display: block
     height: 100%
     width: 402px
+
+    +media-screen-1500x900
+      width: 480px
 
     +media-screen-1024x768
       width: 320px
@@ -128,6 +138,9 @@ $block: ".pos-main"
     display: block
     width: 234px
 
+    +media-screen-1500x900
+      width: 200px
+
     +media-screen-1280x800
       width: 170px
 
@@ -148,6 +161,10 @@ $block: ".pos-main"
     align-items: stretch
     width: calc(100% - 234px)
     padding-left: 20px
+
+    +media-screen-1500x900
+      width: calc(100% - 200px)
+      padding-left: 24px
 
     +media-screen-1280x800
       width: calc(100% - 170px)
@@ -183,6 +200,12 @@ $block: ".pos-main"
     user-select: none
     transition: all .2s
 
+    +media-screen-1500x900
+      height: 55px
+      font-size: 18px
+      line-height: 22px
+      border-radius: 10px
+
     +media-screen-1280x800
       height: 46px
       font-size: 16px
@@ -209,6 +232,9 @@ $block: ".pos-main"
 
     &:not(:last-child)
       margin-bottom: 14px
+
+      +media-screen-1500x900
+        margin-bottom: 12px
 
       +media-screen-1280x800
         margin-bottom: 10px
@@ -253,6 +279,14 @@ $block: ".pos-main"
     cursor: pointer
     user-select: none
     transition: all .2s
+
+    +media-screen-1500x900
+      width: 420px
+      height: 86px
+      margin-left: -210px
+      font-size: 35px
+      line-height: 86px
+      border-radius: 31px 31px 0 0
 
     +media-screen-1280x800
       height: 73px

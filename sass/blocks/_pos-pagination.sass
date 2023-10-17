@@ -49,6 +49,10 @@ $block: ".pos-pagination"
     cursor: pointer
     transition: all .2s
 
+    +media-screen-1500x900
+      width: 74px
+      height: 74px
+
     +media-screen-1280x800
       width: 63px
       height: 63px
@@ -72,6 +76,10 @@ $block: ".pos-pagination"
       line-height: 78px
       font-weight: 700
       color: $c-pagination-control-icon
+
+      +media-screen-1500x900
+        font-size: 53px
+        line-height: 69px
 
       +media-screen-1280x800
         font-size: 45px
@@ -99,6 +107,10 @@ $block: ".pos-pagination"
       border-top-left-radius: 12px
       border-bottom-left-radius: 12px
 
+      +media-screen-1500x900
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+
       +media-screen-1280x800
         border-top-left-radius: 9px
         border-bottom-left-radius: 9px
@@ -118,6 +130,10 @@ $block: ".pos-pagination"
     &_role_next
       border-top-right-radius: 12px
       border-bottom-right-radius: 12px
+
+      +media-screen-1500x900
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px
 
       +media-screen-1280x800
         border-top-right-radius: 9px
@@ -157,6 +173,13 @@ $block: ".pos-pagination"
     border-bottom: 3px solid $c-pagination-info-border
     background-color: $c-pagination-info-bg
     transition: all .2s
+
+    +media-screen-1500x900
+      width: calc(100% - 197px)
+      height: 74px
+      padding: 0 19px
+      font-size: 35px
+      line-height: 68px
 
     +media-screen-1280x800
       width: calc(100% - 126px)
